@@ -95,7 +95,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ---
 
 ## 📧 Contact
-For questions or freelance inquiries, email: <b>info@zerosagency.com</b>
+For questions or freelance inquiries, email: <b>zeros.studio19@gmail.com</b>
 
 ---
 
