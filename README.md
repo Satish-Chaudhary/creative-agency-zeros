@@ -1,13 +1,13 @@
 <!-- ZEROS Creative Agency README -->
 
 <h1 align="center">
-  <img src="favicon.ico" alt="ZEROS Logo" width="80" style="vertical-align:middle;"> <br/>
+  <img src="./Company/favicon.ico" alt="ZEROS Logo" width="80" style="vertical-align:middle;"> <br/>
   <span style="color:#6a0dad;">ZEROS Creative Agency</span>
 </h1>
 
 <p align="center">
   <b>Modern, Animated, and Responsive Web Template for Agencies & Creatives</b><br>
-  <img src="Brand.jpg" alt="Landing Preview" width="400"/>
+  <img src="./Company/Brand.jpg" alt="Landing Preview" width="400"/>
 </p>
 
 ---
@@ -66,8 +66,8 @@ Company/
 - <b>Micro-interactions:</b> Button, nav, and card hover effects
 
 <p align="center">
-  <img src="project2.png" alt="Animated Section" width="350"/>
-  <img src="project3.png" alt="Portfolio Preview" width="350"/>
+  <img src="./Company/project2.png" alt="Animated Section" width="350"/>
+  <img src="./Company/project3.png" alt="Portfolio Preview" width="350"/>
 </p>
 
 ---
