@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -575,4 +576,202 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Agency - Zeros</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #6a0dad;
+            --secondary-color: #5628ee;
+            --background-color: #0f0f0f;
+            --text-color: #f0f0f0;
+            --card-bg-color: rgba(26, 26, 26, 0.6);
+            --border-color: #333;
+            --accent-color: #ff6b6b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            text-align: center;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .posts, .gallery, .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .post, .gallery-item, .review {
+            background: var(--card-bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .post:hover, .gallery-item:hover, .review:hover {
+            transform: translateY(-10px);
+        }
+
+        .post img, .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .review {
+            text-align: center;
+        }
+
+        .review img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            background: var(--card-bg-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+        }
+
+        .contact-form button {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Our Showcase</h1>
+    </header>
+
+    <main class="container">
+        <!-- Posts Section -->
+        <section class="section posts-section">
+            <div class="section-header">
+                <h2>Our Work</h2>
+            </div>
+            <div class="posts">
+                <div class="post">
+                    <img src="project1.png" alt="Post Image">
+                    <h3>Project Title</h3>
+                    <p>Short description of the project and its impact.</p>
+                </div>
+                <!-- Add more posts as needed -->
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section gallery-section">
+            <div class="section-header">
+                <h2>Gallery</h2>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="project2.png"alt="Gallery Image">
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="section reviews-section">
+            <div class="section-header">
+                <h2>Client Reviews</h2>
+            </div>
+            <div class="reviews">
+                <div class="review">
+                    <img src="project3.png" alt="Client Image">
+                    <p>"Great service and amazing results!"</p>
+                    <h4>Client Name</h4>
+                </div>
+                <!-- Add more reviews as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="section contact-section">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+>>>>>>> de8ed7a87e018bdd47a87319dcc32fef6009d18d
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -392,4 +393,401 @@
                 font-size: 2.2em;
             }
         }
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Agency - Zeros</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Client Intake Form Section -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Let's Talk</span>
+            <h2 class="section-title">Start Your Project</h2>
+            <p class="section-subtitle">Fill out the form below to help us understand your vision and requirements.</p>
+        </div>
+        <form action="#" method="POST" class="intake-form">
+            <!-- Client Information -->
+            <fieldset>
+                <legend>1. Client Information</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Acme Inc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Business Details -->
+            <fieldset>
+                <legend>2. Business Details</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="industry">Your Industry</label>
+                        <input type="text" id="industry" name="industry" placeholder="e.g., Technology, Retail, Healthcare">
+                    </div>
+                    <div class="form-group">
+                        <label for="audience">Target Audience</label>
+                        <input type="text" id="audience" name="audience" placeholder="e.g., Young professionals, families">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="goals">Primary goals for the new website?</label>
+                    <textarea id="goals" name="goals" rows="3" placeholder="e.g., Generate leads, sell products"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Website Purpose</legend>
+                <div class="form-group">
+                    <label>What type of website do you need? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="purpose[]" value="portfolio"> Portfolio</label>
+                        <label><input type="checkbox" name="purpose[]" value="ecommerce"> E-commerce</label>
+                        <label><input type="checkbox" name="purpose[]" value="blog"> Blog</label>
+                        <label><input type="checkbox" name="purpose[]" value="corporate"> Corporate</label>
+                        <label><input type="checkbox" name="purpose[]" value="other"> Other</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Design Preferences -->
+            <fieldset>
+                <legend>4. Design Preferences</legend>
+                <div class="form-group">
+                    <label for="style">Desired style/aesthetic</label>
+                    <input type="text" id="style" name="style" placeholder="e.g., Minimal, Modern, Playful, Corporate">
+                </div>
+                <div class="form-group">
+                    <label for="colors">Color preferences</label>
+                    <input type="text" id="colors" name="colors" placeholder="e.g., Blues and grays, or specific hex codes">
+                </div>
+                <div class="form-group">
+                    <label for="references">Reference websites (URLs)</label>
+                    <textarea id="references" name="references" rows="3" placeholder="List any websites you like the look and feel of."></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Features & Functionality -->
+            <fieldset>
+                <legend>5. Features & Functionality</legend>
+                <div class="form-group">
+                    <label>What features are required? (Select all that apply)</label>
+                    <div class="checkbox-group features-grid">
+                        <label><input type="checkbox" name="features[]" value="contact_form"> Contact Form</label>
+                        <label><input type="checkbox" name="features[]" value="payment_gateway"> Payment Gateway</label>
+                        <label><input type="checkbox" name="features[]" value="booking_system"> Booking System</label>
+                        <label><input type="checkbox" name="features[]" value="blog_integration"> Blog Integration</label>
+                        <label><input type="checkbox" name="features[]" value="user_accounts"> User Accounts</label>
+                        <label><input type="checkbox" name="features[]" value="gallery"> Image/Video Gallery</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Content, Budget & Timeline -->
+            <fieldset>
+                <legend>6. Content, Budget & Timeline</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="content_provider">Who will provide the content?</label>
+                        <select id="content_provider" name="content_provider">
+                            <option value="client">I will provide all content</option>
+                            <option value="agency">I need help with content creation</option>
+                            <option value="mix">A mix of both</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="<5k">&lt; $5,000</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k-20k">$10,000 - $20,000</option>
+                            <option value=">20k">$20,000+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">Desired Completion Date</label>
+                        <input type="date" id="timeline" name="timeline">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Additional Notes -->
+            <fieldset>
+                <legend>7. Additional Notes</legend>
+                <div class="form-group">
+                    <label for="notes">Is there anything else you'd like to share?</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Any other requirements, questions, or details."></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-submit">
+                <button type="submit" class="cta-button">Submit Project Inquiry</button>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
+<style>
+        :root {
+            --primary-color: #6a0dad;
+            --background-color: #121212;
+            --surface-color: #1a1a1a;
+            --text-color: #ffffff;
+            --subtle-text-color: #b0b0b0;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --input-bg-color: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .contact-form-section {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--surface-color);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--text-color);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-size: 2.8em;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            font-size: 1.1em;
+            color: var(--subtle-text-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .intake-form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        fieldset {
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            background: var(--input-bg-color);
+            transition: border-color 0.3s ease;
+        }
+
+        fieldset:focus-within {
+            border-color: var(--primary-color);
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: 500;
+            color: var(--primary-color);
+            padding: 0 10px;
+            margin-left: 10px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: 400;
+            color: var(--subtle-text-color);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .checkbox-group, .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-group label, .features-grid label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.05);
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkbox-group label:hover, .features-grid label:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--subtle-text-color);
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        input[type="checkbox"]:checked::before {
+            content: '✔';
+            font-size: 14px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: color 0.4s ease-in-out;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #fff;
+            z-index: -1;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .cta-button:hover {
+            color: #000;
+        }
+
+        .cta-button:hover::before {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            .contact-form-section {
+                padding: 20px;
+            }
+            .section-title {
+                font-size: 2.2em;
+            }
+        }
+>>>>>>> de8ed7a87e018bdd47a87319dcc32fef6009d18d
     </style>
