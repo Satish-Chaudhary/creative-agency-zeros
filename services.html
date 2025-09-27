@@ -1,777 +1,670 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services - Zeros</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header>
-        <nav>
-            <a href="index.html" class="logo">ZEROS</a>
-            <ul id="first-nav">
-                <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
-                <li><a href="about.html" class="nav-link"><span>About</span></a></li>
-                <li><a href="services.html" class="nav-link"><span>Services</span></a></li>
-                <li><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
-                <li><a href="Contact.html" class="nav-link"><span>Contact</span></a></li>
-            </ul>
-            <img src="logo.svg" alt="hamburger" width="30px" height="30px" onclick="showSecondNav()" id="hamburger">
-        </nav>
+      <nav>
+        <a href="index.html" class="logo">ZEROS</a>
+        <ul id="first-nav">
+          <li>
+            <a href="index.html" class="nav-link"><span>Home</span></a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link"><span>About</span></a>
+          </li>
+          <li>
+            <a href="services.html" class="nav-link"><span>Services</span></a>
+          </li>
+          <li>
+            <a href="projects.html" class="nav-link"><span>Projects</span></a>
+          </li>
+          <li>
+            <a href="Contact.html" class="nav-link"><span>Contact</span></a>
+          </li>
+        </ul>
+        <img
+          src="logo.svg"
+          alt="hamburger"
+          width="30px"
+          height="30px"
+          onclick="showSecondNav()"
+          id="hamburger"
+        />
+      </nav>
     </header>
 
     <ul class="second-nav">
-        <li class="second-nav-li">Home</li>
-        <li class="second-nav-li">About</li>
-        <li class="second-nav-li">Services</li>
-        <li class="second-nav-li">Project</li>
-        <li class="second-nav-li">Contact</li>
+      <li class="second-nav-li">Home</li>
+      <li class="second-nav-li">About</li>
+      <li class="second-nav-li">Services</li>
+      <li class="second-nav-li">Project</li>
+      <li class="second-nav-li">Contact</li>
     </ul>
 
     <!-- Enhanced Hero Section -->
     <section class="hero">
-        <div id="particles-js"></div>
-        <div class="hero-content" id="hero-content">
-            <h1 class="hero-title">Our Services</h1>
-            <p class="hero-subtitle">We offer comprehensive digital solutions to transform your business</p>
-            <a href="#services" class="cta-button">
-                <span>Explore Our Services</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
+      <div id="particles-js"></div>
+      <div class="hero-content" id="hero-content">
+        <h1 class="hero-title">Our Services</h1>
+        <p class="hero-subtitle">
+          We offer comprehensive digital solutions to transform your business
+        </p>
+        <a href="#services" class="cta-button">
+          <span>Explore Our Services</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section class="services-section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What We Offer</h2>
-                <p class="section-subtitle">Our team of experts delivers cutting-edge solutions tailored to your needs</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-icon">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <h3>Web Development</h3>
-                            <p>Custom websites that drive results</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h4>Web Development</h4>
-                            <ul>
-                                <li>Responsive Design</li>
-                                <li>E-commerce Solutions</li>
-                                <li>CMS Development</li>
-                                <li>API Integration</li>
-                                <li>Performance Optimization</li>
-                            </ul>
-                            <div class="service-price">₹15k - ₹50k</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-icon">
-                                <i class="fas fa-palette"></i>
-                            </div>
-                            <h3>UI/UX Design</h3>
-                            <p>Beautiful interfaces that convert</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h4>UI/UX Design</h4>
-                            <ul>
-                                <li>User Research</li>
-                                <li>Wireframing</li>
-                                <li>Prototyping</li>
-                                <li>Visual Design</li>
-                                <li>User Testing</li>
-                            </ul>
-                            <div class="service-price">₹8k - ₹25k</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <h3>Mobile Apps</h3>
-                            <p>Native and cross-platform solutions</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h4>Mobile Apps</h4>
-                            <ul>
-                                <li>iOS Development</li>
-                                <li>Android Development</li>
-                                <li>React Native</li>
-                                <li>App Store Optimization</li>
-                                <li>Maintenance & Support</li>
-                            </ul>
-                            <div class="service-price">₹25k - ₹75k</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <h3>SEO & Marketing</h3>
-                            <p>Get found by your ideal customers</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h4>SEO & Marketing</h4>
-                            <ul>
-                                <li>Search Engine Optimization</li>
-                                <li>Content Marketing</li>
-                                <li>Social Media Marketing</li>
-                                <li>Google Ads</li>
-                                <li>Analytics & Reporting</li>
-                            </ul>
-                            <div class="service-price">₹5k - ₹20k/month</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-icon">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
-                            <h3>Brand Identity</h3>
-                            <p>Stand out with memorable branding</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h4>Brand Identity</h4>
-                            <ul>
-                                <li>Logo Design</li>
-                                <li>Brand Guidelines</li>
-                                <li>Business Cards</li>
-                                <li>Marketing Materials</li>
-                                <li>Brand Strategy</li>
-                            </ul>
-                            <div class="service-price">₹10k - ₹30k</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <h3>Maintenance</h3>
-                            <p>Keep your digital assets running smoothly</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h4>Maintenance</h4>
-                            <ul>
-                                <li>Website Updates</li>
-                                <li>Security Monitoring</li>
-                                <li>Performance Optimization</li>
-                                <li>Backup Management</li>
-                                <li>Technical Support</li>
-                            </ul>
-                            <div class="service-price">₹3k - ₹10k/month</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What We Offer</h2>
+          <p class="section-subtitle">
+            Our team of experts delivers cutting-edge solutions tailored to your
+            needs
+          </p>
         </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <div class="service-icon">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Custom websites that drive results</p>
+              </div>
+              <div class="service-card-back">
+                <h4>Web Development</h4>
+                <ul>
+                  <li>Responsive Design</li>
+                  <li>E-commerce Solutions</li>
+                  <li>CMS Development</li>
+                  <li>API Integration</li>
+                  <li>Performance Optimization</li>
+                </ul>
+                <div class="service-price">₹15k - ₹50k</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <div class="service-icon">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful interfaces that convert</p>
+              </div>
+              <div class="service-card-back">
+                <h4>UI/UX Design</h4>
+                <ul>
+                  <li>User Research</li>
+                  <li>Wireframing</li>
+                  <li>Prototyping</li>
+                  <li>Visual Design</li>
+                  <li>User Testing</li>
+                </ul>
+                <div class="service-price">₹8k - ₹25k</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <div class="service-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Apps</h3>
+                <p>Native and cross-platform solutions</p>
+              </div>
+              <div class="service-card-back">
+                <h4>Mobile Apps</h4>
+                <ul>
+                  <li>iOS Development</li>
+                  <li>Android Development</li>
+                  <li>React Native</li>
+                  <li>App Store Optimization</li>
+                  <li>Maintenance & Support</li>
+                </ul>
+                <div class="service-price">₹25k - ₹75k</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <div class="service-icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <h3>SEO & Marketing</h3>
+                <p>Get found by your ideal customers</p>
+              </div>
+              <div class="service-card-back">
+                <h4>SEO & Marketing</h4>
+                <ul>
+                  <li>Search Engine Optimization</li>
+                  <li>Content Marketing</li>
+                  <li>Social Media Marketing</li>
+                  <li>Google Ads</li>
+                  <li>Analytics & Reporting</li>
+                </ul>
+                <div class="service-price">₹5k - ₹20k/month</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <div class="service-icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Brand Identity</h3>
+                <p>Stand out with memorable branding</p>
+              </div>
+              <div class="service-card-back">
+                <h4>Brand Identity</h4>
+                <ul>
+                  <li>Logo Design</li>
+                  <li>Brand Guidelines</li>
+                  <li>Business Cards</li>
+                  <li>Marketing Materials</li>
+                  <li>Brand Strategy</li>
+                </ul>
+                <div class="service-price">₹10k - ₹30k</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <div class="service-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Maintenance</h3>
+                <p>Keep your digital assets running smoothly</p>
+              </div>
+              <div class="service-card-back">
+                <h4>Maintenance</h4>
+                <ul>
+                  <li>Website Updates</li>
+                  <li>Security Monitoring</li>
+                  <li>Performance Optimization</li>
+                  <li>Backup Management</li>
+                  <li>Technical Support</li>
+                </ul>
+                <div class="service-price">₹3k - ₹10k/month</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Professional Eye-Catching Section -->
     <section class="professional-section">
-        <div class="container">
-            <div class="professional-content">
-                <div class="professional-text">
-                    <h2 class="section-title">Ready to Transform Your Business?</h2>
-                    <p class="section-subtitle">Let's discuss your project and create something amazing together.</p>
-                    <div class="stats-container">
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="70">0</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="48">0</div>
-                            <div class="stat-label">Happy Clients</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="2">0</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                    </div>
-                    <a href="Contact.html" class="cta-button">
-                        <span>Get Started Today</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="professional-visual">
-                    <div class="floating-elements">
-                        <div class="floating-element element-1"></div>
-                        <div class="floating-element element-2"></div>
-                        <div class="floating-element element-3"></div>
-                    </div>
-                    <div class="professional-image">
-                        <img src="project1.png" alt="Professional Team">
-                    </div>
-                </div>
+      <div class="container">
+        <div class="professional-content">
+          <div class="professional-text">
+            <h2 class="section-title">Ready to Transform Your Business?</h2>
+            <p class="section-subtitle">
+              Let's discuss your project and create something amazing together.
+            </p>
+            <div class="stats-container">
+              <div class="stat-item">
+                <div class="stat-number" data-target="70">0</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="48">0</div>
+                <div class="stat-label">Happy Clients</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
             </div>
+            <a href="Contact.html" class="cta-button">
+              <span>Get Started Today</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="professional-visual">
+            <div class="floating-elements">
+              <div class="floating-element element-1"></div>
+              <div class="floating-element element-2"></div>
+              <div class="floating-element element-3"></div>
+            </div>
+            <div class="professional-image">
+              <img src="project1.png" alt="Professional Team" />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Why Choose Us Section -->
     <section class="why-choose-us">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose Us</h2>
-                <p class="section-subtitle">We deliver exceptional results through innovation, expertise, and dedication</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Fast Delivery</h3>
-                    <p>We deliver projects on time without compromising quality. Our streamlined process ensures rapid turnaround.</p>
-                    <div class="feature-number">01</div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Reliable & Secure</h3>
-                    <p>Your data and projects are safe with us. We implement industry-standard security measures and best practices.</p>
-                    <div class="feature-number">02</div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Expert Team</h3>
-                    <p>Our team consists of seasoned professionals with years of experience in their respective fields.</p>
-                    <div class="feature-number">03</div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>We're always here when you need us. Our support team is available round the clock to assist you.</p>
-                    <div class="feature-number">04</div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Proven Results</h3>
-                    <p>Our track record speaks for itself. We've helped hundreds of clients achieve their digital goals.</p>
-                    <div class="feature-number">05</div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation First</h3>
-                    <p>We stay ahead of trends and use cutting-edge technologies to give you a competitive advantage.</p>
-                    <div class="feature-number">06</div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">
+            We deliver exceptional results through innovation, expertise, and
+            dedication
+          </p>
         </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Fast Delivery</h3>
+            <p>
+              We deliver projects on time without compromising quality. Our
+              streamlined process ensures rapid turnaround.
+            </p>
+            <div class="feature-number">01</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Reliable & Secure</h3>
+            <p>
+              Your data and projects are safe with us. We implement
+              industry-standard security measures and best practices.
+            </p>
+            <div class="feature-number">02</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Expert Team</h3>
+            <p>
+              Our team consists of seasoned professionals with years of
+              experience in their respective fields.
+            </p>
+            <div class="feature-number">03</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>
+              We're always here when you need us. Our support team is available
+              round the clock to assist you.
+            </p>
+            <div class="feature-number">04</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Proven Results</h3>
+            <p>
+              Our track record speaks for itself. We've helped hundreds of
+              clients achieve their digital goals.
+            </p>
+            <div class="feature-number">05</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Innovation First</h3>
+            <p>
+              We stay ahead of trends and use cutting-edge technologies to give
+              you a competitive advantage.
+            </p>
+            <div class="feature-number">06</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <div class="footer-column">
-                        <h3 class="footer-logo">ZEROS</h3>
-                        <p class="footer-description">We craft digital experiences that transform businesses and captivate audiences through innovative design and cutting-edge technology.</p>
-                        <div class="footer-contact">
-                            <p><i class="fas fa-map-marker-alt"></i> Vijaynagar, Indore, MP</p>
-                            <p><i class="fas fa-phone-alt"></i> +91 9334541428 | +91 8009777605</p>
-                            <p><i class="fas fa-envelope"></i> zeros.studio19@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Quick Links</h4>
-                        <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="Contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">Mobile Apps</a></li>
-                            <li><a href="#">SEO & Marketing</a></li>
-                            <li><a href="#">Brand Identity</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Stay Updated</h4>
-                        <p class="footer-newsletter-text">Subscribe to our newsletter for the latest updates and offers</p>
-                        <form class="footer-newsletter-form" id="newsletterForm">
-                            <input type="email" placeholder="Enter your email" required>
-                            <button type="submit">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
-                        <div class="footer-social">
-                            <h4>Follow Us</h4>
-                            <div class="social-media">
-                                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <div class="copyright">
-                        &copy; 2022-32 Zeros Studio. All rights reserved.
-                    </div>
-                    <div class="footer-links-bottom">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Sitemap</a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-column">
+              <h3 class="footer-logo">ZEROS</h3>
+              <p class="footer-description">
+                We craft digital experiences that transform businesses and
+                captivate audiences through innovative design and cutting-edge
+                technology.
+              </p>
+              <div class="footer-contact">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> Vijaynagar, Indore, MP
+                </p>
+                <p>
+                  <i class="fas fa-phone-alt"></i> +91 9334541428 | +91
+                  8009777605
+                </p>
+                <p><i class="fas fa-envelope"></i> zeros.studio19@gmail.com</p>
+              </div>
             </div>
+
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Services</h4>
+              <ul class="footer-links">
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">SEO & Marketing</a></li>
+                <li><a href="#">Brand Identity</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Stay Updated</h4>
+              <p class="footer-newsletter-text">
+                Subscribe to our newsletter for the latest updates and offers
+              </p>
+              <form class="footer-newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+              <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-media">
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Instagram"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="https://www.twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Twitter"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="LinkedIn"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="YouTube"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="copyright">
+              &copy; 2022-32 Zeros Studio. All rights reserved.
+            </div>
+            <div class="footer-links-bottom">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Sitemap</a>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTop" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <script src="script.js"></script>
     <script>
-        // Add specific animations for the services page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize particles.js
-            particlesJS('particles-js', {
-                particles: {
-                    number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: '#6a0dad' },
-                    shape: { type: 'circle' },
-                    opacity: { value: 0.5, random: false },
-                    size: { value: 3, random: true },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: '#6a0dad',
-                        opacity: 0.4,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 6,
-                        direction: 'none',
-                        random: false,
-                        straight: false,
-                        out_mode: 'out',
-                        bounce: false
-                    }
-                },
-                interactivity: {
-                    detect_on: 'canvas',
-                    events: {
-                        onhover: { enable: true, mode: 'repulse' },
-                        onclick: { enable: true, mode: 'push' },
-                        resize: true
-                    },
-                    modes: {
-                        grab: { distance: 400, line_linked: { opacity: 1 } },
-                        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-                        repulse: { distance: 200, duration: 0.4 },
-                        push: { particles_nb: 4 },
-                        remove: { particles_nb: 2 }
-                    }
-                },
-                retina_detect: true
-            });
-
-            // Animate hero content entrance
-            const tl = gsap.timeline();
-            tl.to('.hero-content', {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                ease: 'power2.out'
-            });
-
-            // Animate section header
-            gsap.to('.services-section .section-header', {
-                opacity: 1,
-                y: 0,
-                duration: 1.2,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: '.services-section .section-header',
-                    start: 'top 80%',
-                }
-            });
-
-            // Animate service cards with stagger effect
-            gsap.to('.service-card', {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: '.services-grid',
-                    start: 'top 80%',
-                }
-            });
-
-            // Add tilt effect on hover for service cards
-            document.querySelectorAll('.service-card').forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    gsap.to(card, {
-                        rotationY: 5,
-                        rotationX: 5,
-                        scale: 1.05,
-                        duration: 0.3,
-                        ease: 'power2.out'
-                    });
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    gsap.to(card, {
-                        rotationY: 0,
-                        rotationX: 0,
-                        scale: 1,
-                        duration: 0.3,
-                        ease: 'power2.out'
-                    });
-                });
-            });
-
-            // Animate Why Choose Us section
-            gsap.to('.why-choose-us .section-header', {
-                opacity: 1,
-                y: 0,
-                duration: 1.2,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: '.why-choose-us .section-header',
-                    start: 'top 80%',
-                }
-            });
-
-            // Animate feature cards with stagger effect
-            gsap.to('.feature-card', {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: '.features-grid',
-                    start: 'top 80%',
-                }
-            });
-
-            // Animate professional section
-            gsap.to('.professional-text', {
-                opacity: 1,
-                x: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: '.professional-text',
-                    start: 'top 80%',
-                }
-            });
-
-            // Counter animation for statistics
-            function animateCounter(element, target) {
-                if (!element || isNaN(target)) {
-                    console.error('Invalid element or target for counter:', element, target);
-                    return;
-                }
-
-                let current = 0;
-                const increment = target / 50; // 50 steps
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
-                    element.textContent = Math.round(current);
-                    element.style.color = '#6a0dad';
-                    element.style.textShadow = '0 0 20px rgba(106, 13, 173, 0.5)';
-                }, 50);
-            }
-
-            // Animate all stat numbers with ScrollTrigger
-            ScrollTrigger.create({
-                trigger: '.stats-container',
-                start: 'top 80%',
-                once: true,
-                onEnter: () => {
-                    document.querySelectorAll('.stat-number').forEach(stat => {
-                        const target = parseInt(stat.getAttribute('data-target'));
-                        if (!isNaN(target)) {
-                            setTimeout(() => {
-                                animateCounter(stat, target);
-                            }, Math.random() * 500); // Stagger the animations
-                        }
-                    });
-                }
-            });
+      // Add specific animations for the services page
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize particles.js
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#6a0dad" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#6a0dad",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" },
+              resize: true,
+            },
+            modes: {
+              grab: { distance: 400, line_linked: { opacity: 1 } },
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
+              },
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+              remove: { particles_nb: 2 },
+            },
+          },
+          retina_detect: true,
         });
+
+        // Animate hero content entrance
+        const tl = gsap.timeline();
+        tl.to(".hero-content", {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+        });
+
+        // Animate section header
+        gsap.to(".services-section .section-header", {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".services-section .section-header",
+            start: "top 80%",
+          },
+        });
+
+        // Animate service cards with stagger effect
+        gsap.to(".service-card", {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".services-grid",
+            start: "top 80%",
+          },
+        });
+
+        // Add tilt effect on hover for service cards
+        document.querySelectorAll(".service-card").forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            gsap.to(card, {
+              rotationY: 5,
+              rotationX: 5,
+              scale: 1.05,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+
+          card.addEventListener("mouseleave", () => {
+            gsap.to(card, {
+              rotationY: 0,
+              rotationX: 0,
+              scale: 1,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+        });
+
+        // Animate Why Choose Us section
+        gsap.to(".why-choose-us .section-header", {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".why-choose-us .section-header",
+            start: "top 80%",
+          },
+        });
+
+        // Animate feature cards with stagger effect
+        gsap.to(".feature-card", {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".features-grid",
+            start: "top 80%",
+          },
+        });
+
+        // Animate professional section
+        gsap.to(".professional-text", {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: ".professional-text",
+            start: "top 80%",
+          },
+        });
+
+        // Counter animation for statistics
+        function animateCounter(element, target) {
+          if (!element || isNaN(target)) {
+            console.error(
+              "Invalid element or target for counter:",
+              element,
+              target
+            );
+            return;
+          }
+
+          let current = 0;
+          const increment = target / 50; // 50 steps
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            element.textContent = Math.round(current);
+            element.style.color = "#6a0dad";
+            element.style.textShadow = "0 0 20px rgba(106, 13, 173, 0.5)";
+          }, 50);
+        }
+
+        // Animate all stat numbers with ScrollTrigger
+        ScrollTrigger.create({
+          trigger: ".stats-container",
+          start: "top 80%",
+          once: true,
+          onEnter: () => {
+            document.querySelectorAll(".stat-number").forEach((stat) => {
+              const target = parseInt(stat.getAttribute("data-target"));
+              if (!isNaN(target)) {
+                setTimeout(() => {
+                  animateCounter(stat, target);
+                }, Math.random() * 500); // Stagger the animations
+              }
+            });
+          },
+        });
+      });
     </script>
-</body>
-
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Agency - Zeros</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <style>
-        :root {
-            --primary-color: #6a0dad;
-            --secondary-color: #5628ee;
-            --background-color: #0f0f0f;
-            --text-color: #f0f0f0;
-            --card-bg-color: rgba(26, 26, 26, 0.6);
-            --border-color: #333;
-            --accent-color: #ff6b6b;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            padding: 20px 0;
-            text-align: center;
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .section {
-            padding: 60px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-        }
-
-        .posts, .gallery, .reviews {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .post, .gallery-item, .review {
-            background: var(--card-bg-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .post:hover, .gallery-item:hover, .review:hover {
-            transform: translateY(-10px);
-        }
-
-        .post img, .gallery-item img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .review {
-            text-align: center;
-        }
-
-        .review img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .contact-form {
-            background: var(--card-bg-color);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-color);
-        }
-
-        .contact-form button {
-            background: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .contact-form button:hover {
-            background: var(--secondary-color);
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h1>Our Showcase</h1>
-    </header>
-
-    <main class="container">
-        <!-- Posts Section -->
-        <section class="section posts-section">
-            <div class="section-header">
-                <h2>Our Work</h2>
-            </div>
-            <div class="posts">
-                <div class="post">
-                    <img src="project1.png" alt="Post Image">
-                    <h3>Project Title</h3>
-                    <p>Short description of the project and its impact.</p>
-                </div>
-                <!-- Add more posts as needed -->
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section class="section gallery-section">
-            <div class="section-header">
-                <h2>Gallery</h2>
-            </div>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="project2.png"alt="Gallery Image">
-                </div>
-                <!-- Add more gallery items as needed -->
-            </div>
-        </section>
-
-        <!-- Reviews Section -->
-        <section class="section reviews-section">
-            <div class="section-header">
-                <h2>Client Reviews</h2>
-            </div>
-            <div class="reviews">
-                <div class="review">
-                    <img src="project3.png" alt="Client Image">
-                    <p>"Great service and amazing results!"</p>
-                    <h4>Client Name</h4>
-                </div>
-                <!-- Add more reviews as needed -->
-            </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section class="section contact-section">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="contact-form">
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-</body>
-
->>>>>>> de8ed7a87e018bdd47a87319dcc32fef6009d18d
+  </body>
 </html>
