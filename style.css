@@ -224,8 +224,6 @@ img:hover {
     }
 }
 
-/* Header */
-/* ... (previous styles remain unchanged) ... */
 
 /* Updated Header styles */
 header {
@@ -468,6 +466,7 @@ a {
 }
 
 .hero-title {
+    color: #602dbe;
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -2665,32 +2664,13 @@ input:checked+.slider:before {
     transform: translateY(0);
 }
 
-.scroll-to-top::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transform: translateX(-100%);
-    transition: transform 0.6s ease;
-    border-radius: 50%;
-    z-index: -1;
-}
-
 .scroll-to-top.show {
     opacity: 1;
     visibility: visible;
 }
 
 .scroll-to-top:hover {
-    transform: translateY(-5px) scale(1.1);
     box-shadow: 0 8px 30px rgba(106, 13, 173, 0.5), 0 0 20px rgba(106, 13, 173, 0.3);
-}
-
-.scroll-to-top:hover::before {
-    transform: translateX(100%);
 }
 
 .scroll-to-top:active {
@@ -4004,11 +3984,44 @@ input:checked+.slider:before {
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* Social media specific background colors on hover */
 .social-media a:hover {
     color: #fff;
     transform: translateY(-3px) scale(1.1);
-    background: linear-gradient(135deg, #6a0dad, #5628ee);
     box-shadow: 0 10px 30px rgba(106, 13, 173, 0.4);
+}
+
+.social-media a[href*="instagram.com"]:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-media a[href*="github.com"]:hover {
+    background: linear-gradient(45deg, #24292e, #343a40);
+}
+
+.social-media a[href*="twitter.com"]:hover,
+.social-media a[href*="x.com"]:hover {
+    background: linear-gradient(45deg, #1da1f2, #0d8bd9);
+}
+
+.social-media a[href*="linkedin.com"]:hover {
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+}
+
+.social-media a[href*="youtube.com"]:hover {
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+}
+
+.social-media a[href*="facebook.com"]:hover {
+    background: linear-gradient(45deg, #4267B2, #3b5998);
+}
+
+.social-media a[href*="dribbble.com"]:hover {
+    background: linear-gradient(45deg, #ea4c89, #d6356c);
+}
+
+.social-media a[href*="behance.net"]:hover {
+    background: linear-gradient(45deg, #1769ff, #0057e7);
 }
 
 .footer-bottom {

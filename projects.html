@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Agency - Zeros</title>
+    <title>Projects - Creative Agency - Zeros</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects-styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
 </head>
 
 <body>
@@ -17,14 +19,22 @@
     <header>
         <nav>
             <a href="index.html" class="logo">ZEROS</a>
-            <ul>
-                <li><a href="index.html#hero">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="Purchase.html">Pricing</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+            <ul id="first-nav">
+                <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
+                <li><a href="about.html" class="nav-link"><span>About</span></a></li>
+                <li><a href="projects.html" class="nav-link active"><span>Projects</span></a></li>
+                <li><a href="Purchase.html" class="nav-link"><span>Pricing</span></a></li>
+                <li><a href="Contact.html" class="nav-link"><span>Contact</span></a></li>
             </ul>
+            <img src="logo.svg" alt="hamburger" width="30px" height="30px" onclick="showSecondNav()" id="hamburger" />
         </nav>
+        <ul class="second-nav">
+            <li class="second-nav-li">Home</li>
+            <li class="second-nav-li">About</li>
+            <li class="second-nav-li">Projects</li>
+            <li class="second-nav-li">Pricing</li>
+            <li class="second-nav-li">Contact</li>
+        </ul>
     </header>
 
     <main>
@@ -32,7 +42,8 @@
         <section class="page-hero">
             <div class="container">
                 <h1 id="typewriter-text">Design That Converts</h1>
-                <p id="typewriter-subtitle">We combine strategy, design, and technology to create digital experiences that are impactful and
+                <p id="typewriter-subtitle">We combine strategy, design, and technology to create digital experiences
+                    that are impactful and
                     inspiring. Explore some of our favorite projects.</p>
                 <a href="#projects" class="cta-button">Discover Our Work <i class="fas fa-arrow-right"></i></a>
             </div>
@@ -83,7 +94,7 @@
                     <div class="project-card" data-category="web">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170"
-                                alt="Project Dashboard">
+                                alt="Project Dashboard" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-category">Web Application</div>
                             </div>
@@ -105,7 +116,7 @@
                     <div class="project-card" data-category="web">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170"
-                                alt="E-commerce Website">
+                                alt="E-commerce Website" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-category">E-Commerce</div>
                             </div>
@@ -127,7 +138,7 @@
                     <div class="project-card" data-category="app">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1628233345409-349459e6f79a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlJTIwYXBwcyUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww"
-                                alt="Mobile App">
+                                alt="Mobile App" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-category">Mobile App</div>
                             </div>
@@ -149,7 +160,7 @@
                     <div class="project-card" data-category="web">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80"
-                                alt="Corporate Website">
+                                alt="Corporate Website" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-category">Corporate</div>
                             </div>
@@ -171,7 +182,7 @@
                     <div class="project-card" data-category="app">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                                alt="SaaS Platform">
+                                alt="SaaS Platform" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-category">SaaS</div>
                             </div>
@@ -193,7 +204,7 @@
                     <div class="project-card" data-category="branding">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                                alt="Gaming Platform">
+                                alt="Gaming Platform" loading="lazy">
                             <div class="project-overlay">
                                 <div class="project-category">Gaming</div>
                             </div>
@@ -232,7 +243,7 @@
                         <div class="testimonial-author">
                             <div class="author-image">
                                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&h=500&fit=crop"
-                                    alt="Alex Johnson">
+                                    alt="Alex Johnson" loading="lazy">
                             </div>
                             <div class="author-name">Alex Johnson</div>
                             <div class="author-role">CEO, TechStart Inc.</div>
@@ -247,7 +258,7 @@
                         <div class="testimonial-author">
                             <div class="author-image">
                                 <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=500&fit=crop"
-                                    alt="Sarah Williams">
+                                    alt="Sarah Williams" loading="lazy">
                             </div>
                             <div class="author-name">Sarah Williams</div>
                             <div class="author-role">Marketing Director, FashionHub</div>
@@ -262,7 +273,7 @@
                         <div class="testimonial-author">
                             <div class="author-image">
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
-                                    alt="Michael Chen">
+                                    alt="Michael Chen" loading="lazy">
                             </div>
                             <div class="author-name">Michael Chen</div>
                             <div class="author-role">Product Manager, WellnessPlus</div>
@@ -325,7 +336,8 @@
                         <p class="footer-newsletter-text">Subscribe to our newsletter for the latest updates and
                             offers
                         </p>
-                        <form class="footer-newsletter-form" id="newsletterForm">
+                        <form action="https://formspree.io/f/xrbyedlg" class="footer-newsletter-form"
+                            id="newsletterForm">
                             <input type="email" placeholder="Enter your email" required>
                             <button type="submit">
                                 <i class="fas fa-paper-plane"></i>
@@ -378,12 +390,28 @@
     </button>
 
     <script>
-        // Initialize GSAP animations
-        gsap.registerPlugin(ScrollTrigger);
+        // Initialize GSAP animations with performance optimizations
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-        // Header scroll effect
-        window.addEventListener('scroll', function () {
+        // Throttle function for scroll events
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+
+        // Header scroll effect with throttling
+        const handleScroll = throttle(function () {
             const header = document.querySelector('header');
+            const scrollToTopButton = document.getElementById('scrollToTop');
+            
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
@@ -391,94 +419,191 @@
             }
 
             // Scroll to top button visibility
-            const scrollToTopButton = document.getElementById('scrollToTop');
             if (window.scrollY > 300) {
                 scrollToTopButton.classList.add('show');
             } else {
                 scrollToTopButton.classList.remove('show');
             }
-        });
+            
+            // Active link highlighting on scroll
+            const sections = document.querySelectorAll('.page-section, .projects-gallery, .testimonials-section');
+            const navLinks = document.querySelectorAll('.nav-link');
 
-        // Animate hero section
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute("id") || section.classList[1];
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        }, 100);
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Animate hero section with GSAP
         document.addEventListener('DOMContentLoaded', function () {
+            // Cache DOM elements for better performance
+            const pageHeroH1 = document.querySelector('.page-hero h1');
+            const pageHeroP = document.querySelector('.page-hero p');
+            const pageHeroCta = document.querySelector('.page-hero .cta-button');
+            const statItems = document.querySelectorAll('.stat-item');
+            const sectionHeaders = document.querySelectorAll('.section-header h2, .section-header p');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            const testimonialsHeaderH2 = document.querySelector('.testimonials-header h2');
+            const testimonialsHeaderLine = document.querySelector('.testimonials-header .line');
+            
+            // Animate logo on page load with glow effect
+            gsap.to(".logo", {
+                opacity: 1,
+                duration: 1,
+                y: 0,
+                ease: "power3.out",
+            });
+
+            // Animate nav links with stagger
+            gsap.to(".nav-link", {
+                opacity: 1,
+                duration: 0.8,
+                y: 0,
+                stagger: 0.1,
+                ease: "power3.out",
+                delay: 0.3,
+            });
+
             // Animate hero elements
-            gsap.to('.page-hero h1', {
-                duration: 1,
-                y: 0,
-                opacity: 1,
-                ease: 'power3.out',
-                delay: 0.5
-            });
+            if (pageHeroH1 && pageHeroP && pageHeroCta) {
+                const heroTl = gsap.timeline();
+                heroTl.to(pageHeroH1, {
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power3.out'
+                })
+                .to(pageHeroP, {
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power3.out'
+                }, "-=0.5")
+                .to(pageHeroCta, {
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power3.out'
+                }, "-=0.5");
+            }
 
-            gsap.to('.page-hero p', {
-                duration: 1,
-                y: 0,
-                opacity: 1,
-                ease: 'power3.out',
-                delay: 0.8
-            });
-
-            gsap.to('.cta-button', {
-                duration: 1,
-                y: 0,
-                opacity: 1,
-                ease: 'power3.out',
-                delay: 1.1
-            });
-
-            // Animate stats section with count-up animation
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const statItems = document.querySelectorAll('.stat-item');
-                        statItems.forEach((item, index) => {
-                            setTimeout(() => {
-                                item.classList.add('animate');
-                            }, index * 200);
+            // Animate stats section with count-up animation and GSAP
+            statItems.forEach((item, index) => {
+                const statObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Animate stat item
+                            gsap.to(item, {
+                                duration: 0.8,
+                                y: 0,
+                                opacity: 1,
+                                ease: 'power2.out',
+                                delay: index * 0.2
+                            });
 
                             // Get the target number
                             const numberElement = item.querySelector('.stat-number');
-                            const targetValue = parseInt(numberElement.textContent);
-                            const suffix = numberElement.textContent.replace(targetValue, '');
+                            if (numberElement) {
+                                const targetValue = parseInt(numberElement.textContent);
+                                const suffix = numberElement.textContent.replace(targetValue, '');
 
-                            // Reset the number to 0
-                            let currentValue = 0;
-                            numberElement.textContent = currentValue + suffix;
+                                // Animate the count-up with GSAP
+                                const countTl = gsap.timeline();
+                                countTl.fromTo(numberElement, 
+                                    { innerText: 0 },
+                                    {
+                                        innerText: targetValue,
+                                        duration: 2,
+                                        ease: "power2.out",
+                                        snap: { innerText: 1 },
+                                        onUpdate: function() {
+                                            numberElement.textContent = Math.floor(this.targets()[0].innerText) + suffix;
+                                        }
+                                    }
+                                );
+                            }
 
-                            // Animate the count-up
-                            const duration = 2000; // 2 seconds
-                            const increment = targetValue / (duration / 16); // 16ms per frame
+                            statObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
 
-                            const updateNumber = () => {
-                                currentValue += increment;
-                                if (currentValue < targetValue) {
-                                    numberElement.textContent = Math.floor(currentValue) + suffix;
-                                    requestAnimationFrame(updateNumber);
-                                } else {
-                                    numberElement.textContent = targetValue + suffix;
-                                }
-                            };
+                statObserver.observe(item);
+            });
 
-                            setTimeout(() => {
-                                updateNumber();
-                            }, index * 300);
-                        });
-
-                        statsObserver.unobserve(entry.target);
-                    }
+            // Animate section headers
+            sectionHeaders.forEach((element, index) => {
+                gsap.to(element, {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power2.out',
+                    delay: index * 0.2
                 });
-            }, { threshold: 0.5 });
+            });
 
-            // Observe stats section
-            const statsSection = document.querySelector('.stats-section');
-            if (statsSection) {
-                statsObserver.observe(statsSection);
-            }
+            // Animate filter buttons
+            filterButtons.forEach((button, index) => {
+                gsap.to(button, {
+                    scrollTrigger: {
+                        trigger: button,
+                        start: "top 90%",
+                        toggleActions: "play none none reverse"
+                    },
+                    duration: 0.8,
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power2.out',
+                    delay: index * 0.1
+                });
+            });
 
-            // Project filtering functionality
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
+            // Animate project cards with staggered GSAP animations
+            projectCards.forEach((card, index) => {
+                gsap.to(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%",
+                        toggleActions: "play none none reverse"
+                    },
+                    duration: 0.8,
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power2.out',
+                    delay: index * 0.1
+                });
 
+                // Cache elements for better performance
+                const tags = card.querySelectorAll('.project-tags span');
+                const ctaButton = card.querySelector('.cta-button');
+                
+                // Remove the hover animations for project tags and CTA button
+                // The CSS will handle the static styles now
+
+                
+            });
+
+            // Project filtering functionality with smooth animations and auto-arrangement
             filterButtons.forEach(button => {
                 button.addEventListener('click', function () {
                     // Remove active class from all buttons
@@ -489,59 +614,182 @@
 
                     const filterValue = this.getAttribute('data-filter');
 
-                    // Filter projects
+                    // Create arrays to hold visible and hidden cards
+                    const visibleCards = [];
+                    const hiddenCards = [];
+
+                    // Filter projects and separate visible/hidden cards
                     projectCards.forEach(card => {
                         if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                            card.style.display = 'block';
-                            gsap.fromTo(card,
-                                { opacity: 0, y: 20 },
-                                { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
-                            );
+                            visibleCards.push(card);
+                            // Show card with animation
+                            gsap.to(card, {
+                                duration: 0.5,
+                                opacity: 1,
+                                scale: 1,
+                                ease: 'power2.out'
+                            });
                         } else {
-                            card.style.display = 'none';
+                            hiddenCards.push(card);
+                            // Hide card with animation
+                            gsap.to(card, {
+                                duration: 0.5,
+                                opacity: 0,
+                                scale: 0.9,
+                                ease: 'power2.out'
+                            });
                         }
                     });
+
+                    // After animations complete, rearrange the grid
+                    setTimeout(() => {
+                        const projectsGrid = document.querySelector('.projects-grid');
+                        
+                        // Clear the grid while preserving cards in DOM
+                        while (projectsGrid.firstChild) {
+                            projectsGrid.removeChild(projectsGrid.firstChild);
+                        }
+                        
+                        // Add visible cards first
+                        visibleCards.forEach(card => {
+                            // Reset display property for visible cards
+                            card.style.display = 'block';
+                            projectsGrid.appendChild(card);
+                        });
+                        
+                        // Then add hidden cards (they remain hidden but are in the DOM)
+                        hiddenCards.forEach(card => {
+                            // Hide cards with display none
+                            card.style.display = 'none';
+                            projectsGrid.appendChild(card);
+                        });
+                    }, 500); // Match the animation duration
+                });
+                
+                // Add hover effects to filter buttons
+                button.addEventListener('mouseenter', () => {
+                    if (!button.classList.contains('active')) {
+                        gsap.to(button, {
+                            duration: 0.3,
+                            y: -3,
+                            boxShadow: '0 5px 15px rgba(106, 13, 173, 0.3)',
+                            ease: 'power2.out'
+                        });
+                    }
+                });
+                
+                button.addEventListener('mouseleave', () => {
+                    if (!button.classList.contains('active')) {
+                        gsap.to(button, {
+                            duration: 0.3,
+                            y: 0,
+                            boxShadow: 'none',
+                            ease: 'power2.out'
+                        });
+                    }
                 });
             });
 
             // Add smooth scrolling for CTA button
-            const ctaButton = document.querySelector('.cta-button');
+            const ctaButton = document.querySelector('.page-hero .cta-button');
             if (ctaButton) {
                 ctaButton.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetSection = document.querySelector('.projects-gallery');
                     if (targetSection) {
-                        window.scrollTo({
-                            top: targetSection.offsetTop - 100,
-                            behavior: 'smooth'
+                        gsap.to(window, {
+                            duration: 1.5,
+                            scrollTo: { y: targetSection.offsetTop - 100 },
+                            ease: 'power2.inOut'
                         });
                     }
                 });
             }
 
-            // Scroll to top button functionality
+            // Scroll to top button functionality with performance optimization
             const scrollToTopButton = document.getElementById('scrollToTop');
             if (scrollToTopButton) {
-                scrollToTopButton.addEventListener('click', function () {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
+                // Add hover effects for better UX
+                scrollToTopButton.addEventListener('mouseenter', function() {
+                    gsap.to(this, {
+                        duration: 0.3,
+                        scale: 1.1,
+                        y: -5,
+                        boxShadow: '0 8px 25px rgba(106, 13, 173, 0.5)',
+                        ease: 'power2.out'
+                    });
+                });
+                
+                scrollToTopButton.addEventListener('mouseleave', function() {
+                    gsap.to(this, {
+                        duration: 0.3,
+                        scale: 1,
+                        y: 0,
+                        boxShadow: '0 4px 20px rgba(106, 13, 173, 0.3)',
+                        ease: 'power2.out'
+                    });
+                });
+                
+                // Scroll to top functionality with GSAP
+                scrollToTopButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    gsap.to(window, {
+                        duration: 1,
+                        scrollTo: { y: 0, autoKill: false },
+                        ease: 'power2.inOut'
                     });
                 });
             }
 
-            // Testimonials carousel
+            // Testimonials carousel with GSAP - Optimized version
             let currentSlide = 0;
             const slides = document.querySelectorAll('.testimonial-slide');
             const indicators = document.querySelectorAll('.indicator');
             const prevBtn = document.querySelector('.prev-btn');
             const nextBtn = document.querySelector('.next-btn');
+            
+            // Initially hide all slides except the first one
+            slides.forEach((slide, index) => {
+                if (index === 0) {
+                    slide.style.display = 'block';
+                    slide.style.opacity = '1';
+                } else {
+                    slide.style.display = 'none';
+                    slide.style.opacity = '0';
+                }
+            });
 
             function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
+                // If same slide, do nothing
+                if (index === currentSlide) return;
+                
+                // Get current and next slides
+                const currentSlideElement = slides[currentSlide];
+                const nextSlideElement = slides[index];
+                
+                // Fade out current slide
+                gsap.to(currentSlideElement, {
+                    duration: 0.5,
+                    opacity: 0,
+                    onComplete: function() {
+                        // Hide current slide after fade out
+                        currentSlideElement.style.display = 'none';
+                        
+                        // Show next slide
+                        nextSlideElement.style.display = 'block';
+                        
+                        // Fade in next slide
+                        gsap.to(nextSlideElement, {
+                            duration: 0.5,
+                            opacity: 1,
+                            ease: 'power2.out'
+                        });
+                    },
+                    ease: 'power2.inOut'
+                });
+                
+                // Update indicators
                 indicators.forEach(indicator => indicator.classList.remove('active'));
-
-                slides[index].classList.add('active');
                 indicators[index].classList.add('active');
 
                 currentSlide = index;
@@ -558,26 +806,98 @@
             }
 
             // Auto slide change
-            setInterval(nextSlide, 5000);
+            let autoSlideInterval = setInterval(nextSlide, 5000);
+            
+            // Pause auto-slide on hover
+            const testimonialsContainer = document.querySelector('.testimonials-container');
+            if (testimonialsContainer) {
+                testimonialsContainer.addEventListener('mouseenter', () => {
+                    clearInterval(autoSlideInterval);
+                });
+                
+                testimonialsContainer.addEventListener('mouseleave', () => {
+                    autoSlideInterval = setInterval(nextSlide, 5000);
+                });
+            }
 
             // Button event listeners
-            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetAutoSlide();
+                });
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetAutoSlide();
+                });
+            }
 
             // Indicator click events
             indicators.forEach((indicator, index) => {
                 indicator.addEventListener('click', () => {
                     showSlide(index);
+                    resetAutoSlide();
                 });
             });
+            
+            // Reset auto-slide timer
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
 
-            // Animate testimonials line
-            gsap.to('.testimonials-header .line', {
-                scrollTrigger: '.testimonials-header .line',
-                width: '80%',
-                duration: 1,
-                ease: 'power2.out',
-                delay: 0.5
+            // Animate testimonials header and line
+            if (testimonialsHeaderH2) {
+                gsap.to(testimonialsHeaderH2, {
+                    scrollTrigger: {
+                        trigger: '.testimonials-header',
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power2.out'
+                });
+            }
+
+            if (testimonialsHeaderLine) {
+                gsap.to(testimonialsHeaderLine, {
+                    scrollTrigger: {
+                        trigger: '.testimonials-header .line',
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    width: '80%',
+                    duration: 1,
+                    ease: 'power2.out',
+                    delay: 0.5
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        // Mobile menu toggle function
+        function showSecondNav() {
+            const secondNav = document.querySelector(".second-nav");
+            secondNav.classList.toggle("active-second-nav");
+        }
+        
+        // Add event listeners for mobile menu items
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuItems = document.querySelectorAll('.second-nav-li');
+            const menuLinks = ['index.html', 'about.html', 'projects.html', 'Purchase.html', 'Contact.html'];
+            
+            mobileMenuItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    if (menuLinks[index]) {
+                        window.location.href = menuLinks[index];
+                    }
+                });
             });
         });
     </script>

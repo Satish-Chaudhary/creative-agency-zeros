@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
         // Get current page
         const path = window.location.pathname;
         const page = path.split("/").pop().toLowerCase().replace(".html", "");
-        
+
         let typewriterText = "";
         let typewriterElement = null;
         let subtitleElement = null;
@@ -91,7 +91,7 @@ window.addEventListener("load", () => {
         // Typewriter animation for main title
         if (typewriterElement) {
             const originalText = typewriterElement.textContent;
-            
+
             tl.to(typewriterElement, {
                 duration: 2,
                 text: typewriterText,
@@ -100,7 +100,7 @@ window.addEventListener("load", () => {
         } else if (page === "about" && document.querySelector(".about-hero h1")) {
             const titleElement = document.querySelector(".about-hero h1");
             const originalText = titleElement.textContent;
-            
+
             tl.to(titleElement, {
                 duration: 2,
                 text: "Building Stunning Websites",
@@ -109,7 +109,7 @@ window.addEventListener("load", () => {
         } else if (page === "projects" && document.querySelector(".page-hero h1")) {
             const titleElement = document.querySelector(".page-hero h1");
             const originalText = titleElement.textContent;
-            
+
             tl.to(titleElement, {
                 duration: 2,
                 text: "Design That Converts",
@@ -118,7 +118,7 @@ window.addEventListener("load", () => {
         } else if (page === "services" && document.querySelector(".hero-title")) {
             const titleElement = document.querySelector(".hero-title");
             const originalText = titleElement.textContent;
-            
+
             tl.to(titleElement, {
                 duration: 2,
                 text: "Digital Solutions That Work",
@@ -130,7 +130,7 @@ window.addEventListener("load", () => {
         if (subtitleElement) {
             const subtitleText = subtitleElement.textContent;
             subtitleElement.textContent = '';
-            
+
             tl.to(subtitleElement, {
                 duration: 3,
                 text: subtitleText,
@@ -140,7 +140,7 @@ window.addEventListener("load", () => {
             const subtitleElement = document.querySelector(".about-hero p");
             const subtitleText = subtitleElement.textContent;
             subtitleElement.textContent = '';
-            
+
             tl.to(subtitleElement, {
                 duration: 3,
                 text: subtitleText,
@@ -150,7 +150,7 @@ window.addEventListener("load", () => {
             const subtitleElement = document.querySelector(".page-hero p");
             const subtitleText = subtitleElement.textContent;
             subtitleElement.textContent = '';
-            
+
             tl.to(subtitleElement, {
                 duration: 3,
                 text: subtitleText,
@@ -160,7 +160,7 @@ window.addEventListener("load", () => {
             const subtitleElement = document.querySelector(".hero-subtitle");
             const subtitleText = subtitleElement.textContent;
             subtitleElement.textContent = '';
-            
+
             tl.to(subtitleElement, {
                 duration: 3,
                 text: subtitleText,
@@ -222,117 +222,31 @@ window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
     const scrollToTop = document.getElementById("scrollToTop");
 
-    // Throttle scroll events for better performance
-    if (!isScrolling) {
-        window.requestAnimationFrame(() => {
-            if (window.scrollY > 100) {
-                header.classList.add("scrolled");
-                scrollToTop?.classList.add("show");
-            } else {
-                header.classList.remove("scrolled");
-                scrollToTop?.classList.remove("show");
-            }
-            isScrolling = false;
-        });
-        isScrolling = true;
-    }
-
-    // Clear previous timeout
-    clearTimeout(scrollTimeout);
-    
-    // Hide scroll to top button when scrolling to top
-    if (scrollToTop?.classList.contains('show')) {
-        scrollToTop.style.opacity = '1';
-        scrollToTop.style.visibility = 'visible';
-    }
-});
-
-// Optimized scroll to top functionality with throttling and performance improvements
-let ticking = false;
-let lastScrollY = window.scrollY;
-
-window.addEventListener("scroll", () => {
-    lastScrollY = window.scrollY;
-    
-    // Throttle scroll events for better performance
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            const header = document.querySelector("header");
-            const scrollToTop = document.getElementById("scrollToTop");
-            
-            // Update header and scroll to top button visibility
-            if (lastScrollY > 100) {
-                header?.classList.add("scrolled");
-                scrollToTop?.classList.add("show");
-            } else {
-                header?.classList.remove("scrolled");
-                scrollToTop?.classList.remove("show");
-            }
-            
-            ticking = false;
-        });
-        ticking = true;
+    // Update header and scroll to top button visibility
+    if (window.scrollY > 100) {
+        header?.classList.add("scrolled");
+        scrollToTop?.classList.add("show");
+    } else {
+        header?.classList.remove("scrolled");
+        scrollToTop?.classList.remove("show");
     }
 }, { passive: true }); // Passive listener for better scroll performance
 
-// Enhanced scroll to top functionality
-const scrollToTopBtn = document.getElementById("scrollToTop");
-if (scrollToTopBtn) {
-    // Scroll to top with GSAP for smoother animation
-    scrollToTopBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        
-        // Use GSAP ScrollToPlugin for smooth scrolling
-        gsap.to(window, {
-            duration: 1.2,
-            scrollTo: { y: 0 },
-            ease: "power2.out"
-        });
+// Scroll to top functionality
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
-    
-    // Enhanced hover effects with GSAP
-    const hoverTimeline = gsap.timeline({ paused: true });
-    hoverTimeline.to(scrollToTopBtn, {
-        y: -5,
-        scale: 1.1,
-        boxShadow: '0 8px 30px rgba(106, 13, 173, 0.5), 0 0 20px rgba(106, 13, 173, 0.3)',
-        duration: 0.3,
-        ease: 'power2.out'
-    });
-    
-    scrollToTopBtn.addEventListener('mouseenter', () => hoverTimeline.play());
-    scrollToTopBtn.addEventListener('mouseleave', () => hoverTimeline.reverse());
-    
-    // Add subtle attention animation when button is visible
-    const attentionTimeline = gsap.timeline({ 
-        paused: true,
-        repeat: -1,
-        repeatDelay: 3,
-        yoyo: true
-    });
-    
-    attentionTimeline.to(scrollToTopBtn, {
-        scale: 1.05,
-        duration: 0.5,
-        ease: "power1.inOut"
-    });
-    
-    // Start attention animation when button becomes visible
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                if (scrollToTopBtn.classList.contains('show')) {
-                    attentionTimeline.play();
-                } else {
-                    attentionTimeline.pause();
-                }
-            }
-        });
-    });
-    
-    observer.observe(scrollToTopBtn, { attributes: true });
 }
 
+// Add event listener to scroll to top button
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener("click", scrollToTop);
+    }
+});
 // Currency toggle functionality
 document
     .getElementById("currencyToggle")
@@ -401,7 +315,7 @@ document.querySelectorAll(".pricing-card").forEach((card) => {
             ease: "power2.out",
         });
     });
-    
+
     // Add hover effects to CTA buttons within pricing cards
     const ctaButton = card.querySelector('.cta-button');
     if (ctaButton) {
@@ -412,7 +326,7 @@ document.querySelectorAll(".pricing-card").forEach((card) => {
                 duration: 0.3,
                 ease: 'power2.out'
             });
-            
+
             // Animate the arrow icon if it exists
             const arrowIcon = ctaButton.querySelector('i');
             if (arrowIcon) {
@@ -423,7 +337,7 @@ document.querySelectorAll(".pricing-card").forEach((card) => {
                 });
             }
         });
-        
+
         ctaButton.addEventListener('mouseleave', () => {
             gsap.to(ctaButton, {
                 y: 0,
@@ -431,7 +345,7 @@ document.querySelectorAll(".pricing-card").forEach((card) => {
                 duration: 0.3,
                 ease: 'power2.out'
             });
-            
+
             // Reset the arrow icon if it exists
             const arrowIcon = ctaButton.querySelector('i');
             if (arrowIcon) {
@@ -454,7 +368,7 @@ document.querySelectorAll(".web-cta-button").forEach((button) => {
             duration: 0.3,
             ease: "power2.out"
         });
-        
+
         // Animate the arrow icon
         const arrowIcon = button.querySelector('i');
         if (arrowIcon) {
@@ -473,7 +387,7 @@ document.querySelectorAll(".web-cta-button").forEach((button) => {
             duration: 0.3,
             ease: "power2.out"
         });
-        
+
         // Reset the arrow icon
         const arrowIcon = button.querySelector('i');
         if (arrowIcon) {
@@ -507,20 +421,20 @@ let webTimerInterval;
 function updateWebTimer() {
     const now = Date.now();
     let distance = timerEnd - now;
-    
+
     if (distance < 0) {
         // Timer has expired
         distance = 0;
-        
+
         // Clear interval
         clearInterval(webTimerInterval);
-        
+
         // Set all timer values to 00
         document.getElementById("web-days").textContent = "00";
         document.getElementById("web-hours").textContent = "00";
         document.getElementById("web-minutes").textContent = "00";
         document.getElementById("web-seconds").textContent = "00";
-        
+
         // Auto-hide the counter section after a short delay
         setTimeout(() => {
             const offerCard = document.querySelector(".web-offer-card");
@@ -532,7 +446,7 @@ function updateWebTimer() {
                     ease: "power2.in",
                     onComplete: () => {
                         offerCard.style.display = "none";
-                        
+
                         // Center hero content when offer is hidden
                         const heroContent = document.getElementById("hero-content");
                         if (heroContent) {
@@ -542,16 +456,16 @@ function updateWebTimer() {
                 });
             }
         }, 2000);
-        
+
         return;
     }
-    
+
     // Calculate time units
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+
     // Update timer values with fade/flip transition effect
     updateTimerValue("web-days", days.toString().padStart(2, "0"));
     updateTimerValue("web-hours", hours.toString().padStart(2, "0"));
@@ -564,7 +478,7 @@ function updateTimerValue(elementId, newValue) {
     const element = document.getElementById(elementId);
     if (element) {
         const currentValue = element.textContent;
-        
+
         // Only animate if value has changed
         if (currentValue !== newValue) {
             // Fade out current value
@@ -576,7 +490,7 @@ function updateTimerValue(elementId, newValue) {
                 onComplete: () => {
                     // Update text content
                     element.textContent = newValue;
-                    
+
                     // Flip in new value
                     gsap.fromTo(element,
                         { opacity: 0, rotationX: 90 },
@@ -597,16 +511,16 @@ const marqueeElem = document.getElementById("marquee");
 if (marqueeElem) {
     // Store original content
     const originalContent = marqueeElem.innerHTML;
-    
+
     // Duplicate content for seamless loop
     marqueeElem.innerHTML += marqueeElem.innerHTML;
     marqueeElem.style.display = "flex";
     marqueeElem.style.gap = "32px";
     marqueeElem.parentElement.style.overflow = "hidden";
-    
+
     // Set initial position to the right
     gsap.set(marqueeElem, { x: 0 });
-    
+
     // Create the animation
     let marqueeAnimation = gsap.to(marqueeElem, {
         x: -marqueeElem.scrollWidth / 2,
@@ -614,17 +528,17 @@ if (marqueeElem) {
         ease: "linear",
         repeat: -1,
         immediateRender: false,
-        onRepeat: function() {
+        onRepeat: function () {
             // Reset position to create seamless loop
             gsap.set(marqueeElem, { x: 0 });
         }
     });
-    
+
     // Pause on hover
     marqueeElem.parentElement.addEventListener('mouseenter', () => {
         marqueeAnimation.pause();
     });
-    
+
     // Resume on mouse leave
     marqueeElem.parentElement.addEventListener('mouseleave', () => {
         marqueeAnimation.resume();
@@ -788,7 +702,7 @@ gsap.utils.toArray(".team-member").forEach((member, i) => {
         ease: "power3.out",
         delay: i * 0.1,
     });
-    
+
     // Add hover effects
     member.addEventListener('mouseenter', () => {
         gsap.to(member, {
@@ -798,7 +712,7 @@ gsap.utils.toArray(".team-member").forEach((member, i) => {
             duration: 0.3,
             ease: 'power2.out'
         });
-        
+
         // Animate social links
         const socialLinks = member.querySelectorAll('.social-link');
         socialLinks.forEach((link, index) => {
@@ -810,7 +724,7 @@ gsap.utils.toArray(".team-member").forEach((member, i) => {
             });
         });
     });
-    
+
     member.addEventListener('mouseleave', () => {
         gsap.to(member, {
             y: 0,
@@ -819,7 +733,7 @@ gsap.utils.toArray(".team-member").forEach((member, i) => {
             duration: 0.3,
             ease: 'power2.out'
         });
-        
+
         // Reset social links
         const socialLinks = member.querySelectorAll('.social-link');
         socialLinks.forEach((link) => {
@@ -878,7 +792,7 @@ document.querySelectorAll(".feature-card").forEach((card) => {
             duration: 0.3,
             ease: "power2.out",
         });
-        
+
         // Animate feature icon
         const icon = card.querySelector(".feature-icon");
         if (icon) {
@@ -889,7 +803,7 @@ document.querySelectorAll(".feature-card").forEach((card) => {
                 ease: "power2.out",
             });
         }
-        
+
         // Animate feature number
         const number = card.querySelector(".feature-number");
         if (number) {
@@ -909,7 +823,7 @@ document.querySelectorAll(".feature-card").forEach((card) => {
             duration: 0.3,
             ease: "power2.out",
         });
-        
+
         // Reset feature icon
         const icon = card.querySelector(".feature-icon");
         if (icon) {
@@ -920,7 +834,7 @@ document.querySelectorAll(".feature-card").forEach((card) => {
                 ease: "power2.out",
             });
         }
-        
+
         // Reset feature number
         const number = card.querySelector(".feature-number");
         if (number) {
@@ -1102,7 +1016,7 @@ document.querySelectorAll(".service-card").forEach((card) => {
             boxShadow: "0 20px 40px rgba(106, 13, 173, 0.4)",
             duration: 0.3,
         });
-        
+
         // Animate the icon
         const icon = card.querySelector(".service-icon");
         if (icon) {
@@ -1124,7 +1038,7 @@ document.querySelectorAll(".service-card").forEach((card) => {
             duration: 0.5,
             ease: "power2.out",
         });
-        
+
         // Reset the icon
         const icon = card.querySelector(".service-icon");
         if (icon) {
@@ -1291,7 +1205,7 @@ const discoverWorkBtn = document.getElementById('discover-work-btn');
 if (discoverWorkBtn) {
     // Add pulse animation
     discoverWorkBtn.classList.add('pulse');
-    
+
     discoverWorkBtn.addEventListener('mouseenter', () => {
         gsap.to(discoverWorkBtn, {
             y: -5,
@@ -1299,7 +1213,7 @@ if (discoverWorkBtn) {
             duration: 0.3,
             ease: 'power2.out'
         });
-        
+
         // Animate the arrow icon
         const arrowIcon = discoverWorkBtn.querySelector('i');
         if (arrowIcon) {
@@ -1310,7 +1224,7 @@ if (discoverWorkBtn) {
             });
         }
     });
-    
+
     discoverWorkBtn.addEventListener('mouseleave', () => {
         gsap.to(discoverWorkBtn, {
             y: 0,
@@ -1318,7 +1232,7 @@ if (discoverWorkBtn) {
             duration: 0.3,
             ease: 'power2.out'
         });
-        
+
         // Reset the arrow icon
         const arrowIcon = discoverWorkBtn.querySelector('i');
         if (arrowIcon) {
@@ -1360,7 +1274,7 @@ document.querySelectorAll('.project-visual').forEach(visual => {
             ease: 'power2.out'
         });
     });
-    
+
     // Add click effect
     visual.addEventListener('click', () => {
         gsap.to(visual, {
@@ -1498,7 +1412,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
-        
+
         // Add hover effects to filter buttons
         button.addEventListener('mouseenter', () => {
             if (!button.classList.contains('active')) {
@@ -1510,7 +1424,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         });
-        
+
         button.addEventListener('mouseleave', () => {
             if (!button.classList.contains('active')) {
                 gsap.to(button, {
@@ -1538,7 +1452,7 @@ if (prevControl) {
             ease: 'power2.out'
         });
     });
-    
+
     prevControl.addEventListener('mouseleave', () => {
         gsap.to(prevControl, {
             scale: 1,
@@ -1560,7 +1474,7 @@ if (nextControl) {
             ease: 'power2.out'
         });
     });
-    
+
     nextControl.addEventListener('mouseleave', () => {
         gsap.to(nextControl, {
             scale: 1,
@@ -1621,7 +1535,7 @@ document
 const submitBtn = document.querySelector('.submit-btn');
 if (submitBtn) {
     submitBtn.classList.add('pulse');
-    
+
     submitBtn.addEventListener('mouseenter', () => {
         gsap.to(submitBtn, {
             y: -3,
@@ -1629,18 +1543,18 @@ if (submitBtn) {
             duration: 0.3,
             ease: 'power2.out'
         });
-        
+
         // Animate elements
         const span = submitBtn.querySelector('span');
         const icon = submitBtn.querySelector('i');
-        
+
         if (span && icon) {
             gsap.to(span, {
                 x: -5,
                 duration: 0.3,
                 ease: 'power2.out'
             });
-            
+
             gsap.to(icon, {
                 x: 5,
                 duration: 0.3,
@@ -1648,7 +1562,7 @@ if (submitBtn) {
             });
         }
     });
-    
+
     submitBtn.addEventListener('mouseleave', () => {
         gsap.to(submitBtn, {
             y: 0,
@@ -1656,18 +1570,18 @@ if (submitBtn) {
             duration: 0.3,
             ease: 'power2.out'
         });
-        
+
         // Reset elements
         const span = submitBtn.querySelector('span');
         const icon = submitBtn.querySelector('i');
-        
+
         if (span && icon) {
             gsap.to(span, {
                 x: 0,
                 duration: 0.3,
                 ease: 'power2.out'
             });
-            
+
             gsap.to(icon, {
                 x: 0,
                 duration: 0.3,
@@ -1800,7 +1714,7 @@ document.addEventListener("DOMContentLoaded", () => {
             moveToCard(track, currentCard, nextCard);
             currentIndex = (currentIndex + 1) % cards.length;
         });
-        
+
         // Add hover effects
         nextButton.addEventListener('mouseenter', () => {
             gsap.to(nextButton, {
@@ -1811,7 +1725,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: 'power2.out'
             });
         });
-        
+
         nextButton.addEventListener('mouseleave', () => {
             gsap.to(nextButton, {
                 scale: 1,
@@ -1831,7 +1745,7 @@ document.addEventListener("DOMContentLoaded", () => {
             moveToCard(track, currentCard, prevCard);
             currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         });
-        
+
         // Add hover effects
         prevButton.addEventListener('mouseenter', () => {
             gsap.to(prevButton, {
@@ -1842,7 +1756,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: 'power2.out'
             });
         });
-        
+
         prevButton.addEventListener('mouseleave', () => {
             gsap.to(prevButton, {
                 scale: 1,
@@ -1872,7 +1786,7 @@ document.querySelectorAll('.project-btn').forEach(button => {
             duration: 0.3,
             ease: 'power2.out'
         });
-        
+
         // Animate the icon
         const icon = button.querySelector('i');
         if (icon) {
@@ -1883,7 +1797,7 @@ document.querySelectorAll('.project-btn').forEach(button => {
             });
         }
     });
-    
+
     button.addEventListener('mouseleave', () => {
         gsap.to(button, {
             y: 0,
@@ -1891,7 +1805,7 @@ document.querySelectorAll('.project-btn').forEach(button => {
             duration: 0.3,
             ease: 'power2.out'
         });
-        
+
         // Reset the icon
         const icon = button.querySelector('i');
         if (icon) {
@@ -1902,7 +1816,7 @@ document.querySelectorAll('.project-btn').forEach(button => {
             });
         }
     });
-    
+
     // Add click effect
     button.addEventListener('click', () => {
         gsap.to(button, {
