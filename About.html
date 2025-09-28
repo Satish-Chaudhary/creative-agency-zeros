@@ -277,21 +277,20 @@
 
       /* About Page Specific Sections */
       .about-hero {
-        height: 95vh;
-        width: 100vw;
-        display: grid;
-        place-items: center;
-        padding-top: 150px;
-        padding-bottom: 120px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
         text-align: center;
+        padding: 0 20px;
+        position: relative;
         background: linear-gradient(
             135deg,
-            rgba(18, 18, 18, 0.6),
-            rgba(26, 26, 26, 0.6)
+            rgba(18, 18, 18, 0.4),
+            rgba(26, 26, 26, 0.9)
           ),
-          url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+          url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop")
             no-repeat center center/cover;
-        position: relative;
         overflow: hidden;
       }
 
@@ -302,30 +301,24 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(
-          45deg,
-          rgba(106, 13, 173, 0.4),
-          rgba(86, 40, 238, 0.2)
-        );
         animation: gradientShift 8s ease-in-out infinite;
         pointer-events: none;
       }
-
       @keyframes gradientShift {
         0%,
         100% {
           background: linear-gradient(
             45deg,
-            rgba(106, 13, 173, 0.2),
-            rgba(86, 40, 238, 0.2)
+            rgba(106, 13, 173, 0.1),
+            rgba(86, 40, 238, 0.1)
           );
         }
 
         50% {
           background: linear-gradient(
             45deg,
-            rgba(86, 40, 238, 0.2),
-            rgba(106, 13, 173, 0.2)
+            rgba(86, 40, 238, 0.1),
+            rgba(106, 13, 173, 0.1)
           );
         }
       }
@@ -1538,8 +1531,8 @@
       <!-- About Hero Section -->
       <section class="about-hero">
         <div class="container">
-          <h1 id="typewriter-text">Transforming Ideas Into Digital Reality</h1>
-          <p>
+          <h1 id="typewriter-text">Building Stunning Websites</h1>
+          <p id="typewriter-subtitle">
             We are a team of passionate creators, thinkers, and innovators
             dedicated to crafting digital experiences that make an impact. With
             over 3 years of experience, we've helped businesses transform their
