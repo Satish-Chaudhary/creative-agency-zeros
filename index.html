@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Agency - Zeros</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -57,18 +57,22 @@
           <a href="Contact.html" class="nav-link"><span>Contact</span></a>
         </li>
       </ul>
-      <img src="logo.svg" alt="hamburger" width="30px" height="30px" onclick="showSecondNav()" id="hamburger" />
+      <div id="hamburger" onclick="showSecondNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <main>
     <ul class="second-nav">
-      <li class="second-nav-li">Home</li>
-      <li class="second-nav-li">About</li>
-      <li class="second-nav-li">Services</li>
-      <li class="second-nav-li">Project</li>
-      <li class="second-nav-li">Contact</li>
+      <li class="second-nav-li"><a href="index.html">Home</a></li>
+      <li class="second-nav-li"><a href="about.html">About</a></li>
+      <li class="second-nav-li"><a href="services.html">Services</a></li>
+      <li class="second-nav-li"><a href="projects.html">Project</a></li>
+      <li class="second-nav-li"><a href="Contact.html">Contact</a></li>
     </ul>
     <section class="hero">
       <div id="particles-js"></div>
@@ -266,7 +270,7 @@
               <div class="floating-element element-2"></div>
               <div class="floating-element element-3"></div>
             </div>
-            <img src="project1.png" alt="Our Creative Team" />
+            <img src="./assets/images/project1.png" alt="Our Creative Team" />
             <div class="image-overlay">
               <div class="overlay-content">
                 <div class="team-stat">
@@ -593,33 +597,65 @@
           <!-- Project 1 -->
           <div class="project-item active" data-category="ecommerce web">
             <div class="project-visual" onclick="openProjectModal('project1')">
-              <img src="./project3.png" alt="E-Commerce Platform" class="project-screenshot" />
+              <img src="./assets/images/dashboard.png" alt="Dashboard" class="project-screenshot" />
             </div>
+
             <div class="project-details">
-              <span class="project-tag">E-Commerce</span>
-              <h3 class="project-name">Premium Fashion Store</h3>
+              <span class="project-tag">Healthcare Dashboard</span>
+              <h3 class="project-name">Patient Health Monitoring System</h3>
               <p class="project-description">
-                A fully responsive e-commerce platform built for a luxury
-                fashion brand. Features include advanced product filtering,
-                secure payment processing, inventory management, and
-                personalized recommendations.
+                A comprehensive healthcare dashboard designed for medical professionals to monitor patient vitals, track treatment progress, and manage appointments. This system integrates real-time data from multiple sources to provide actionable insights and improve patient outcomes.
               </p>
               <ul class="project-highlights">
                 <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Advanced product search
-                  & filtering
+                  <i class="fas fa-check-circle"></i> Real-time patient vital monitoring
                 </li>
                 <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Secure payment gateway
-                  integration
+                  <i class="fas fa-check-circle"></i> Treatment progress tracking
                 </li>
                 <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Real-time inventory
-                  management
+                  <i class="fas fa-check-circle"></i> Integrated appointment management
                 </li>
                 <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Mobile-first responsive
-                  design
+                  <i class="fas fa-check-circle"></i> Multi-source data visualization
+                </li>
+              </ul>
+              <div class="project-tech-stack">
+                <span class="tech-item">React</span>
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">MongoDB</span>
+                <span class="tech-item">D3.js</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="project-btn view-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="project-btn code-btn">View Code <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-item" data-category="dashboard web">
+            <div class="project-visual" onclick="openProjectModal('project2')">
+              <img src="./assets/images/fashion.jpg" alt="Corporate Dashboard" class="project-screenshot" />
+            </div>
+            <div class="project-details">
+              <span class="project-tag">Fashion Store</span>
+              <h3 class="project-name">Elegant Fashion E-commerce Platform</h3>
+              <p class="project-description">
+                A sophisticated e-commerce solution designed specifically for luxury fashion brands. This platform combines stunning visual aesthetics with seamless functionality to showcase collections, manage inventory, and provide an exceptional shopping experience that reflects the brand's premium identity.
+              </p>
+              <ul class="project-highlights">
+                <li class="project-highlight">
+                  <i class="fas fa-check-circle"></i> High-resolution product gallery with 360° views
+                </li>
+                <li class="project-highlight">
+                  <i class="fas fa-check-circle"></i> Advanced filtering and search capabilities
+                </li>
+                <li class="project-highlight">
+                  <i class="fas fa-check-circle"></i> Personalized customer recommendations
+                </li>
+                <li class="project-highlight">
+                  <i class="fas fa-check-circle"></i> Secure payment gateway integration
                 </li>
               </ul>
               <div class="project-tech-stack">
@@ -635,58 +671,13 @@
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-item" data-category="dashboard web">
-            <div class="project-visual" onclick="openProjectModal('project2')">
-              <img src="./project2.png" alt="Corporate Dashboard" class="project-screenshot" />
-            </div>
-            <div class="project-details">
-              <span class="project-tag">Dashboard</span>
-              <h3 class="project-name">Enterprise Analytics Dashboard</h3>
-              <p class="project-description">
-                A comprehensive business intelligence dashboard for enterprise
-                clients. Provides real-time data visualization, custom
-                reporting, and predictive analytics to drive business
-                decisions.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Real-time data
-                  visualization
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Customizable reporting
-                  tools
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Multi-user role
-                  management
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Predictive analytics
-                  engine
-                </li>
-              </ul>
-              <div class="project-tech-stack">
-                <span class="tech-item">Vue.js</span>
-                <span class="tech-item">Python</span>
-                <span class="tech-item">PostgreSQL</span>
-                <span class="tech-item">D3.js</span>
-              </div>
-              <div class="project-actions">
-                <a href="#" class="project-btn view-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
-                <a href="#" class="project-btn code-btn">View Code <i class="fab fa-github"></i></a>
-              </div>
-            </div>
-          </div>
-
           <!-- Project 3 -->
           <div class="project-item" data-category="mobile">
             <div class="project-visual" onclick="openProjectModal('project3')">
-              <img src="./project1.png" alt="Mobile App" class="project-screenshot" />
+              <img src="./assets/images/fitness.png" alt="Mobile App" class="project-screenshot" />
             </div>
             <div class="project-details">
-              <span class="project-tag">Mobile App</span>
+              <span class="project-tag">Fitness Tracker</span>
               <h3 class="project-name">Fitness Tracker Application</h3>
               <p class="project-description">
                 A cross-platform mobile application for fitness enthusiasts.
@@ -980,25 +971,25 @@
         <div class="team-member">
           <div class="team-card">
             <div class="member-image">
-              <img src="./project3.png" alt="Alex Johnson" />
+              <img src="./assets/images/avtar.jpeg" alt="Anuj Lumar" />
             </div>
             <div class="member-info">
-              <h2>Alex Johnson</h2>
+              <h2>ANuj Kumar</h2>
               <h3>Founder & CEO</h3>
               <p class="member-description">
-                Innovative leader with a passion for technology and design. 8+
+                Innovative leader with a passion for technology and design. 2+
                 years of experience in digital transformation.
               </p>
               <div class="team-socials">
-                <a href="https://github.com/alexjohnson" target="_blank" rel="noopener noreferrer" class="social-link"
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link"
                   title="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/alexjohnson" target="_blank" rel="noopener noreferrer"
+                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer"
                   class="social-link" title="LinkedIn">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://twitter.com/alexjohnson" target="_blank" rel="noopener noreferrer" class="social-link"
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link"
                   title="Twitter">
                   <i class="fab fa-instagram"></i>
                 </a>
@@ -1011,25 +1002,25 @@
         <div class="team-member">
           <div class="team-card">
             <div class="member-image">
-              <img src="./project2.png" alt="Sarah Chen" />
+              <img src="./assets/images/avtar2.jpeg" alt="Satish chaudhary" />
             </div>
             <div class="member-info">
-              <h2>Sarah Chen</h2>
+              <h2>Satish Chaudhary</h2>
               <h3>Frontend Developer</h3>
               <p class="member-description">
                 Builds sleek, responsive interfaces with modern frameworks.
                 Expert in React and Vue.js.
               </p>
               <div class="team-socials">
-                <a href="https://github.com/sarahchen" target="_blank" rel="noopener noreferrer" class="social-link"
+                <a href="https://s7h6m3.csb.app/" target="_blank" rel="noopener noreferrer" class="social-link"
                   title="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/sarahchen" target="_blank" rel="noopener noreferrer"
+                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer"
                   class="social-link" title="LinkedIn">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://dribbble.com/sarahchen" target="_blank" rel="noopener noreferrer" class="social-link"
+                <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer" class="social-link"
                   title="Dribbble">
                   <i class="fab fa-instagram"></i>
                 </a>
@@ -1042,25 +1033,25 @@
         <div class="team-member">
           <div class="team-card">
             <div class="member-image">
-              <img src="./project1.png" alt="James Lee" />
+              <img src="./assets/images/avtar3.jpg" alt="Sahil Singh" />
             </div>
             <div class="member-info">
-              <h2>James Lee</h2>
+              <h2>Sahil Singh</h2>
               <h3>Backend Developer</h3>
               <p class="member-description">
                 Architects robust APIs and scalable server-side systems.
                 Specializes in Node.js and Python.
               </p>
               <div class="team-socials">
-                <a href="https://github.com/jameslee" target="_blank" rel="noopener noreferrer" class="social-link"
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link"
                   title="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/jameslee" target="_blank" rel="noopener noreferrer" class="social-link"
+                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
                   title="LinkedIn">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://stackoverflow.com/users/jameslee" target="_blank" rel="noopener noreferrer"
+                <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer"
                   class="social-link" title="Stack Overflow">
                   <i class="fab fa-instagram"></i>
                 </a>
@@ -1073,25 +1064,25 @@
         <div class="team-member">
           <div class="team-card">
             <div class="member-image">
-              <img src="./project3.png" alt="Emily Rodriguez" />
+              <img src="./assets/images/avtar4.jpeg" alt="Arya Gupta" />
             </div>
             <div class="member-info">
-              <h2>Emily Rodriguez</h2>
+              <h2>Arya Gupta</h2>
               <h3>UI/UX Designer</h3>
               <p class="member-description">
                 Designs intuitive experiences that users love. Expert in user
                 research and prototyping.
               </p>
               <div class="team-socials">
-                <a href="https://github.com/emilyrodriguez" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
                   class="social-link" title="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/emilyrodriguez" target="_blank" rel="noopener noreferrer"
+                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer"
                   class="social-link" title="LinkedIn">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://behance.net/emilyrodriguez" target="_blank" rel="noopener noreferrer"
+                <a href="https://behance.net/" target="_blank" rel="noopener noreferrer"
                   class="social-link" title="Behance">
                   <i class="fab fa-instagram"></i>
                 </a>
@@ -1201,7 +1192,7 @@
   <button id="scrollToTop" class="scroll-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-  <script src="script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
 </body>
 

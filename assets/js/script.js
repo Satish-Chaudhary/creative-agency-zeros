@@ -205,9 +205,35 @@ window.addEventListener("load", () => {
 //show second nav on clicking hamburger icon
 function showSecondNav() {
     let secondNav = document.querySelector(".second-nav");
-    console.log("gel");
+    let hamburger = document.getElementById("hamburger");
+    
     secondNav.classList.toggle("active-second-nav");
+    hamburger.classList.toggle("active");
 }
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const secondNav = document.querySelector('.second-nav');
+    const hamburger = document.getElementById('hamburger');
+    
+    if (secondNav && secondNav.classList.contains('active-second-nav') && 
+        !secondNav.contains(event.target) && 
+        event.target !== hamburger) {
+        secondNav.classList.remove('active-second-nav');
+        hamburger.classList.remove('active');
+    }
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.second-nav-li a').forEach(link => {
+    link.addEventListener('click', () => {
+        const secondNav = document.querySelector('.second-nav');
+        const hamburger = document.getElementById('hamburger');
+        
+        secondNav.classList.remove('active-second-nav');
+        hamburger.classList.remove('active');
+    });
+});
 
 // Add hover effect to nav links
 document.querySelectorAll(".nav-link").forEach((link) => {

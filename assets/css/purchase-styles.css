@@ -1,5 +1,151 @@
 /* ================== New Pricing Page Sections ================== */
 
+/* Modern Mobile Navigation */
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+#hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+}
+
+#hamburger span:nth-child(1) {
+    top: 0;
+}
+
+#hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hamburger span:nth-child(3) {
+    bottom: 0;
+}
+
+#hamburger.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+#hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+.second-nav {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    top: 80px;
+    width: 90%;
+    max-width: 400px;
+    height: max-content;
+    position: fixed;
+    z-index: 9999;
+    background: rgba(30, 30, 30, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(106, 13, 173, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.second-nav.active-second-nav {
+    display: flex;
+    animation: slideDownMobile 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes slideDownMobile {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.second-nav-li {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    font-size: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.second-nav-li:last-child {
+    border-bottom: none;
+}
+
+.second-nav-li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(106, 13, 173, 0.2), transparent);
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.second-nav-li:hover::before {
+    width: 100%;
+}
+
+.second-nav-li:hover {
+    color: #6a0dad;
+    transform: translateX(5px);
+}
+
+.second-nav-li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 18px 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #hamburger {
+        display: inline-block;
+    }
+
+    #first-nav {
+        display: none;
+    }
+}
+
 /* Currency Toggle Section */
 .pricing-toggle-section {
     padding: 20px 0;
@@ -119,10 +265,11 @@ input:checked + .slider:before {
     font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #ffffff, #b0b0b0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #6a0dad;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #6a0dad;
+    background-clip: unset;
 }
 
 .features-comparison-section .section-header p {
@@ -200,6 +347,87 @@ input:checked + .slider:before {
 .table-row .plan-feature i.fa-times {
     color: #ff6b6b;
     font-size: 1.2rem;
+}
+
+/* Responsive styles for comparison table */
+@media (max-width: 768px) {
+    .comparison-table {
+        border-radius: 15px;
+    }
+    
+    .table-header {
+        grid-template-columns: 2fr 1fr 1fr;
+        font-size: 0.9rem;
+    }
+    
+    .table-header .plan-name:last-child {
+        display: none;
+    }
+    
+    .table-row {
+        grid-template-columns: 2fr 1fr 1fr;
+        font-size: 0.9rem;
+    }
+    
+    .table-row .plan-feature:last-child {
+        display: none;
+    }
+    
+    .table-header .feature-name,
+    .table-row .feature-name,
+    .table-header .plan-name,
+    .table-row .plan-feature {
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-comparison-section {
+        padding: 60px 0;
+    }
+    
+    .features-comparison-section .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .features-comparison-section .section-header p {
+        font-size: 1rem;
+    }
+    
+    .comparison-table {
+        border-radius: 10px;
+    }
+    
+    .table-header {
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 0.7rem;
+    }
+    
+    .table-header .plan-name:last-child {
+        display: none;
+    }
+    
+    .table-row {
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 0.7rem;
+    }
+    
+    .table-row .plan-feature:last-child {
+        display: none;
+    }
+    
+    .table-header .feature-name,
+    .table-row .feature-name,
+    .table-header .plan-name,
+    .table-row .plan-feature {
+        padding: 10px 6px;
+    }
+    
+    /* Show only important features on very small screens */
+    .table-row.important-feature {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 /* Testimonials Section */

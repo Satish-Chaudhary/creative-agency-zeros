@@ -7,7 +7,8 @@
   <title>Creative Agency - Zeros</title>
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/purchase-styles.css">
   <link rel="stylesheet" href="purchase-styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
@@ -36,24 +37,18 @@
           <a href="Contact.html" class="nav-link"><span>Contact</span></a>
         </li>
       </ul>
-      <img src="logo.svg" alt="hamburger" width="30px" height="30px" onclick="showSecondNav()" id="hamburger" />
+      <div id="hamburger" onclick="showSecondNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
     <ul class="second-nav">
-      <li class="second-nav-li">
-        <a href="index.html" class="nav-link"><span>Home</span></a>
-      </li>
-      <li class="second-nav-li">
-        <a href="about.html" class="nav-link"><span>About</span></a>
-      </li>
-      <li class="second-nav-li">
-        <a href="services.html" class="nav-link"><span>Services</span></a>
-      </li>
-      <li class="second-nav-li">
-        <a href="projects.html" class="nav-link"><span>Projects</span></a>
-      </li>
-      <li class="second-nav-li">
-        <a href="Contact.html" class="nav-link"><span>Contact</span></a>
-      </li>
+      <li class="second-nav-li"><a href="index.html">Home</a></li>
+      <li class="second-nav-li"><a href="about.html">About</a></li>
+      <li class="second-nav-li"><a href="services.html">Services</a></li>
+      <li class="second-nav-li"><a href="projects.html">Project</a></li>
+      <li class="second-nav-li"><a href="Contact.html">Contact</a></li>
     </ul>
   </header>
 
@@ -164,13 +159,13 @@
             <div class="plan-name">Professional</div>
             <div class="plan-name">Enterprise</div>
           </div>
-          <div class="table-row">
+          <div class="table-row important-feature">
             <div class="feature-name">Websites</div>
             <div class="plan-feature">1</div>
             <div class="plan-feature">5</div>
             <div class="plan-feature">Unlimited</div>
           </div>
-          <div class="table-row">
+          <div class="table-row important-feature">
             <div class="feature-name">Storage</div>
             <div class="plan-feature">10 GB</div>
             <div class="plan-feature">50 GB</div>
@@ -182,7 +177,7 @@
             <div class="plan-feature">Unlimited</div>
             <div class="plan-feature">Unlimited</div>
           </div>
-          <div class="table-row">
+          <div class="table-row important-feature">
             <div class="feature-name">SEO Tools</div>
             <div class="plan-feature"><i class="fas fa-check"></i></div>
             <div class="plan-feature"><i class="fas fa-check"></i></div>
@@ -194,13 +189,13 @@
             <div class="plan-feature">25</div>
             <div class="plan-feature">Unlimited</div>
           </div>
-          <div class="table-row">
+          <div class="table-row important-feature">
             <div class="feature-name">SSL Certificate</div>
             <div class="plan-feature"><i class="fas fa-check"></i></div>
             <div class="plan-feature"><i class="fas fa-check"></i></div>
             <div class="plan-feature"><i class="fas fa-check"></i></div>
           </div>
-          <div class="table-row">
+          <div class="table-row important-feature">
             <div class="feature-name">24/7 Support</div>
             <div class="plan-feature"><i class="fas fa-times"></i></div>
             <div class="plan-feature"><i class="fas fa-check"></i></div>
@@ -409,144 +404,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    // FAQ Accordion
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const faqItem = question.parentElement;
-        const isActive = faqItem.classList.contains('active');
-        
-        // Close all FAQ items
-        document.querySelectorAll('.faq-item').forEach(item => {
-          item.classList.remove('active');
-        });
-        
-        // Open clicked item if it wasn't active
-        if (!isActive) {
-          faqItem.classList.add('active');
-        }
-      });
-    });
-
-    // Currency toggle functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const currencyToggle = document.getElementById('currencyToggle');
-      
-      if (currencyToggle) {
-        currencyToggle.addEventListener('change', function() {
-          const inrPrices = document.querySelectorAll('.inr-price');
-          const usdPrices = document.querySelectorAll('.usd-price');
-          const inrLabels = document.querySelectorAll('.inr-label');
-          const usdLabels = document.querySelectorAll('.usd-label');
-
-          if (this.checked) {
-            // Show USD prices
-            inrPrices.forEach(price => price.style.display = 'none');
-            usdPrices.forEach(price => price.style.display = 'inline');
-            inrLabels.forEach(label => label.classList.remove('active'));
-            usdLabels.forEach(label => label.classList.add('active'));
-          } else {
-            // Show INR prices
-            inrPrices.forEach(price => price.style.display = 'inline');
-            usdPrices.forEach(price => price.style.display = 'none');
-            inrLabels.forEach(label => label.classList.add('active'));
-            usdLabels.forEach(label => label.classList.remove('active'));
-          }
-        });
-      }
-
-      // Set initial active state for INR labels
-      document.querySelectorAll('.inr-label').forEach(label => {
-        label.classList.add('active');
-      });
-    });
-
-    // Initialize GSAP animations
-    document.addEventListener('DOMContentLoaded', function() {
-      // Animate pricing cards on scroll
-      gsap.utils.toArray('.pricing-card').forEach((card, i) => {
-        gsap.from(card, {
-          scrollTrigger: {
-            trigger: card,
-            start: 'top bottom-=100',
-            toggleActions: 'play none none reverse'
-          },
-          y: 100,
-          opacity: 0,
-          duration: 0.8,
-          delay: i * 0.2
-        });
-      });
-
-      // Animate section headers
-      gsap.utils.toArray('.section-header').forEach(header => {
-        gsap.from(header, {
-          scrollTrigger: {
-            trigger: header,
-            start: 'top bottom-=100',
-            toggleActions: 'play none none reverse'
-          },
-          y: 50,
-          opacity: 0,
-          duration: 0.8
-        });
-      });
-
-      // Animate comparison table
-      gsap.from('.comparison-table', {
-        scrollTrigger: {
-          trigger: '.comparison-table',
-          start: 'top bottom-=100',
-          toggleActions: 'play none none reverse'
-        },
-        y: 100,
-        opacity: 0,
-        duration: 1
-      });
-
-      // Animate testimonial cards
-      gsap.utils.toArray('.testimonial-card').forEach((card, i) => {
-        gsap.from(card, {
-          scrollTrigger: {
-            trigger: card,
-            start: 'top bottom-=100',
-            toggleActions: 'play none none reverse'
-          },
-          y: 100,
-          opacity: 0,
-          duration: 0.8,
-          delay: i * 0.2
-        });
-      });
-
-      // Animate FAQ items
-      gsap.utils.toArray('.faq-item').forEach((item, i) => {
-        gsap.from(item, {
-          scrollTrigger: {
-            trigger: item,
-            start: 'top bottom-=100',
-            toggleActions: 'play none none reverse'
-          },
-          x: -100,
-          opacity: 0,
-          duration: 0.8,
-          delay: i * 0.1
-        });
-      });
-
-      // Animate CTA section
-      gsap.from('.pricing-cta-section', {
-        scrollTrigger: {
-          trigger: '.pricing-cta-section',
-          start: 'top bottom-=100',
-          toggleActions: 'play none none reverse'
-        },
-        scale: 0.9,
-        opacity: 0,
-        duration: 1
-      });
-    });
-  </script>
+  <script src="./assets/js/purchase.js"></script>
 </body>
 
 </html>
