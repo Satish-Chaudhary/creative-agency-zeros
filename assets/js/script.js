@@ -433,13 +433,20 @@ gsap.registerPlugin(ScrollTrigger);
 const TIMER_KEY = "webOfferTimerEnd";
 const OFFER_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
 
-// Get timer end time from sessionStorage or set new one
-let timerEnd = sessionStorage.getItem(TIMER_KEY);
+// Get timer end time from localStorage or set new one
+let timerEnd = localStorage.getItem(TIMER_KEY);
 if (!timerEnd) {
     timerEnd = Date.now() + OFFER_DURATION;
-    sessionStorage.setItem(TIMER_KEY, timerEnd);
+    localStorage.setItem(TIMER_KEY, timerEnd);
 } else {
     timerEnd = parseInt(timerEnd);
+    
+    // Check if the timer has already expired
+    if (Date.now() > timerEnd) {
+        // Timer has expired, set a new one
+        timerEnd = Date.now() + OFFER_DURATION;
+        localStorage.setItem(TIMER_KEY, timerEnd);
+    }
 }
 
 let webTimerInterval;
