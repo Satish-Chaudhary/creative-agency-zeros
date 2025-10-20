@@ -97,7 +97,7 @@
 <div style="background: #121212; padding: 20px; border-radius: 10px; font-family: 'Courier New', monospace; margin: 25px 0;">
 creative-agency-zeros/<br>
 ├── about.html         <span style="color: #6a0dad;"># About the agency with typewriter animation</span><br>
-├── contact.html       <span style="color: #6a0dad;"># Enhanced contact form with data handling</span><br>
+├── Contact.html       <span style="color: #6a0dad;"># Enhanced contact form with data handling</span><br>
 ├── index.html         <span style="color: #6a0dad;"># Main landing page with typewriter effect</span><br>
 ├── projects.html      <span style="color: #6a0dad;"># Portfolio/projects page</span><br>
 ├── Purchase.html      <span style="color: #6a0dad;"># Purchase/offer page</span><br>
