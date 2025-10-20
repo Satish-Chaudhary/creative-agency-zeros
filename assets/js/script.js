@@ -449,6 +449,12 @@ if (!timerEnd) {
     }
 }
 
+// Additional check to ensure timer is valid
+if (isNaN(timerEnd) || timerEnd < Date.now()) {
+    timerEnd = Date.now() + OFFER_DURATION;
+    localStorage.setItem(TIMER_KEY, timerEnd);
+}
+
 let webTimerInterval;
 
 function updateWebTimer() {
