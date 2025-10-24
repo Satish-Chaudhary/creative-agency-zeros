@@ -1,0 +1,243 @@
+/* Critical CSS for above-the-fold content */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 5%;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background: transparent;
+    position: relative;
+    outline: 1.8px solid #444;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.logo {
+    font-size: 1.8em;
+    text-decoration: none;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background: linear-gradient(135deg, #4d40c4, #520dad, #7c3aed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 5px 20px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+#hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.4), rgba(26, 26, 26, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    opacity: 1;
+    transform: translateY(50px);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    color: #602dbe;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #6a0dad, #5628ee);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Offer card styles */
+.web-offer-card {
+    width: 100%;
+    max-width: 380px;
+    margin-top: 100px;
+    background: transparent;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.web-card-header {
+    background: transparent;
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.web-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.web-service-icon {
+    font-size: 1.8rem;
+    animation: web-pulse 2s infinite;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.web-discount-badge {
+    background: linear-gradient(45deg, #4ecdc4, #28a745);
+    color: white;
+    padding: 3px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    animation: web-bounce 2s infinite;
+    box-shadow: 0 4px 15px rgba(104, 192, 116, 0.4);
+}
+
+.web-service-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.web-price-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.web-current-price {
+    font-size: 2rem;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 80px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .web-offer-card {
+        display: none;
+    }
+    
+    #hamburger {
+        display: inline-block;
+    }
+}

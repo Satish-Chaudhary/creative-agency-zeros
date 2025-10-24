@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
    <url>
       <loc>https://zerosstudio.vercel.app/</loc>
       <lastmod>2025-10-24</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+      <image:image>
+         <image:loc>https://zerosstudio.vercel.app/assets/images/project1.png</image:loc>
+         <image:title>Zeros Studio</image:title>
+         <image:caption>Creative web design and development services</image:caption>
+      </image:image>
    </url>
    <url>
       <loc>https://zerosstudio.vercel.app/about.html</loc>
       <lastmod>2025-10-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
+      <image:image>
+         <image:loc>https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1332&amp;q=80</image:loc>
+         <image:title>Our Team</image:title>
+         <image:caption>Our team collaborating on digital projects</image:caption>
+      </image:image>
    </url>
    <url>
       <loc>https://zerosstudio.vercel.app/services.html</loc>
@@ -23,6 +33,16 @@
       <lastmod>2025-10-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
+      <image:image>
+         <image:loc>https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80</image:loc>
+         <image:title>Coffee Shop Website</image:title>
+         <image:caption>Modern coffee shop website design</image:caption>
+      </image:image>
+      <image:image>
+         <image:loc>https://images.unsplash.com/photo-1633681138600-295fcd688876?ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJlYXV0eSUyMHBhcmxvciUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D&amp;auto=format&amp;fit=crop&amp;q=60&amp;w=1000</image:loc>
+         <image:title>Beauty Parlour Website</image:title>
+         <image:caption>Elegant beauty parlour website design</image:caption>
+      </image:image>
    </url>
    <url>
       <loc>https://zerosstudio.vercel.app/Contact.html</loc>
