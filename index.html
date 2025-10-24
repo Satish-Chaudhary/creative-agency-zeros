@@ -27,7 +27,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 
 </head>
@@ -800,7 +799,7 @@
         </div>
 
         <div class="contact-map">
-          <iframe
+          <iframe title="Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.1428!2d75.8577!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fdcc0e7b0c6d%3A0x96d6e7a17d7c1e3e!2sVijaynagar%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin"
             width="100%" height="300" style="border: 0; border-radius: 15px" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
@@ -843,7 +842,7 @@
 
         <div class="currency-toggle">
           <span class="currency-label">₹ INR</span>
-          <label class="toggle-switch">
+          <label class="toggle-switch" id="currencyToggleLabel" for="currencyToggle">
             <input type="checkbox" id="currencyToggle" />
             <span class="slider"></span>
           </label>
@@ -1162,7 +1161,7 @@
             </p>
             <form action="https://formspree.io/f/xrbyedlg" class="footer-newsletter-form" id="newsletterForm">
               <input type="email" placeholder="Enter your email" required />
-              <button type="submit">
+              <button type="submit" class="newsletter-button">
                 <i class="fas fa-paper-plane"></i>
               </button>
             </form>

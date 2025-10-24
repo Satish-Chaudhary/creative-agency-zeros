@@ -9,7 +9,8 @@ window.addEventListener("load", () => {
 
         // GSAP Hero animations
         gsap.registerPlugin(TextPlugin);
-        gsap.registerPlugin(ScrollToPlugin);
+        // ScrollToPlugin is not used in this file and causes errors when not loaded
+        // gsap.registerPlugin(ScrollToPlugin);
 
         // Center hero content vertically and horizontally (for index page)
         const heroSection = document.querySelector('.hero');
@@ -1728,88 +1729,91 @@ document
 // Project Carousel
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector(".carousel-track");
-    const cards = Array.from(track.children);
-    const nextButton = document.querySelector(".carousel-button.next");
-    const prevButton = document.querySelector(".carousel-button.prev");
+    // Only proceed if track element exists
+    if (track) {
+        const cards = Array.from(track.children);
+        const nextButton = document.querySelector(".carousel-button.next");
+        const prevButton = document.querySelector(".carousel-button.prev");
 
-    let currentIndex = 0;
+        let currentIndex = 0;
 
-    const setCardPosition = (card, index) => {
-        card.style.left = `${index * 100}%`;
-    };
+        const setCardPosition = (card, index) => {
+            card.style.left = `${index * 100}%`;
+        };
 
-    cards.forEach(setCardPosition);
+        cards.forEach(setCardPosition);
 
-    const moveToCard = (track, currentCard, targetCard) => {
-        track.style.transform = `translateX(-${targetCard.style.left})`;
-        currentCard.classList.remove("active");
-        targetCard.classList.add("active");
-    };
+        const moveToCard = (track, currentCard, targetCard) => {
+            track.style.transform = `translateX(-${targetCard.style.left})`;
+            currentCard.classList.remove("active");
+            targetCard.classList.add("active");
+        };
 
-    if (nextButton) {
-        nextButton.addEventListener("click", () => {
-            const currentCard = track.querySelector(".active");
-            const nextCard = currentCard.nextElementSibling || cards[0];
-            moveToCard(track, currentCard, nextCard);
-            currentIndex = (currentIndex + 1) % cards.length;
-        });
-
-        // Add hover effects
-        nextButton.addEventListener('mouseenter', () => {
-            gsap.to(nextButton, {
-                scale: 1.1,
-                y: -2,
-                boxShadow: '0 5px 15px rgba(106, 13, 173, 0.3)',
-                duration: 0.3,
-                ease: 'power2.out'
+        if (nextButton) {
+            nextButton.addEventListener("click", () => {
+                const currentCard = track.querySelector(".active");
+                const nextCard = currentCard.nextElementSibling || cards[0];
+                moveToCard(track, currentCard, nextCard);
+                currentIndex = (currentIndex + 1) % cards.length;
             });
-        });
 
-        nextButton.addEventListener('mouseleave', () => {
-            gsap.to(nextButton, {
-                scale: 1,
-                y: 0,
-                boxShadow: 'none',
-                duration: 0.3,
-                ease: 'power2.out'
+            // Add hover effects
+            nextButton.addEventListener('mouseenter', () => {
+                gsap.to(nextButton, {
+                    scale: 1.1,
+                    y: -2,
+                    boxShadow: '0 5px 15px rgba(106, 13, 173, 0.3)',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
             });
-        });
-    }
 
-    if (prevButton) {
-        prevButton.addEventListener("click", () => {
-            const currentCard = track.querySelector(".active");
-            const prevCard =
-                currentCard.previousElementSibling || cards[cards.length - 1];
-            moveToCard(track, currentCard, prevCard);
-            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-        });
-
-        // Add hover effects
-        prevButton.addEventListener('mouseenter', () => {
-            gsap.to(prevButton, {
-                scale: 1.1,
-                y: -2,
-                boxShadow: '0 5px 15px rgba(106, 13, 173, 0.3)',
-                duration: 0.3,
-                ease: 'power2.out'
+            nextButton.addEventListener('mouseleave', () => {
+                gsap.to(nextButton, {
+                    scale: 1,
+                    y: 0,
+                    boxShadow: 'none',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
             });
-        });
+        }
 
-        prevButton.addEventListener('mouseleave', () => {
-            gsap.to(prevButton, {
-                scale: 1,
-                y: 0,
-                boxShadow: 'none',
-                duration: 0.3,
-                ease: 'power2.out'
+        if (prevButton) {
+            prevButton.addEventListener("click", () => {
+                const currentCard = track.querySelector(".active");
+                const prevCard =
+                    currentCard.previousElementSibling || cards[cards.length - 1];
+                moveToCard(track, currentCard, prevCard);
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
             });
-        });
-    }
 
-    // Initial setup
-    if (cards.length > 0) {
-        cards[0].classList.add("active");
+            // Add hover effects
+            prevButton.addEventListener('mouseenter', () => {
+                gsap.to(prevButton, {
+                    scale: 1.1,
+                    y: -2,
+                    boxShadow: '0 5px 15px rgba(106, 13, 173, 0.3)',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            });
+
+            prevButton.addEventListener('mouseleave', () => {
+                gsap.to(prevButton, {
+                    scale: 1,
+                    y: 0,
+                    boxShadow: 'none',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            });
+        }
+
+        // Initial setup
+        if (cards.length > 0) {
+            cards[0].classList.add("active");
+        }
     }
 
     // GSAP Animations
