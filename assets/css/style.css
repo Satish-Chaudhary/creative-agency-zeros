@@ -1174,6 +1174,13 @@ a {
 .marque img {
     height: 2vw;
     rotate: 180deg;
+    /* Add explicit dimensions to prevent layout shifts */
+    width: 30px;
+    height: 30px;
+    /* Ensure images maintain aspect ratio */
+    object-fit: contain;
+    /* Prevent images from being distorted */
+    flex-shrink: 0;
 }
 
 /* About Us Section */
@@ -2071,7 +2078,8 @@ a {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 15px;
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); 
 }
 
 .feature-card p {
@@ -2525,8 +2533,9 @@ input:checked+.slider:before {
 
 .addon-services h3 {
     font-size: 2rem;
-    color: #6a0dad;
+    color: #ffffff;
     margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .addon-grid {
@@ -4627,6 +4636,43 @@ input:checked+.slider:before {
     .marque img {
         height: 4vw;
     }
+}
+
+/* Scroller */
+.scroller {
+    width: 100%;
+}
+
+.move {
+    background-color: #6a0dad86;
+    display: flex;
+    padding: 3vw 0;
+    overflow: hidden;
+}
+
+.marque {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding: 0 1.5vw;
+}
+
+.marque h1 {
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.marque img {
+    height: 2vw;
+    rotate: 180deg;
+    /* Add explicit dimensions to prevent layout shifts */
+    width: 30px;
+    height: 30px;
+    /* Ensure images maintain aspect ratio */
+    object-fit: contain;
+    /* Prevent images from being distorted */
+    flex-shrink: 0;
 }
 
 @media (max-width: 576px) {
