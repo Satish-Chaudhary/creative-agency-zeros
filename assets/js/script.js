@@ -702,16 +702,16 @@ ScrollTrigger.create({
 });
 
 // Animate the feature items
-gsap.from(".about-features .feature-item", {
-    opacity: 0,
-    y: 20,
-    stagger: 0.2,
-    duration: 0.8,
-    scrollTrigger: {
-        trigger: ".about-features",
-        start: "top 80%",
-    },
-});
+// gsap.from(".about-features .feature-item", {
+//     opacity: 0,
+//     y: 20,
+//     stagger: 0.2,
+//     duration: 0.8,
+//     scrollTrigger: {
+//         trigger: ".about-features",
+//         start: "top 80%",
+//     },
+// });
 
 // Animate pricing cards on scroll
 gsap.set(".pricing-card", { y: 50, autoAlpha: 0 });

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="maCXnVAKikB9MaF_bNLmB7zY9m85XbJAFj1k1C9rq8c" />
+  <meta name="description" content="Explore our latest blog posts about web design, development, and digital marketing trends.">
+  <meta name="keywords" content="blog, web design, development, digital marketing, creative agency">
+  <meta name="author" content="Zeros Studio" />
+  <title>Blog - ZEROS Creative Agency</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/critical.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/blog-styles.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ZEROS</a>
+      <ul id="first-nav">
+        <li>
+          <a href="index.html" class="nav-link"><span>Home</span></a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-link"><span>About</span></a>
+        </li>
+        <li>
+          <a href="services.html" class="nav-link"><span>Services</span></a>
+        </li>
+        <li>
+          <a href="projects.html" class="nav-link"><span>Projects</span></a>
+        </li>
+        <li>
+          <a href="blog.html" class="nav-link"><span>Blog</span></a>
+        </li>
+        <li>
+          <a href="Contact.html" class="nav-link"><span>Contact</span></a>
+        </li>
+      </ul>
+      <div id="hamburger" onclick="showSecondNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <ul class="second-nav">
+      <li class="second-nav-li"><a href="index.html">Home</a></li>
+      <li class="second-nav-li"><a href="about.html">About</a></li>
+      <li class="second-nav-li"><a href="services.html">Services</a></li>
+      <li class="second-nav-li"><a href="projects.html">Project</a></li>
+      <li class="second-nav-li"><a href="blog.html">Blog</a></li>
+      <li class="second-nav-li"><a href="Contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section blog-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Our Blog</h1>
+          <p class="hero-subtitle">
+            Explore our latest insights on design, development, and digital marketing
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="blog-content">
+          <!-- Main Blog Area -->
+          <div class="blog-main">
+            <!-- Search and Filter -->
+            <div class="blog-controls">
+              <div class="search-box">
+                <input type="text" id="blogSearch" placeholder="Search blog posts...">
+                <i class="fas fa-search"></i>
+              </div>
+              
+              <div class="category-filters">
+                <a href="#" class="category-filter active">All</a>
+                <a href="#" class="category-filter">Design</a>
+                <a href="#" class="category-filter">Development</a>
+                <a href="#" class="category-filter">Marketing</a>
+                <a href="#" class="category-filter">Case Study</a>
+                <a href="#" class="category-filter">Client Story</a>
+              </div>
+            </div>
+
+            <!-- Featured Post -->
+            <div class="featured-post" id="featuredPost">
+              <!-- Featured post will be loaded here dynamically -->
+            </div>
+
+            <!-- Blog Posts Grid -->
+            <div class="blog-grid" id="blogGrid">
+              <!-- Blog posts will be loaded here dynamically -->
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="blog-sidebar">
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Categories</h3>
+              <ul class="category-list">
+                <li><a href="#" class="category-filter active">All <span>(12)</span></a></li>
+                <li><a href="#" class="category-filter">Design <span>(5)</span></a></li>
+                <li><a href="#" class="category-filter">Development <span>(4)</span></a></li>
+                <li><a href="#" class="category-filter">Marketing <span>(3)</span></a></li>
+                <li><a href="#" class="category-filter">Case Study <span>(2)</span></a></li>
+                <li><a href="#" class="category-filter">Client Story <span>(2)</span></a></li>
+              </ul>
+            </div>
+            
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Popular Tags</h3>
+              <div class="tags-cloud">
+                <a href="#" class="tag">Web Design</a>
+                <a href="#" class="tag">UI/UX</a>
+                <a href="#" class="tag">JavaScript</a>
+                <a href="#" class="tag">React</a>
+                <a href="#" class="tag">SEO</a>
+                <a href="#" class="tag">Digital Marketing</a>
+                <a href="#" class="tag">Branding</a>
+                <a href="#" class="tag">Mobile Apps</a>
+              </div>
+            </div>
+            
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Newsletter</h3>
+              <p class="widget-description">Subscribe to get the latest posts delivered to your inbox.</p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="subscribe-button">Subscribe</button>
+              </form>
+            </div>
+            
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Popular Posts</h3>
+              <div class="recent-posts" id="popularPosts">
+                <!-- Popular posts will be loaded here dynamically -->
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-logo">ZEROS</h3>
+            <p class="footer-description">
+              We craft digital experiences that transform businesses and
+              captivate audiences through innovative design and cutting-edge
+              technology.
+            </p>
+            <div class="footer-contact">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Vijaynagar, Indore, MP
+              </p>
+              <p>
+                <i class="fas fa-phone-alt"></i> +91 9334541428 | +91
+                8009777605
+              </p>
+              <p><i class="fas fa-envelope"></i> zeros.studio19@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">UI/UX Design</a></li>
+              <li><a href="services.html">Mobile Apps</a></li>
+              <li><a href="services.html">SEO & Marketing</a></li>
+              <li><a href="services.html">Brand Identity</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Stay Updated</h4>
+            <p class="footer-newsletter-text">
+              Subscribe to our newsletter for the latest updates and offers
+            </p>
+            <form class="footer-newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="newsletter-button" aria-label="Subscribe to newsletter">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+            <div class="footer-social">
+              <h4>Follow Us</h4>
+              <div class="social-media">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; 2022-32 Zeros Studio. All rights reserved.
+          </div>
+          <div class="footer-links-bottom">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <script src="./assets/js/script.min.js"></script>
+  <script src="./assets/js/blog.js"></script>
+  <script>
+    // Initialize blog when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize blog manager if not already initialized
+      if (!window.blogManager) {
+        window.blogManager = new BlogManager();
+      }
+      
+      // Render blog posts
+      window.blogManager.renderBlogPosts();
+      
+      // Render featured post
+      renderFeaturedPost();
+      
+      // Render popular posts
+      renderPopularPosts();
+    });
+    
+    // Render featured post
+    function renderFeaturedPost() {
+      const posts = window.blogManager.getPosts();
+      const featuredPostContainer = document.getElementById('featuredPost');
+      
+      if (posts.length > 0) {
+        const featuredPost = posts[0]; // First post as featured
+        featuredPostContainer.innerHTML = `
+          <div class="post-image">
+            ${featuredPost.videoUrl ? 
+              `<video controls style="width: 100%; height: 100%; object-fit: cover;">
+                  <source src="${featuredPost.videoUrl}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>` : 
+              `<img src="${featuredPost.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${featuredPost.title}">`
+            }
+            <div class="post-category">${featuredPost.category}</div>
+          </div>
+          <div class="post-content">
+            <div class="post-meta">
+              <span class="post-date"><i class="fas fa-calendar"></i> ${new Date(featuredPost.date).toLocaleDateString()}</span>
+              <span class="post-author"><i class="fas fa-user"></i> ${featuredPost.author}</span>
+            </div>
+            <h2 class="post-title"><a href="blog-post.html?id=${featuredPost.id}">${featuredPost.title}</a></h2>
+            <p class="post-excerpt">${featuredPost.content.substring(0, 200)}...</p>
+            <div class="post-tags">
+              ${featuredPost.tags.slice(0, 3).map(tag => `<span class="tag">${tag}</span>`).join('')}
+            </div>
+            <a href="blog-post.html?id=${featuredPost.id}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        `;
+      } else {
+        featuredPostContainer.innerHTML = `
+          <div class="no-featured-post">
+            <h3>No Featured Post Available</h3>
+            <p>Check back soon for our latest blog posts!</p>
+          </div>
+        `;
+      }
+    }
+    
+    // Render popular posts
+    function renderPopularPosts() {
+      const posts = window.blogManager.getPosts();
+      const popularPostsContainer = document.getElementById('popularPosts');
+      
+      if (posts.length === 0) {
+        popularPostsContainer.innerHTML = '<p>No posts available.</p>';
+        return;
+      }
+      
+      // Sort by likes and take top 3
+      const popularPosts = [...posts].sort((a, b) => b.likes - a.likes).slice(0, 3);
+      
+      popularPostsContainer.innerHTML = popularPosts.map(post => `
+        <div class="recent-post">
+          <div class="recent-post-image">
+            ${post.videoUrl ? 
+              `<video controls style="width: 100%; height: 100%; object-fit: cover;">
+                  <source src="${post.videoUrl}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>` : 
+              `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}" onerror="this.src='https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80';">`
+            }
+          </div>
+          <div class="recent-post-content">
+            <h4><a href="blog-post.html?id=${post.id}">${post.title}</a></h4>
+            <span class="recent-post-date">${new Date(post.date).toLocaleDateString()}</span>
+            <div class="post-stats">
+              <span><i class="fas fa-heart"></i> ${post.likes}</span>
+              <span><i class="fas fa-comment"></i> ${post.comments.length}</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

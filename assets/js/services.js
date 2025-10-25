@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    // Counter animation for statistics
+    // Improved counter animation for statistics with better conflict handling
     function animateCounter(element, target) {
         if (!element || isNaN(target)) {
             console.error(
@@ -200,20 +200,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 50);
     }
 
-    // Animate all stat numbers with ScrollTrigger
-    ScrollTrigger.create({
-        trigger: ".stats-container",
-        start: "top 80%",
-        once: true,
-        onEnter: () => {
-            document.querySelectorAll(".stat-number").forEach((stat) => {
-                const target = parseInt(stat.getAttribute("data-target"));
-                if (!isNaN(target)) {
-                    setTimeout(() => {
-                        animateCounter(stat, target);
-                    }, Math.random() * 500); // Stagger the animations
-                }
-            });
-        },
-    });
+    // Animate all stat numbers with ScrollTrigger - improved version with better selector handling
+    // Check if the stats container exists before creating the ScrollTrigger
+    const statsContainer = document.querySelector(".stats-container");
+    if (statsContainer) {
+        ScrollTrigger.create({
+            trigger: ".stats-container",
+            start: "top 80%",
+            once: true,
+            onEnter: () => {
+                // Use a more specific selector to avoid conflicts
+                const statElements = statsContainer.querySelectorAll(".stat-number");
+                statElements.forEach((stat) => {
+                    const target = parseInt(stat.getAttribute("data-target"));
+                    if (!isNaN(target)) {
+                        // Add a small delay to ensure proper timing
+                        setTimeout(() => {
+                            animateCounter(stat, target);
+                        }, Math.random() * 300); // Reduced stagger time for smoother animation
+                    }
+                });
+            },
+        });
+    }
 });
