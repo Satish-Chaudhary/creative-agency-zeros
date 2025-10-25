@@ -941,6 +941,9 @@ nav ul {
     background: rgba(106, 13, 173, 0.4);
     color: white;
 }
+a{
+    text-decoration: none;
+}
 
 .project-card .cta-button {
     display: inline-flex;

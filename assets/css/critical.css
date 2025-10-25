@@ -228,16 +228,25 @@ nav ul {
         height: auto;
         min-height: 100vh;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .web-offer-card {
         display: none;
     }
-    
+
     #hamburger {
         display: inline-block;
+    }
+
+    .professional-text {
+        padding: 0 40px;
+    }
+    .professional-text .section-title ,
+    .professional-text .section-subtitle {
+        padding: 0 20px;
+        width: 90vw !important;
     }
 }

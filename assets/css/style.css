@@ -1631,6 +1631,8 @@ a {
     .about-content {
         grid-template-columns: 1fr;
         gap: 50px;
+        align-items: center;
+        justify-content: center;
     }
 
     .about-us .about-title {
@@ -1651,6 +1653,7 @@ a {
 
     .image-container img {
         height: 300px;
+        border-radius: 8px;
     }
 }
 
