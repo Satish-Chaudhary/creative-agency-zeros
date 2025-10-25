@@ -597,12 +597,12 @@ gsap.to(".about-text", {
 });
 
 // Animate the about image
-gsap.to(".about-image", {
+gsap.to(".about-visual", {
     opacity: 1,
     x: 0,
     duration: 1,
     scrollTrigger: {
-        trigger: ".about-image",
+        trigger: ".about-visual",
         start: "top 80%",
     },
 });
@@ -701,8 +701,8 @@ ScrollTrigger.create({
     },
 });
 
-// Animate the feature list items
-gsap.from(".about-features li", {
+// Animate the feature items
+gsap.from(".about-features .feature-item", {
     opacity: 0,
     y: 20,
     stagger: 0.2,
@@ -917,14 +917,15 @@ gsap.to(".stats-section", {
 });
 
 // Add subtle background animation to stats section with gradient effect
-gsap.to(".stats-section::before", {
-    xPercent: 100,
-    backgroundPosition: "100% 100%",
-    duration: 4,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-});
+// Note: Removed pseudo-element animation that caused warnings
+// gsap.to(".stats-section::before", {
+//     xPercent: 100,
+//     backgroundPosition: "100% 100%",
+//     duration: 4,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "sine.inOut",
+// });
 
 // Enhanced counter animation for statistics with GSAP and easing
 function animateCounter(element, target) {
@@ -986,16 +987,17 @@ ScrollTrigger.create({
 });
 
 // Add parallax effect to the background gradient
-gsap.to(".why-choose-us::before", {
-    yPercent: -50,
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".why-choose-us",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-    },
-});
+// Note: Removed pseudo-element animation that caused warnings
+// gsap.to(".why-choose-us::before", {
+//     yPercent: -50,
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: ".why-choose-us",
+//         start: "top bottom",
+//         end: "bottom top",
+//         scrub: true,
+//     },
+// });
 
 // Services Section Animations
 gsap.to(".services-section .section-header", {
