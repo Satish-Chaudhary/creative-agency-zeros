@@ -104,6 +104,11 @@
             <div class="blog-grid" id="blogGrid">
               <!-- Blog posts will be loaded here dynamically -->
             </div>
+            
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+              <!-- Pagination will be loaded here dynamically -->
+            </div>
           </div>
 
           <!-- Sidebar -->
@@ -333,11 +338,11 @@
         <div class="recent-post">
           <div class="recent-post-image">
             ${post.videoUrl ? 
-              `<video controls style="width: 100%; height: 100%; object-fit: cover;">
+              `<video style="width: 100%; height: 60px; object-fit: cover;">
                   <source src="${post.videoUrl}" type="video/mp4">
                   Your browser does not support the video tag.
               </video>` : 
-              `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}" onerror="this.src='https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80';">`
+              `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}">`
             }
           </div>
           <div class="recent-post-content">
@@ -345,7 +350,6 @@
             <span class="recent-post-date">${new Date(post.date).toLocaleDateString()}</span>
             <div class="post-stats">
               <span><i class="fas fa-heart"></i> ${post.likes}</span>
-              <span><i class="fas fa-comment"></i> ${post.comments.length}</span>
             </div>
           </div>
         </div>

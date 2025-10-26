@@ -27,6 +27,9 @@ class BlogManager {
         this.initializeFileUploads();
         // Add default posts if there are no posts
         this.addDefaultPostsIfNeeded();
+        // Pagination variables
+        this.currentPage = 1;
+        this.postsPerPage = 4;
     }
 
     // Load posts from localStorage
@@ -89,6 +92,30 @@ class BlogManager {
                 category: "Client Story",
                 tags: ["Client Story", "Branding", "Identity", "Growth"],
                 imageUrl: "https://images.unsplash.com/photo-1555066935-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+            },
+            {
+                title: "Mastering CSS Grid: A Complete Guide for Modern Layouts",
+                content: "CSS Grid has revolutionized the way we create layouts on the web, providing unprecedented control and flexibility for designers and developers. In this comprehensive guide, we'll explore everything you need to know about CSS Grid, from basic concepts to advanced techniques. CSS Grid is a two-dimensional layout system that allows you to create complex layouts with rows and columns simultaneously. Unlike Flexbox, which is primarily one-dimensional, Grid gives you control over both axes, making it perfect for overall page layouts and complex component designs. We'll start with the fundamentals, covering grid containers, grid items, and the essential properties that control grid behavior. You'll learn how to define grid tracks using various units including fr, minmax, and fit-content. We'll explore different ways to position items within the grid, including line-based placement, grid area naming, and the grid template areas property. Advanced topics will include grid alignment, auto-placement algorithms, and responsive grid techniques that adapt to different screen sizes. We'll also cover practical examples like creating image galleries, dashboard layouts, and magazine-style designs. Performance considerations and browser support will be discussed, ensuring your grid layouts work across all modern browsers. By the end of this guide, you'll have a solid understanding of CSS Grid and be able to create sophisticated layouts with ease.",
+                author: "Jennifer Lee",
+                category: "Development",
+                tags: ["CSS", "Grid", "Layout", "Web Design"],
+                imageUrl: "https://images.unsplash.com/photo-1555066936-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+            },
+            {
+                title: "The Psychology of Color in Web Design",
+                content: "Color is one of the most powerful tools in a designer's arsenal, capable of evoking emotions, influencing decisions, and guiding user behavior. Understanding the psychology of color is essential for creating effective web designs that resonate with your target audience. In this article, we'll delve into the science behind color perception and explore how different hues can impact user experience. Red is often associated with urgency and excitement, making it an excellent choice for call-to-action buttons and sale announcements. However, overuse of red can create feelings of aggression or anxiety. Blue, on the other hand, conveys trust and reliability, which is why it's popular among financial institutions and technology companies. Green represents growth, health, and nature, making it ideal for eco-friendly brands and financial success indicators. Yellow is attention-grabbing and energetic but can be overwhelming in large quantities. Orange combines the energy of red with the friendliness of yellow, making it perfect for creating a sense of fun and enthusiasm. Purple is associated with luxury, creativity, and spirituality, often used by premium brands and creative agencies. We'll explore cultural differences in color perception, as colors can have vastly different meanings across different regions and demographics. The article will also cover practical applications, including color contrast for accessibility, creating harmonious palettes, and using color to establish visual hierarchy. Case studies will demonstrate how successful brands leverage color psychology to achieve their business objectives.",
+                author: "Robert Kim",
+                category: "Design",
+                tags: ["Color Theory", "Psychology", "Web Design", "UX"],
+                imageUrl: "https://images.unsplash.com/photo-1555066937-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+            },
+            {
+                title: "SEO Best Practices for 2023: What You Need to Know",
+                content: "Search engine optimization continues to evolve, with Google's algorithms becoming increasingly sophisticated at understanding user intent and content quality. In 2023, SEO is less about keyword stuffing and more about creating valuable, relevant content that genuinely serves users' needs. This comprehensive guide covers the essential SEO best practices you need to implement to improve your search rankings. Core Web Vitals have become a critical ranking factor, emphasizing the importance of page speed, interactivity, and visual stability. We'll explore optimization techniques for each metric, including image optimization, code splitting, and resource preloading. Content quality remains paramount, with Google's E-E-A-T guidelines (Experience, Expertise, Authoritativeness, Trustworthiness) playing a crucial role in ranking decisions. We'll discuss strategies for creating authoritative content, establishing author credibility, and building trust signals. Technical SEO fundamentals like mobile-friendliness, secure connections (HTTPS), and structured data markup are non-negotiable requirements. We'll cover advanced techniques such as semantic SEO, topic clustering, and entity-based optimization. Local SEO has gained increased importance, especially for businesses serving specific geographic areas. The guide will explain how to optimize for local search, including Google My Business optimization and local citation building. Voice search optimization is also becoming more relevant as smart speakers and virtual assistants gain popularity. We'll explore conversational keyword research and featured snippet optimization strategies. By implementing these 2023 SEO best practices, you'll be well-positioned to improve your search visibility and drive organic traffic to your website.",
+                author: "Amanda Foster",
+                category: "Marketing",
+                tags: ["SEO", "Search Engines", "Content Marketing", "2023"],
+                imageUrl: "https://images.unsplash.com/photo-1555066938-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
             }
         ];
 
@@ -335,18 +362,87 @@ class BlogManager {
         }
     }
 
-    // Render blog posts
+    // Render blog posts with pagination
     renderBlogPosts() {
         const blogGrid = document.querySelector('.blog-grid');
-        if (!blogGrid) return;
+        const paginationContainer = document.getElementById('pagination');
+        
+        if (!blogGrid || !paginationContainer) return;
+
+        // Calculate pagination
+        const totalPages = Math.ceil(this.posts.length / this.postsPerPage);
+        
+        // Get posts for current page
+        const startIndex = (this.currentPage - 1) * this.postsPerPage;
+        const endIndex = startIndex + this.postsPerPage;
+        const postsToShow = this.posts.slice(startIndex, endIndex);
 
         // Clear existing posts
         blogGrid.innerHTML = '';
 
-        // Render posts
-        this.posts.forEach(post => {
+        // Render posts for current page
+        postsToShow.forEach(post => {
             const postElement = this.createPostElement(post);
             blogGrid.appendChild(postElement);
+        });
+
+        // Render pagination
+        this.renderPagination(totalPages);
+    }
+
+    // Render pagination controls
+    renderPagination(totalPages) {
+        const paginationContainer = document.getElementById('pagination');
+        if (!paginationContainer) return;
+
+        // Clear existing pagination
+        paginationContainer.innerHTML = '';
+
+        if (totalPages <= 1) return;
+
+        let paginationHTML = '<div class="pagination-controls">';
+
+        // Previous button
+        if (this.currentPage > 1) {
+            paginationHTML += `<a href="#" class="prev-page" data-page="${this.currentPage - 1}">Previous</a>`;
+        }
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+            if (i === this.currentPage) {
+                paginationHTML += `<span class="page-number active">${i}</span>`;
+            } else if (
+                i === 1 || 
+                i === totalPages || 
+                (i >= this.currentPage - 1 && i <= this.currentPage + 1)
+            ) {
+                paginationHTML += `<a href="#" class="page-number" data-page="${i}">${i}</a>`;
+            } else if (i === this.currentPage - 2 || i === this.currentPage + 2) {
+                paginationHTML += `<span class="page-number dots">...</span>`;
+            }
+        }
+
+        // Next button
+        if (this.currentPage < totalPages) {
+            paginationHTML += `<a href="#" class="next-page" data-page="${this.currentPage + 1}">Next</a>`;
+        }
+
+        paginationHTML += '</div>';
+        paginationContainer.innerHTML = paginationHTML;
+
+        // Add event listeners to pagination links
+        const pageLinks = paginationContainer.querySelectorAll('.page-number, .prev-page, .next-page');
+        pageLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = parseInt(link.getAttribute('data-page'));
+                if (page) {
+                    this.currentPage = page;
+                    this.renderBlogPosts();
+                    // Scroll to top of blog grid
+                    document.querySelector('.blog-grid').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
     }
 
@@ -405,6 +501,8 @@ class BlogManager {
             )
             : this.posts;
 
+        // Reset to first page when filtering
+        this.currentPage = 1;
         this.renderFilteredPosts(filteredPosts);
     }
 
@@ -414,25 +512,37 @@ class BlogManager {
             ? this.posts 
             : this.posts.filter(post => post.category === category);
 
+        // Reset to first page when filtering
+        this.currentPage = 1;
         this.renderFilteredPosts(filteredPosts);
     }
 
-    // Render filtered posts
+    // Render filtered posts with pagination
     renderFilteredPosts(posts) {
         const blogGrid = document.querySelector('.blog-grid');
-        if (!blogGrid) return;
+        const paginationContainer = document.getElementById('pagination');
+        
+        if (!blogGrid || !paginationContainer) return;
 
+        // Calculate pagination for filtered posts
+        const totalPages = Math.ceil(posts.length / this.postsPerPage);
+        
+        // Get posts for current page
+        const startIndex = (this.currentPage - 1) * this.postsPerPage;
+        const endIndex = startIndex + this.postsPerPage;
+        const postsToShow = posts.slice(startIndex, endIndex);
+
+        // Clear existing posts
         blogGrid.innerHTML = '';
 
-        if (posts.length === 0) {
-            blogGrid.innerHTML = '<p class="no-posts">No posts found matching your criteria.</p>';
-            return;
-        }
-
-        posts.forEach(post => {
+        // Render posts for current page
+        postsToShow.forEach(post => {
             const postElement = this.createPostElement(post);
             blogGrid.appendChild(postElement);
         });
+
+        // Render pagination
+        this.renderPagination(totalPages);
     }
 
     // Show notification
