@@ -1637,7 +1637,8 @@ if (submitBtn) {
 document
     .getElementById("contact-form")
     .addEventListener("submit", function (e) {
-        e.preventDefault();
+        
+        // e.preventDefault(); 
 
         // Form validation
         const name = document.getElementById("name").value;
@@ -1713,7 +1714,7 @@ document
                     ease: "back.in",
                     onComplete: () => {
                         // Show success message
-                        alert("Thank you! Your message has been sent successfully.");
+                        // alert("Thank you! Your message has been sent successfully.");
 
                         // Reset form and button after submission
                         setTimeout(() => {
