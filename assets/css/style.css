@@ -1577,6 +1577,325 @@ a {
 
 .exp-card:hover {
     background: rgba(255, 255, 255, 0.08);
+}
+
+/* Page Section Styles */
+.page-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(106, 13, 173, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(86, 40, 238, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.page-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Legal Content Styles */
+.legal-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.policy-date {
+    text-align: right;
+    margin-bottom: 30px;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+.policy-section {
+    margin-bottom: 40px;
+}
+
+.policy-section:last-child {
+    margin-bottom: 0;
+}
+
+.policy-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.policy-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #6a0dad, #5628ee);
+    border-radius: 2px;
+}
+
+.policy-section h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 25px 0 15px;
+    color: #6a0dad;
+}
+
+.policy-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+}
+
+.policy-section ul {
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.policy-section ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #d0d0d0;
+    position: relative;
+}
+
+.policy-section ul li::before {
+    content: '•';
+    color: #6a0dad;
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+}
+
+.policy-section a {
+    color: #6a0dad;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(106, 13, 173, 0.3);
+}
+
+.policy-section a:hover {
+    color: #5628ee;
+    border-bottom: 1px solid #5628ee;
+}
+
+/* 404 Page Styles */
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.error-illustration {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.error-illustration h2 {
+    font-size: 8rem;
+    color: #6a0dad;
+    margin: 0;
+    text-shadow: 0 0 30px rgba(106, 13, 173, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 30px rgba(106, 13, 173, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 0 50px rgba(106, 13, 173, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 30px rgba(106, 13, 173, 0.5);
+    }
+}
+
+.error-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.error-content h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.error-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+.error-options {
+    list-style: none;
+    padding: 0;
+}
+
+.error-options li {
+    margin-bottom: 15px;
+}
+
+.error-options a {
+    display: inline-flex;
+    align-items: center;
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.error-options a:hover {
+    background: rgba(106, 13, 173, 0.2);
+    color: #fff;
+    transform: translateX(5px);
+    border-color: rgba(106, 13, 173, 0.5);
+}
+
+.error-options a::before {
+    content: '→';
+    margin-right: 10px;
+    color: #6a0dad;
+    transition: all 0.3s ease;
+}
+
+.error-options a:hover::before {
+    transform: translateX(3px);
+}
+
+/* Responsive Styles for Legal and 404 Pages */
+@media (max-width: 992px) {
+    .legal-content {
+        padding: 30px;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .policy-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .policy-section p,
+    .policy-section ul li {
+        font-size: 1rem;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .error-illustration h2 {
+        font-size: 6rem;
+    }
+    
+    .error-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-section {
+        padding: 80px 0;
+    }
+    
+    .legal-content {
+        padding: 25px 20px;
+    }
+    
+    .policy-date {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .policy-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .error-illustration h2 {
+        font-size: 5rem;
+    }
+    
+    .error-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .error-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-section {
+        padding: 60px 0;
+    }
+    
+    .legal-content {
+        padding: 20px 15px;
+    }
+    
+    .policy-section {
+        margin-bottom: 30px;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .error-illustration h2 {
+        font-size: 4rem;
+    }
+    
+    .error-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .error-options a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+
+.exp-card:hover {
+    background: rgba(255, 255, 255, 0.08);
     border-color: rgba(106, 13, 173, 0.3);
     transform: translateY(-5px);
 }

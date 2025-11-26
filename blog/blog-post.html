@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="maCXnVAKikB9MaF_bNLmB7zY9m85XbJAFj1k1C9rq8c" />
-  <meta name="description" content="Read our latest blog post about web design, development, and digital marketing trends.">
+  <meta name="description"
+    content="Read our latest blog post about web design, development, and digital marketing trends.">
   <meta name="keywords" content="blog, web design, development, digital marketing, creative agency">
   <meta name="author" content="Zeros Studio" />
   <title>Blog Post - ZEROS Creative Agency</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./assets/css/critical.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/blog-styles.css">
-  <link rel="stylesheet" href="./assets/css/fontawesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../assets/css/critical.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/blog-styles.css">
+  <link rel="stylesheet" href="../assets/css/fontawesome.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
@@ -25,22 +29,22 @@
       <a href="index.html" class="logo">ZEROS</a>
       <ul id="first-nav">
         <li>
-          <a href="index.html" class="nav-link"><span>Home</span></a>
+          <a href="../index.html" class="nav-link"><span>Home</span></a>
         </li>
         <li>
-          <a href="about.html" class="nav-link"><span>About</span></a>
+          <a href="../about-zeros-studio.html" class="nav-link"><span>About</span></a>
         </li>
         <li>
-          <a href="services.html" class="nav-link"><span>Services</span></a>
+          <a href="../web-design-development-services.html" class="nav-link"><span>Services</span></a>
         </li>
         <li>
-          <a href="projects.html" class="nav-link"><span>Projects</span></a>
+          <a href="../web-design-development-projects.html" class="nav-link"><span>Projects</span></a>
         </li>
         <li>
-          <a href="blog.html" class="nav-link"><span>Blog</span></a>
+          <a href="./blog/blog.html" class="nav-link"><span>Blog</span></a>
         </li>
         <li>
-          <a href="Contact.html" class="nav-link"><span>Contact</span></a>
+          <a href="../contact-us.html" class="nav-link"><span>Contact</span></a>
         </li>
       </ul>
       <div id="hamburger" onclick="showSecondNav()">
@@ -50,12 +54,12 @@
       </div>
     </nav>
     <ul class="second-nav">
-      <li class="second-nav-li"><a href="index.html">Home</a></li>
-      <li class="second-nav-li"><a href="about.html">About</a></li>
-      <li class="second-nav-li"><a href="services.html">Services</a></li>
-      <li class="second-nav-li"><a href="projects.html">Project</a></li>
-      <li class="second-nav-li"><a href="blog.html">Blog</a></li>
-      <li class="second-nav-li"><a href="Contact.html">Contact</a></li>
+      <li class="second-nav-li"><a href="../index.html">Home</a></li>
+      <li class="second-nav-li"><a href="../about-zeros-studio.html">About</a></li>
+      <li class="second-nav-li"><a href="../web-design-development-services.html">Services</a></li>
+      <li class="second-nav-li"><a href="../web-design-development-projects.html">Project</a></li>
+      <li class="second-nav-li"><a href="./blog/blog.html">Blog</a></li>
+      <li class="second-nav-li"><a href="../contact-us.html">Contact</a></li>
     </ul>
   </header>
 
@@ -81,7 +85,7 @@
                   <i class="fas fa-share"></i> Share
                 </button>
               </div>
-              
+
               <div class="post-tags" id="postTags">
                 <!-- Tags will be loaded here dynamically -->
               </div>
@@ -90,7 +94,7 @@
             <!-- Comments Section -->
             <div class="comments-section">
               <h3>Comments (<span id="commentCount">0</span>)</h3>
-              
+
               <form class="comment-form" id="commentForm" method="POST">
                 <div class="form-group">
                   <input type="text" id="commentName" placeholder="Your Name" required>
@@ -100,7 +104,7 @@
                 </div>
                 <button type="submit" class="cta-button">Post Comment</button>
               </form>
-              
+
               <div class="comments-list" id="commentsList">
                 <!-- Comments will be loaded here dynamically -->
               </div>
@@ -115,7 +119,7 @@
                 <!-- Recent posts will be loaded here dynamically -->
               </div>
             </div>
-            
+
             <div class="sidebar-widget">
               <h3 class="widget-title">Categories</h3>
               <ul class="category-list">
@@ -125,7 +129,7 @@
                 <li><a href="#" class="category-filter">Case Study <span>(2)</span></a></li>
               </ul>
             </div>
-            
+
             <div class="sidebar-widget">
               <h3 class="widget-title">Popular Tags</h3>
               <div class="tags-cloud">
@@ -169,23 +173,23 @@
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="Contact.html">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about-zeros-studio.html">About Us</a></li>
+              <li><a href="../web-design-development-services.html">Services</a></li>
+              <li><a href="../web-design-development-projects.html">Projects</a></li>
+              <li><a href="./blog/blog.html">Blog</a></li>
+              <li><a href="../contact-us.html">Contact</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Services</h4>
             <ul class="footer-links">
-              <li><a href="services.html">Web Development</a></li>
-              <li><a href="services.html">UI/UX Design</a></li>
-              <li><a href="services.html">Mobile Apps</a></li>
-              <li><a href="services.html">SEO & Marketing</a></li>
-              <li><a href="services.html">Brand Identity</a></li>
+              <li><a href="web-design-development-services.html">Web Development</a></li>
+              <li><a href="web-design-development-services.html">UI/UX Design</a></li>
+              <li><a href="web-design-development-services.html">Mobile Apps</a></li>
+              <li><a href="web-design-development-services.html">SEO & Marketing</a></li>
+              <li><a href="web-design-development-services.html">Brand Identity</a></li>
             </ul>
           </div>
 
@@ -228,9 +232,9 @@
             &copy; 2022-32 Zeros Studio. All rights reserved.
           </div>
           <div class="footer-links-bottom">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Sitemap</a>
+            <a href="our-privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-services.html">Terms of Service</a>
+            <a href="sitemap.xml">Sitemap</a>
           </div>
         </div>
       </div>
@@ -241,21 +245,21 @@
   <button id="scrollToTop" class="scroll-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-  
-  <script src="./assets/js/script.min.js"></script>
-  <script src="./assets/js/blog.js"></script>
+
+  <script src="../assets/js/script.min.js"></script>
+  <script src="../assets/js/blog.js"></script>
   <script>
     // Load blog post when page loads
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Initialize blog manager if not already initialized
       if (!window.blogManager) {
         window.blogManager = new BlogManager();
       }
-      
+
       // Get post ID from URL
       const urlParams = new URLSearchParams(window.location.search);
       const postId = urlParams.get('id');
-      
+
       if (postId) {
         loadBlogPost(postId);
         loadRecentPosts(postId);
@@ -263,11 +267,11 @@
         document.getElementById('blogPostContent').innerHTML = '<p class="error">Post not found.</p>';
       }
     });
-    
+
     // Load blog post content
     function loadBlogPost(postId) {
       const post = window.blogManager.getPostById(postId);
-      
+
       if (post) {
         const postContent = document.getElementById('blogPostContent');
         postContent.innerHTML = `
@@ -281,53 +285,53 @@
           </div>
           
           <div class="post-image">
-            ${post.videoUrl ? 
-              `<video controls style="width: 100%; height: 400px; object-fit: cover;">
+            ${post.videoUrl ?
+            `<video controls style="width: 100%; height: 400px; object-fit: cover;">
                   <source src="${post.videoUrl}" type="video/mp4">
                   Your browser does not support the video tag.
-              </video>` : 
-              `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}">`
-            }
+              </video>` :
+            `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}">`
+          }
           </div>
           
           <div class="post-body">
             <p>${post.content.replace(/\n/g, '</p><p>')}</p>
           </div>
         `;
-        
+
         // Update like count
         document.getElementById('likeCount').textContent = post.likes;
-        
+
         // Update comment count
         document.getElementById('commentCount').textContent = post.comments.length;
-        
+
         // Render tags
         const tagsContainer = document.getElementById('postTags');
         tagsContainer.innerHTML = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-        
+
         // Render comments
         renderComments(post.comments);
-        
+
         // Add event listener for like button
-        document.getElementById('likeButton').addEventListener('click', function() {
+        document.getElementById('likeButton').addEventListener('click', function () {
           const newLikeCount = window.blogManager.likePost(postId);
           if (newLikeCount !== null) {
             document.getElementById('likeCount').textContent = newLikeCount;
           }
         });
-        
+
         // Add event listener for comment form
-        document.getElementById('commentForm').addEventListener('submit', function(e) {
+        document.getElementById('commentForm').addEventListener('submit', function (e) {
           e.preventDefault();
           const name = document.getElementById('commentName').value;
           const text = document.getElementById('commentText').value;
-          
+
           if (name && text) {
             const comment = {
               name: name,
               text: text
             };
-            
+
             // In a real implementation, you would add the comment to the post
             // For now, we'll just show a success message
             alert('Comment submitted successfully!');
@@ -338,16 +342,16 @@
         document.getElementById('blogPostContent').innerHTML = '<p class="error">Post not found.</p>';
       }
     }
-    
+
     // Render comments
     function renderComments(comments) {
       const commentsList = document.getElementById('commentsList');
-      
+
       if (comments.length === 0) {
         commentsList.innerHTML = '<p class="no-comments">No comments yet. Be the first to comment!</p>';
         return;
       }
-      
+
       commentsList.innerHTML = comments.map(comment => `
         <div class="comment">
           <div class="comment-header">
@@ -360,30 +364,30 @@
         </div>
       `).join('');
     }
-    
+
     // Load recent posts
     function loadRecentPosts(currentPostId) {
       const posts = window.blogManager.getPosts().filter(post => post.id !== currentPostId);
       const recentPostsContainer = document.getElementById('recentPosts');
-      
+
       if (posts.length === 0) {
         recentPostsContainer.innerHTML = '<p>No recent posts available.</p>';
         return;
       }
-      
+
       // Show only the 3 most recent posts
       const recentPosts = posts.slice(0, 3);
-      
+
       recentPostsContainer.innerHTML = recentPosts.map(post => `
         <div class="recent-post">
           <div class="recent-post-image">
-            ${post.videoUrl ? 
-              `<video style="width: 100%; height: 60px; object-fit: cover;">
+            ${post.videoUrl ?
+          `<video style="width: 100%; height: 60px; object-fit: cover;">
                   <source src="${post.videoUrl}" type="video/mp4">
                   Your browser does not support the video tag.
-              </video>` : 
-              `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}">`
-            }
+              </video>` :
+          `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}">`
+        }
           </div>
           <div class="recent-post-content">
             <h4><a href="blog-post.html?id=${post.id}">${post.title}</a></h4>
@@ -394,4 +398,5 @@
     }
   </script>
 </body>
+
 </html>

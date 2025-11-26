@@ -1764,6 +1764,7 @@ nav ul {
     font-size: 1.2rem;
     transition: all 0.3s ease;
     position: relative;
+    text-decoration: none;
     width: 45px;
     height: 45px;
     border-radius: 50%;

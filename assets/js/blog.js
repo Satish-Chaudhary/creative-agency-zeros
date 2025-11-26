@@ -87,7 +87,7 @@ class BlogManager {
             },
             {
                 title: "Client Success Story: Transforming Brand Identity for GreenLeaf Organics",
-                content: "GreenLeaf Organics came to us with a challenge: their brand identity wasn't resonating with their target audience, and they were losing market share to competitors despite having superior products. In this success story, we'll explore how we helped them transform their brand and achieve remarkable growth. When we first met with GreenLeaf Organics, they had a traditional, somewhat dated brand identity that didn't reflect their innovative approach to organic farming and sustainable practices. Their logo, color palette, and messaging were generic and failed to communicate what made them unique in the crowded organic food market. Our brand discovery process involved extensive research into their target audience, competitive landscape, and market trends. We conducted stakeholder interviews, customer surveys, and brand audits to understand the disconnect between GreenLeaf's values and their public perception. The insights revealed that their customers cared deeply about environmental impact, transparency in sourcing, and community involvement – aspects that were completely missing from their brand messaging. Our solution involved a complete brand overhaul, starting with a new visual identity that incorporated earthy tones, organic shapes, and authentic photography. The new logo featured a stylized leaf that subtly formed the letter 'G', creating a memorable and meaningful mark. We developed a brand voice that was authentic, educational, and community-focused, moving away from the typical marketing speak that dominated their previous communications. Packaging design was a critical component of the transformation. We created sustainable packaging solutions that not only reduced environmental impact but also served as a powerful marketing tool, with clear messaging about sourcing, farming practices, and environmental benefits. Digital presence was also crucial to the rebrand. We redesigned their website to be more educational and engaging, featuring stories about their farmers, detailed information about their growing practices, and resources for sustainable living. Social media strategy focused on building a community around shared values rather than just product promotion. The results were extraordinary. Within six months of the rebrand launch, GreenLeaf Organics saw a 75% increase in brand recognition and a 45% increase in sales. Customer loyalty improved significantly, with repeat purchases increasing by 60%. The brand transformation also attracted new investors and opened doors to premium retail partnerships that had previously been unavailable. This success story demonstrates how strategic brand development can create tangible business value while staying true to a company's core mission and values.",
+                content: "GreenLeaf Organics came to us with a challenge: their brand identity wasn't resonating with their target audience, and they were losing market share to competitors despite having superior products. In this success story, we'll explore how we helped them transform their brand and achieve remarkable growth. When we first met with GreenLeaf Organics, they had a traditional, somewhat dated brand identity that didn't reflect their innovative approach to organic farming and sustainable practices. Their logo, color palette, and messaging were generic and failed to communicate what made them unique in the crowded organic food market. Our brand discovery process involved extensive research into their target audience, competitive landscape, and market trends. We conducted stakeholder interviews, customer surveys, and brand audits to understand the disconnect between GreenLeaf's values and their public perception. The insights revealed that their customers cared deeply about environmental impact, transparency in sourcing, and community involvement &adash; aspects that were completely missing from their brand messaging. Our solution involved a complete brand overhaul, starting with a new visual identity that incorporated earthy tones, organic shapes, and authentic photography. The new logo featured a stylized leaf that subtly formed the letter 'G', creating a memorable and meaningful mark. We developed a brand voice that was authentic, educational, and community-focused, moving away from the typical marketing speak that dominated their previous communications. Packaging design was a critical component of the transformation. We created sustainable packaging solutions that not only reduced environmental impact but also served as a powerful marketing tool, with clear messaging about sourcing, farming practices, and environmental benefits. Digital presence was also crucial to the rebrand. We redesigned their website to be more educational and engaging, featuring stories about their farmers, detailed information about their growing practices, and resources for sustainable living. Social media strategy focused on building a community around shared values rather than just product promotion. The results were extraordinary. Within six months of the rebrand launch, GreenLeaf Organics saw a 75% increase in brand recognition and a 45% increase in sales. Customer loyalty improved significantly, with repeat purchases increasing by 60%. The brand transformation also attracted new investors and opened doors to premium retail partnerships that had previously been unavailable. This success story demonstrates how strategic brand development can create tangible business value while staying true to a company's core mission and values.",
                 author: "David Thompson",
                 category: "Client Story",
                 tags: ["Client Story", "Branding", "Identity", "Growth"],
@@ -241,13 +241,13 @@ class BlogManager {
     initializeFileUploads() {
         const imageInput = document.getElementById('postImage');
         const videoInput = document.getElementById('postVideo');
-        
+
         if (imageInput) {
             imageInput.addEventListener('change', (e) => {
                 this.handleImageUpload(e.target.files[0], 'imagePreview');
             });
         }
-        
+
         if (videoInput) {
             videoInput.addEventListener('change', (e) => {
                 this.handleVideoUpload(e.target.files[0], 'videoPreview');
@@ -258,19 +258,19 @@ class BlogManager {
     // Handle image upload
     handleImageUpload(file, previewId) {
         if (!file) return;
-        
+
         // Validate file type
         if (!file.type.startsWith('image/')) {
             this.showNotification('Please select a valid image file', 'error');
             return;
         }
-        
+
         // Validate file size (max 5MB)
         if (file.size > 5 * 1024 * 1024) {
             this.showNotification('Image size should be less than 5MB', 'error');
             return;
         }
-        
+
         const reader = new FileReader();
         reader.onload = (e) => {
             const preview = document.getElementById(previewId);
@@ -284,19 +284,19 @@ class BlogManager {
     // Handle video upload
     handleVideoUpload(file, previewId) {
         if (!file) return;
-        
+
         // Validate file type
         if (!file.type.startsWith('video/')) {
             this.showNotification('Please select a valid video file', 'error');
             return;
         }
-        
+
         // Validate file size (max 10MB)
         if (file.size > 10 * 1024 * 1024) {
             this.showNotification('Video size should be less than 10MB', 'error');
             return;
         }
-        
+
         const reader = new FileReader();
         reader.onload = (e) => {
             const preview = document.getElementById(previewId);
@@ -319,11 +319,11 @@ class BlogManager {
         const author = document.getElementById('postAuthor').value || 'Anonymous';
         const category = document.getElementById('postCategory').value;
         const tags = document.getElementById('postTags').value.split(',').map(tag => tag.trim()).filter(tag => tag);
-        
+
         // Get image data
         const imageInput = document.getElementById('postImage');
         const videoInput = document.getElementById('postVideo');
-        
+
         if (imageInput && imageInput.files[0]) {
             const reader = new FileReader();
             reader.onload = (e) => {
@@ -348,13 +348,13 @@ class BlogManager {
         if (title && content) {
             this.createPost(title, content, author, category, tags, imageUrl, videoUrl);
             document.getElementById('createPostForm').reset();
-            
+
             // Clear previews
             const imagePreview = document.getElementById('imagePreview');
             const videoPreview = document.getElementById('videoPreview');
             if (imagePreview) imagePreview.innerHTML = '';
             if (videoPreview) videoPreview.innerHTML = '';
-            
+
             // Show success message
             this.showNotification('Post created successfully!', 'success');
         } else {
@@ -366,12 +366,12 @@ class BlogManager {
     renderBlogPosts() {
         const blogGrid = document.querySelector('.blog-grid');
         const paginationContainer = document.getElementById('pagination');
-        
+
         if (!blogGrid || !paginationContainer) return;
 
         // Calculate pagination
         const totalPages = Math.ceil(this.posts.length / this.postsPerPage);
-        
+
         // Get posts for current page
         const startIndex = (this.currentPage - 1) * this.postsPerPage;
         const endIndex = startIndex + this.postsPerPage;
@@ -412,8 +412,8 @@ class BlogManager {
             if (i === this.currentPage) {
                 paginationHTML += `<span class="page-number active">${i}</span>`;
             } else if (
-                i === 1 || 
-                i === totalPages || 
+                i === 1 ||
+                i === totalPages ||
                 (i >= this.currentPage - 1 && i <= this.currentPage + 1)
             ) {
                 paginationHTML += `<a href="#" class="page-number" data-page="${i}">${i}</a>`;
@@ -452,13 +452,13 @@ class BlogManager {
         article.className = 'blog-post';
         article.innerHTML = `
             <div class="post-image">
-                ${post.videoUrl ? 
-                    `<video controls style="width: 100%; height: 200px; object-fit: cover;">
+                ${post.videoUrl ?
+                `<video controls style="width: 100%; height: 200px; object-fit: cover;">
                         <source src="${post.videoUrl}" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video>` : 
-                    `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}">`
-                }
+                    </video>` :
+                `<img src="${post.imageUrl || 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'}" alt="${post.title}">`
+            }
                 <div class="post-category">${post.category}</div>
             </div>
             <div class="post-content">
@@ -493,8 +493,8 @@ class BlogManager {
 
     // Filter posts by search term
     filterPosts(term) {
-        const filteredPosts = term 
-            ? this.posts.filter(post => 
+        const filteredPosts = term
+            ? this.posts.filter(post =>
                 post.title.toLowerCase().includes(term.toLowerCase()) ||
                 post.content.toLowerCase().includes(term.toLowerCase()) ||
                 post.tags.some(tag => tag.toLowerCase().includes(term.toLowerCase()))
@@ -508,8 +508,8 @@ class BlogManager {
 
     // Filter posts by category
     filterByCategory(category) {
-        const filteredPosts = category === 'All' 
-            ? this.posts 
+        const filteredPosts = category === 'All'
+            ? this.posts
             : this.posts.filter(post => post.category === category);
 
         // Reset to first page when filtering
@@ -521,12 +521,12 @@ class BlogManager {
     renderFilteredPosts(posts) {
         const blogGrid = document.querySelector('.blog-grid');
         const paginationContainer = document.getElementById('pagination');
-        
+
         if (!blogGrid || !paginationContainer) return;
 
         // Calculate pagination for filtered posts
         const totalPages = Math.ceil(posts.length / this.postsPerPage);
-        
+
         // Get posts for current page
         const startIndex = (this.currentPage - 1) * this.postsPerPage;
         const endIndex = startIndex + this.postsPerPage;
@@ -572,7 +572,7 @@ class BlogManager {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize blog manager
     window.blogManager = new BlogManager();
-    
+
     // Add real-time clock to blog posts
     setInterval(() => {
         const timeElements = document.querySelectorAll('.post-date');
@@ -589,31 +589,31 @@ document.addEventListener('DOMContentLoaded', () => {
 // Helper function to calculate time since post
 function timeSince(date) {
     const seconds = Math.floor((new Date() - date) / 1000);
-    
+
     let interval = seconds / 31536000;
     if (interval > 1) {
         return Math.floor(interval) + " years ago";
     }
-    
+
     interval = seconds / 2592000;
     if (interval > 1) {
         return Math.floor(interval) + " months ago";
     }
-    
+
     interval = seconds / 86400;
     if (interval > 1) {
         return Math.floor(interval) + " days ago";
     }
-    
+
     interval = seconds / 3600;
     if (interval > 1) {
         return Math.floor(interval) + " hours ago";
     }
-    
+
     interval = seconds / 60;
     if (interval > 1) {
         return Math.floor(interval) + " minutes ago";
     }
-    
+
     return Math.floor(seconds) + " seconds ago";
 }

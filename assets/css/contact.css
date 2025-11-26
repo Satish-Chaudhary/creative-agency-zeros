@@ -703,6 +703,7 @@ input[type="checkbox"]:checked::before {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
