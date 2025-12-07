@@ -12,7 +12,7 @@
       </image:image>
    </url>
    <url>
-      <loc>https://zerosstudio.vercel.app/about-zeros-studio.html</loc>
+      <loc>https://zerosstudio.vercel.app/about.html</loc>
       <lastmod>2025-11-26</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -63,7 +63,7 @@
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://zerosstudio.vercel.app/contact-us.html</loc>
+      <loc>https://zerosstudio.vercel.app/Contact.html</loc>
       <lastmod>2025-11-26</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.7</priority>
