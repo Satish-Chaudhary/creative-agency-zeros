@@ -561,6 +561,44 @@ nav ul {
     }
 }
 
+/* ===================== NAV ACTIVE HIGHLIGHT ===================== */
+/* Desktop Active Link */
+.nav-link.active-nav {
+    background: linear-gradient(135deg, #6a0dad, #5628ee);
+    border-radius: 25px;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(106, 13, 173, 0.4);
+    position: relative;
+    padding: 8px 20px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link.active-nav::before {
+    display: none;
+}
+
+.nav-link.active-nav span {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Mobile Active Link */
+.second-nav-li.active-nav {
+    background: rgba(106, 13, 173, 0.1);
+    border-left: 4px solid #6a0dad;
+    padding-left: 10px;
+}
+
+.second-nav-li.active-nav a {
+    color: #9d4edd !important;
+    font-weight: 700;
+}
+
+.second-nav-li.active-nav i {
+    color: #9d4edd;
+}
+
+
 
 /* Stats Section */
 .stats-section {
@@ -941,7 +979,8 @@ nav ul {
     background: rgba(106, 13, 173, 0.4);
     color: white;
 }
-a{
+
+a {
     text-decoration: none;
 }
 

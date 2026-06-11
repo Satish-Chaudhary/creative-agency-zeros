@@ -344,6 +344,7 @@ button:hover,
         opacity: 0;
         transform: translate(-50%, -20px);
     }
+
     to {
         opacity: 1;
         transform: translate(-50%, 0);
@@ -537,6 +538,43 @@ nav ul {
 
 .nav-link:hover span {
     transform: translateX(5px);
+}
+
+/* ===================== NAV ACTIVE HIGHLIGHT ===================== */
+/* Desktop Active Link */
+.nav-link.active-nav {
+    background: linear-gradient(135deg, #6a0dad, #5628ee);
+    border-radius: 25px;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(106, 13, 173, 0.4);
+    position: relative;
+    padding: 8px 20px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link.active-nav::before {
+    display: none;
+}
+
+.nav-link.active-nav span {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Mobile Active Link */
+.second-nav-li.active-nav {
+    background: rgba(106, 13, 173, 0.1);
+    border-left: 4px solid #6a0dad;
+    padding-left: 10px;
+}
+
+.second-nav-li.active-nav a {
+    color: #9d4edd !important;
+    font-weight: 700;
+}
+
+.second-nav-li.active-nav i {
+    color: #9d4edd;
 }
 
 
@@ -1977,15 +2015,15 @@ nav ul {
         right: auto;
         font-size: 1.1rem;
     }
-    
+
     .timeline-content {
         padding: 25px;
     }
-    
+
     .timeline-content h3 {
         font-size: 1.5rem;
     }
-    
+
     .page-section {
         padding: 80px 0;
     }
@@ -2051,7 +2089,7 @@ nav ul {
         left: -75px;
         font-size: 0.95rem;
     }
-    
+
     /* Card-based layout for timeline on small screens */
     .timeline::after {
         display: none;
@@ -2084,7 +2122,7 @@ nav ul {
         margin-bottom: 15px;
         display: inline-block;
     }
-    
+
     .timeline-content {
         padding: 25px;
         border-radius: 15px;
@@ -2096,43 +2134,43 @@ nav ul {
         margin-left: 0;
         margin-right: 0;
     }
-    
+
     .timeline-content:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 40px rgba(106, 13, 173, 0.3);
         border-color: rgba(106, 13, 173, 0.3);
     }
-    
+
     .timeline-content h3 {
         font-size: 1.5rem;
         margin-bottom: 15px;
     }
-    
+
     .timeline-content {
         padding: 22px;
         font-size: 0.9rem;
     }
-    
+
     .timeline-content h3 {
         font-size: 1.4rem;
         gap: 10px;
     }
-    
+
     .timeline-content h3 i {
         font-size: 1.2rem;
         width: 35px;
         height: 35px;
     }
-    
+
     .timeline-content p {
         font-size: 0.9rem;
     }
-    
+
     .timeline-year {
         font-size: 0.9rem;
         padding: 4px 12px;
     }
-    
+
     .why-how-when-grid {
         gap: 25px;
     }
@@ -2251,7 +2289,7 @@ nav ul {
         font-size: 0.85rem;
         padding: 3px 10px;
     }
-    
+
     /* Card-based layout for timeline on extra small screens */
     .timeline::after {
         display: none;
@@ -2284,7 +2322,7 @@ nav ul {
         margin-bottom: 12px;
         display: inline-block;
     }
-    
+
     .timeline-content {
         padding: 20px;
         border-radius: 12px;
@@ -2297,35 +2335,35 @@ nav ul {
         margin-right: 0;
         font-size: 0.85rem;
     }
-    
+
     .timeline-content:hover {
         transform: translateY(-3px);
         box-shadow: 0 12px 35px rgba(106, 13, 173, 0.3);
         border-color: rgba(106, 13, 173, 0.3);
     }
-    
+
     .timeline-content h3 {
         font-size: 1.2rem;
         margin-bottom: 12px;
         gap: 6px;
     }
-    
+
     .timeline-content h3 i {
         font-size: 1rem;
         width: 30px;
         height: 30px;
     }
-    
+
     .timeline-content p {
         font-size: 0.85rem;
         line-height: 1.6;
     }
-    
+
     .timeline-year {
         font-size: 0.85rem;
         padding: 3px 10px;
     }
-    
+
     .why-how-when-grid {
         gap: 20px;
     }

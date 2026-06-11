@@ -207,18 +207,18 @@ window.addEventListener("load", () => {
 function showSecondNav() {
     let secondNav = document.querySelector(".second-nav");
     let hamburger = document.getElementById("hamburger");
-    
+
     secondNav.classList.toggle("active-second-nav");
     hamburger.classList.toggle("active");
 }
 
 // Close mobile menu when clicking outside
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const secondNav = document.querySelector('.second-nav');
     const hamburger = document.getElementById('hamburger');
-    
-    if (secondNav && secondNav.classList.contains('active-second-nav') && 
-        !secondNav.contains(event.target) && 
+
+    if (secondNav && secondNav.classList.contains('active-second-nav') &&
+        !secondNav.contains(event.target) &&
         event.target !== hamburger) {
         secondNav.classList.remove('active-second-nav');
         hamburger.classList.remove('active');
@@ -230,7 +230,7 @@ document.querySelectorAll('.second-nav-li a').forEach(link => {
     link.addEventListener('click', () => {
         const secondNav = document.querySelector('.second-nav');
         const hamburger = document.getElementById('hamburger');
-        
+
         secondNav.classList.remove('active-second-nav');
         hamburger.classList.remove('active');
     });
@@ -441,7 +441,7 @@ if (!timerEnd) {
     localStorage.setItem(TIMER_KEY, timerEnd);
 } else {
     timerEnd = parseInt(timerEnd);
-    
+
     // Check if the timer has already expired
     if (Date.now() > timerEnd) {
         // Timer has expired, set a new one
@@ -737,7 +737,7 @@ gsap.utils.toArray(".team-member").forEach((member, i) => {
             start: "top 90%",
         },
         y: 50,
-        opacity: 0,
+        opacity: 1,
         duration: 0.8,
         ease: "power3.out",
         delay: i * 0.1,
@@ -1637,7 +1637,7 @@ if (submitBtn) {
 document
     .getElementById("contact-form")
     .addEventListener("submit", function (e) {
-        
+
         // e.preventDefault(); 
 
         // Form validation
@@ -1890,3 +1890,94 @@ ScrollTrigger.batch(".pricing-card", {
     onLeaveBack: (batch) =>
         gsap.set(batch, { autoAlpha: 0, y: 50, overwrite: true }),
 });
+
+// ===================== NAV ACTIVE HIGHLIGHT =====================
+(function () {
+    const navLinks = document.querySelectorAll('.nav-link, .second-nav-li a');
+
+    // Normalize path detection
+    function getNormalizedPath() {
+        const path = window.location.pathname.split('/').pop() || 'index.html';
+        return path === '' ? 'index.html' : path;
+    }
+
+    function setActiveLink() {
+        const currentPath = getNormalizedPath();
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href') || '';
+            const linkPage = href.split('/').pop();
+
+            // Remove existing active class
+            link.classList.remove('active-nav');
+            link.parentElement.classList.remove('active-nav'); // For mobile nav li
+
+            // Check for home page variations
+            const isHomePath = currentPath === 'index.html';
+            const isLinkHome = linkPage === 'index.html' || linkPage === '#' || linkPage === '';
+
+            if (linkPage === currentPath || (isHomePath && isLinkHome)) {
+                link.classList.add('active-nav');
+                if (link.parentElement.classList.contains('second-nav-li')) {
+                    link.parentElement.classList.add('active-nav');
+                }
+            }
+        });
+    }
+
+    setActiveLink();
+
+    // Highlight on click for single-page feel
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.forEach(l => {
+                l.classList.remove('active-nav');
+                l.parentElement.classList.remove('active-nav');
+            });
+            this.classList.add('active-nav');
+            if (this.parentElement.classList.contains('second-nav-li')) {
+                this.parentElement.classList.add('active-nav');
+            }
+        });
+    });
+})();
+
+// ===================== TEAM INFINITE SLIDER =====================
+(function () {
+    const track = document.getElementById('teamSliderTrack');
+    if (!track) return;
+    // Duplicate cards for seamless loop
+    track.innerHTML += track.innerHTML;
+
+    // Hover: pause via CSS class handled by CSS animation-play-state
+    // JS fallback for older browsers
+    track.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+    });
+    track.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+    });
+})();
+
+// ===================== PROJECT CARD FILTER =====================
+(function () {
+    const filterBtns = document.querySelectorAll('.project-showcase .filter-btn');
+    const cardItems = document.querySelectorAll('.project-card-item');
+    if (!filterBtns.length || !cardItems.length) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.getAttribute('data-filter');
+            cardItems.forEach(card => {
+                const cats = card.getAttribute('data-category') || '';
+                if (filter === 'all' || cats.includes(filter)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+})();

@@ -15,7 +15,7 @@
   <meta property="og:description"
     content="We craft stunning digital experiences with modern web design, UI/UX, and development services. Based in Indore, we create websites that drive results." />
   <meta property="og:type" content="website" />
-<meta name="google-adsense-account" content="ca-pub-7621401186463500">
+  <meta name="google-adsense-account" content="ca-pub-7621401186463500">
   <meta property="og:url" content="https://zerosstudio.vercel.app/" />
   <meta property="og:image" content="https://zerosstudio.vercel.app/assets/images/project1.png" />
   <meta property="og:locale" content="en_IN" />
@@ -62,8 +62,8 @@
     }
   }
   </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7621401186463500"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7621401186463500"
+    crossorigin="anonymous"></script>
 
 </head>
 <!-- Google tag (gtag.js) -->
@@ -102,7 +102,7 @@
       <a href="index.html" class="logo">ZEROS</a>
       <ul id="first-nav">
         <li>
-          <a href="#" class="nav-link"><span>Home</span></a>
+          <a href="index.html" class="nav-link active-nav"><span>Home</span></a>
         </li>
         <li>
           <a href="about.html" class="nav-link"><span>About</span></a>
@@ -114,7 +114,7 @@
           <a href="projects.html" class="nav-link"><span>Projects</span></a>
         </li>
         <li>
-          <a href="./404-page-not-found.html" class="nav-link"><span>Blog</span></a>
+          <a href="Purchase.html" class="nav-link"><span>Pricing</span></a>
         </li>
         <li>
           <a href="Contact.html" class="nav-link"><span>Contact</span></a>
@@ -126,18 +126,19 @@
         <span></span>
       </div>
     </nav>
+    <ul class="second-nav">
+      <li class="second-nav-li active-nav"><a href="index.html">Home</a></li>
+      <li class="second-nav-li"><a href="about.html">About</a></li>
+      <li class="second-nav-li"><a href="services.html">Services</a></li>
+      <li class="second-nav-li"><a href="projects.html">Project</a></li>
+      <li class="second-nav-li"><a href="Purchase.html">Pricing</a></li>
+      <li class="second-nav-li"><a href="Contact.html">Contact</a></li>
+    </ul>
   </header>
 
   <!-- Hero Section -->
   <main>
-    <ul class="second-nav">
-      <li class="second-nav-li"><a href="index.html">Home</a></li>
-      <li class="second-nav-li"><a href="about.html">About</a></li>
-      <li class="second-nav-li"><a href="services.html">Services</a></li>
-      <li class="second-nav-li"><a href="projects.html">Project</a></li>
-      <li class="second-nav-li"><a href="./404-page-not-found.html">Blog</a></li>
-      <li class="second-nav-li"><a href="Contact.html">Contact</a></li>
-    </ul>
+
     <section class="hero">
       <div class="hero-content" id="hero-content">
         <h1 class="hero-title" id="typewriter-text">
@@ -530,7 +531,7 @@
                 <li>Visual Design</li>
                 <li>User Testing</li>
               </ul>
-              <div class="service-price">₹8k - ₹25k</div>
+              <div class="service-price">Starting at ₹15k</div>
             </div>
           </div>
         </div>
@@ -539,21 +540,21 @@
           <div class="service-card-inner">
             <div class="service-card-front">
               <div class="service-icon">
-                <i class="fas fa-mobile-alt"></i>
+                <i class="fas fa-film"></i>
               </div>
-              <h3>Mobile Apps</h3>
-              <p>Native and cross-platform solutions</p>
+              <h3>AI Video Generation</h3>
+              <p>AI-powered video content creation</p>
             </div>
             <div class="service-card-back">
-              <h4>Mobile Apps</h4>
+              <h4>AI Video Generation</h4>
               <ul>
-                <li>iOS Development</li>
-                <li>Android Development</li>
-                <li>React Native</li>
-                <li>App Store Optimization</li>
-                <li>Maintenance & Support</li>
+                <li>AI Script Writing</li>
+                <li>Automated Video Creation</li>
+                <li>Voice-over Integration</li>
+                <li>Brand Customization</li>
+                <li>Multi-format Export</li>
               </ul>
-              <div class="service-price">₹25k - ₹75k</div>
+              <div class="service-price">₹349/video</div>
             </div>
           </div>
         </div>
@@ -630,177 +631,133 @@
     </div>
   </section>
 
-  <!-- Add this section after the "Contact Us" section -->
+  <!-- Featured Projects Section -->
   <section class="project-showcase" id="project-showcase">
-    <div class="project-wrapper">
-      <div class="project-header">
-        <h2 class="project-title">Featured Projects</h2>
-        <p class="project-subtitle">
-          Explore our latest work and see how we've helped businesses
-          transform their digital presence with innovative solutions.
-        </p>
+    <div class="container">
 
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="mobile">Mobile</button>
-          <button class="filter-btn" data-filter="dashboard">
-            Dashboard
-          </button>
-          <button class="filter-btn" data-filter="ecommerce">
-            E-commerce
-          </button>
-        </div>
+      <div class="fp-header">
+        <span class="fp-badge">Our Work</span>
+        <h2 class="fp-title">Featured Projects</h2>
+        <p class="fp-subtitle">Explore some of our most impactful digital creations.</p>
       </div>
 
-      <div class="project-carousel">
-        <div class="project-slider">
-          <!-- Project 1 -->
-          <div class="project-item active" data-category="ecommerce web">
-            <div class="project-visual" onclick="openProjectModal('project1')">
-              <img src="./assets/images/dashboard.png" alt="Dashboard" class="project-screenshot" />
-            </div>
+      <div class="project-grid">
 
-            <div class="project-details">
-              <span class="project-tag">Healthcare Dashboard</span>
-              <h3 class="project-name">Patient Health Monitoring System</h3>
-              <p class="project-description">
-                A comprehensive healthcare dashboard designed for medical professionals to monitor patient vitals, track
-                treatment progress, and manage appointments. This system integrates real-time data from multiple sources
-                to provide actionable insights and improve patient outcomes.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Real-time patient vital monitoring
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Treatment progress tracking
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Integrated appointment management
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Multi-source data visualization
-                </li>
-              </ul>
-              <div class="project-tech-stack">
-                <span class="tech-item">React</span>
-                <span class="tech-item">Node.js</span>
-                <span class="tech-item">MongoDB</span>
-                <span class="tech-item">D3.js</span>
-              </div>
-              <div class="project-actions">
-                <a href="#" class="project-btn view-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
-                <a href="#" class="project-btn code-btn">View Code <i class="fab fa-github"></i></a>
-              </div>
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-preview">
+            <div class="preview-inner">
+              <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=1200"
+                alt="Healthcare">
             </div>
+            <a href="#" class="preview-btn">Live Preview <i class="fas fa-external-link-alt"></i></a>
           </div>
-
-          <!-- Project 2 -->
-          <div class="project-item" data-category="dashboard web">
-            <div class="project-visual" onclick="openProjectModal('project2')">
-              <img src="./assets/images/fashion.jpg" alt="Corporate Dashboard" class="project-screenshot" />
-            </div>
-            <div class="project-details">
-              <span class="project-tag">Fashion Store</span>
-              <h3 class="project-name">Elegant Fashion E-commerce Platform</h3>
-              <p class="project-description">
-                A sophisticated e-commerce solution designed specifically for luxury fashion brands. This platform
-                combines stunning visual aesthetics with seamless functionality to showcase collections, manage
-                inventory, and provide an exceptional shopping experience that reflects the brand's premium identity.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> High-resolution product gallery with 360° views
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Advanced filtering and search capabilities
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Personalized customer recommendations
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Secure payment gateway integration
-                </li>
-              </ul>
-              <div class="project-tech-stack">
-                <span class="tech-item">React</span>
-                <span class="tech-item">Node.js</span>
-                <span class="tech-item">MongoDB</span>
-                <span class="tech-item">Stripe API</span>
-              </div>
-              <div class="project-actions">
-                <a href="#" class="project-btn view-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
-                <a href="#" class="project-btn code-btn">View Code <i class="fab fa-github"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-item" data-category="mobile">
-            <div class="project-visual" onclick="openProjectModal('project3')">
-              <img src="./assets/images/fitness.png" alt="Mobile App" class="project-screenshot" />
-            </div>
-            <div class="project-details">
-              <span class="project-tag">Fitness Tracker</span>
-              <h3 class="project-name">Fitness Tracker Application</h3>
-              <p class="project-description">
-                A cross-platform mobile application for fitness enthusiasts.
-                Features workout tracking, nutrition logging, social sharing,
-                and integration with wearable devices for comprehensive health
-                monitoring.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Workout plan
-                  customization
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Nutrition tracking &
-                  meal planning
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Social community
-                  features
-                </li>
-                <li class="project-highlight">
-                  <i class="fas fa-check-circle"></i> Wearable device
-                  integration
-                </li>
-              </ul>
-              <div class="project-tech-stack">
-                <span class="tech-item">React Native</span>
-                <span class="tech-item">Firebase</span>
-                <span class="tech-item">Redux</span>
-                <span class="tech-item">GraphQL</span>
-              </div>
-              <div class="project-actions">
-                <a href="#" class="project-btn view-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
-                <a href="#" class="project-btn code-btn">View Code <i class="fab fa-github"></i></a>
-              </div>
-            </div>
+          <div class="project-info">
+            <h3 class="project-name">Event Planner</h3>
+            <p class="project-desc">A comprehensive platform for event organizers to manage schedules, track RSVPs, and
+              coordinate
+              vendors in real time.</p>
           </div>
         </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-preview">
+            <div class="preview-inner">
+              <img
+                src="https://images.unsplash.com/photo-1633681138600-295fcd688876?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJlYXV0eSUyMHBhcmxvciUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000"
+                alt="E-commerce">
+            </div>
+            <a href="#" class="preview-btn">Live Preview <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Beauty Parlour</h3>
+            <p class="project-desc">A luxury beauty and salon booking platform with stunning visuals, service filtering,
+              and a seamless
+              secure booking experience.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-preview">
+            <div class="preview-inner">
+              <img
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+                alt="Portfolio">
+            </div>
+            <a href="#" class="preview-btn">Live Preview <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Coffee Shop</h3>
+            <p class="project-desc">An inviting website for a local coffee shop, focusing on large imagery of artisan
+              blends and
+              smooth online ordering.</p>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-preview">
+            <div class="preview-inner">
+              <img
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fERlbnRhbCUyMENsaW5pYyUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000"
+                alt="Education">
+            </div>
+            <a href="#" class="preview-btn">Live Preview <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Dental Clinic</h3>
+            <p class="project-desc">A comprehensive clinic management system with interactive patient booking and
+              automated
+              appointment reminders.</p>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-preview">
+            <div class="preview-inner">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1673784706288-684bf6e6e220?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2lmdCUyMHNob3AlMjB3ZWJzaXRlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=1000"
+                alt="Real Estate">
+            </div>
+            <a href="#" class="preview-btn">Live Preview <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Gift Shop</h3>
+            <p class="project-desc">A modern e-commerce portal for custom gift listings with integrated search and
+              personalized product previews.</p>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-preview">
+            <div class="preview-inner">
+              <img
+                src="https://images.unsplash.com/flagged/photo-1558954157-aa76c0d246c6?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Fintech">
+            </div>
+            <a href="#" class="preview-btn">Live Preview <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Real Estates</h3>
+            <p class="project-desc">A sophisticated real estate platform providing real-time property listings, market
+              data
+              and trend forecasting.</p>
+          </div>
+        </div>
+
       </div>
 
-      <div class="project-navigation">
-        <button class="nav-control prev-control" id="prevControl" title="left">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="progress-container">
-          <div class="progress-bar" id="progressBar"></div>
-        </div>
-        <div class="project-indicators" id="indicators">
-          <div class="indicator-dot active" data-index="0"></div>
-          <div class="indicator-dot" data-index="1"></div>
-          <div class="indicator-dot" data-index="2"></div>
-        </div>
-        <button class="nav-control next-control" id="nextControl" title="right">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+      <div class="fp-footer">
+        <a href="projects.html" class="fp-all-btn">See All Projects <i class="fas fa-arrow-right"></i></a>
       </div>
+
     </div>
   </section>
+
 
   <!-- Project Modal -->
   <div id="projectModal" class="project-modal">
@@ -831,16 +788,20 @@
             <i class="fas fa-map-marker-alt"></i>
             <h3>Our Location</h3>
             <p>Vijaynagar, Indore, MP</p>
-          </div>
-          <div class="info-item">
+            <br>
+            <br>
+            <!-- </div>
+          <div class="info-item"> -->
             <i class="fas fa-phone-alt"></i>
             <h3>Phone Number</h3>
             <p>
-              <a href="tel:+919334541428">+91 933454142</a> |
+              <a href="tel:+919334454142">+91 9334454142</a> |
               <a href="tel:+918009777605">+91 8009777605</a>
             </p>
-          </div>
-          <div class="info-item">
+            <br>
+            <br>
+            <!-- </div>
+          <div class="info-item"> -->
             <i class="fas fa-envelope"></i>
             <h3>Email Address</h3>
             <p>
@@ -902,66 +863,56 @@
       </div>
       <div class="pricing-cards">
         <!-- Pricing Card 1 -->
-        <div class="pricing-card">
+        <a class="pricing-card" href="Contact.html#contact-form">
           <div class="card-header">
             <h3>Starter Plan</h3>
             <p class="price">
-              <span class="inr-price">₹7,000</span><span class="usd-price" style="display: none">$85</span>
+              <span class="inr-price"><del
+                  style="color: #888; font-size: 0.7em; margin-right: 8px;">₹9,999</del>₹6,999</span><span
+                class="usd-price" style="display: none"><del
+                  style="color: #888; font-size: 0.7em; margin-right: 8px;">$105</del>$73</span>
             </p>
             <p class="plan-desc">Perfect for small businesses and startups</p>
           </div>
           <ul class="features-list">
-            <li>
-              <i class="fas fa-check-circle"></i> Static Website (5 Pages)
-            </li>
+            <li><i class="fas fa-check-circle"></i> Static Website (5 Pages)</li>
             <li><i class="fas fa-check-circle"></i> Responsive Design</li>
             <li><i class="fas fa-check-circle"></i> Basic SEO</li>
             <li><i class="fas fa-check-circle"></i> Contact Form</li>
             <li><i class="fas fa-check-circle"></i> 1 Month Support</li>
-            <li class="disabled">
-              <i class="fas fa-times-circle"></i> E-commerce Functionality
-            </li>
-            <li class="disabled">
-              <i class="fas fa-times-circle"></i> Content Management System
-            </li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> E-commerce Functionality</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Content Management System</li>
           </ul>
-          <a href="Contact.html" class="cta-button">Get Started</a>
-        </div>
+        </a>
         <!-- Pricing Card 2 (Popular) -->
-        <div class="pricing-card popular">
+        <a class="pricing-card popular" href="Contact.html#contact-form">
           <div class="popular-badge">Most Popular</div>
           <div class="card-header">
             <h3>Business Plan</h3>
             <p class="price">
-              <span class="inr-price">₹25,000</span><span class="usd-price" style="display: none">$300</span>
+              <span class="inr-price"><del
+                  style="color: #888; font-size: 0.7em; margin-right: 8px;">₹27,999</del>₹24,999</span><span
+                class="usd-price" style="display: none"><del
+                  style="color: #888; font-size: 0.7em; margin-right: 8px;">$295</del>$260</span>
             </p>
-            <p class="plan-desc">
-              Ideal for growing businesses with dynamic needs
-            </p>
+            <p class="plan-desc">Ideal for growing businesses with dynamic needs</p>
           </div>
           <ul class="features-list">
-            <li>
-              <i class="fas fa-check-circle"></i> Dynamic Website (10 Pages)
-            </li>
+            <li><i class="fas fa-check-circle"></i> Dynamic Website (10 Pages)</li>
             <li><i class="fas fa-check-circle"></i> Responsive Design</li>
-            <li><i class="fas fa-check-circle"></i> Advanced SEO</li>
-            <li>
-              <i class="fas fa-check-circle"></i> E-commerce Functionality
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i> Content Management System
-            </li>
+            <li><i class="fas fa-check-circle"></i> E-commerce Functionality</li>
             <li><i class="fas fa-check-circle"></i> 3 Months Support</li>
-            <li><i class="fas fa-check-circle"></i> Analytics Integration</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Advanced SEO</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Content Management System</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Analytics Integration</li>
           </ul>
-          <a href="Contact.html" class="cta-button">Get Started</a>
-        </div>
+        </a>
         <!-- Pricing Card 3 -->
-        <div class="pricing-card">
+        <a class="pricing-card" href="Contact.html#contact-form">
           <div class="card-header">
             <h3>Enterprise Plan</h3>
             <p class="price">
-              <span class="inr-price">₹50,000+</span><span class="usd-price" style="display: none">$600+</span>
+              <span class="inr-price">₹49,999</span><span class="usd-price" style="display: none">$522</span>
             </p>
             <p class="plan-desc">
               Fully customized solutions for large enterprises
@@ -984,8 +935,7 @@
             <li><i class="fas fa-check-circle"></i> 6 Months Support</li>
             <li><i class="fas fa-check-circle"></i> Custom Integrations</li>
           </ul>
-          <a href="Contact.html" class="cta-button">Get Started</a>
-        </div>
+        </a>
       </div>
 
       <!-- Add-on Services -->
@@ -993,10 +943,10 @@
         <h3>Add-on Services</h3>
         <div class="addon-grid">
           <div class="addon-item">
-            <i class="fas fa-mobile-alt"></i>
-            <h4>Mobile App</h4>
+            <i class="fas fa-film"></i>
+            <h4>AI Video Generation</h4>
             <p class="addon-price">
-              <span class="inr-price">₹15,000</span><span class="usd-price" style="display: none">$180</span>
+              <span class="inr-price">₹349/video</span><span class="usd-price" style="display: none">$4/video</span>
             </p>
           </div>
           <div class="addon-item">
@@ -1010,14 +960,14 @@
             <i class="fas fa-chart-line"></i>
             <h4>Analytics Setup</h4>
             <p class="addon-price">
-              <span class="inr-price">₹3,000</span><span class="usd-price" style="display: none">$35</span>
+              <span class="inr-price">₹3,000</span><span class="usd-price" style="display: none">$36</span>
             </p>
           </div>
           <div class="addon-item">
-            <i class="fas fa-shield-alt"></i>
-            <h4>Security Package</h4>
+            <i class="fas fa-tools"></i>
+            <h4>Maintenance</h4>
             <p class="addon-price">
-              <span class="inr-price">₹2,000/mo</span><span class="usd-price" style="display: none">$25/mo</span>
+              <span class="inr-price">₹1,799/mon</span><span class="usd-price" style="display: none">$22/mo</span>
             </p>
           </div>
         </div>
@@ -1030,127 +980,129 @@
     <div class="container">
       <h2 class="header">Our Team</h2>
 
-      <!-- Enhanced Grid Container with animations -->
-      <div class="team-grid">
-        <!-- Team Member 1: Founder -->
-        <div class="team-member">
-          <div class="team-card">
-            <div class="member-image">
-              <img src="./assets/images/avtar.jpeg" alt="Anuj Lumar" />
-            </div>
-            <div class="member-info">
-              <h2>Anuj Kumar</h2>
-              <h3>Founder & CEO</h3>
-              <p class="member-description">
-                Innovative leader with a passion for technology and design. 2+
-                years of experience in digital transformation.
-              </p>
-              <div class="team-socials">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="Twitter">
-                  <i class="fab fa-instagram"></i>
-                </a>
+      <!-- Slider Container -->
+      <div class="team-slider-wrapper">
+        <div class="team-slider-track" id="teamSliderTrack">
+          <!-- Team Member 1: Founder -->
+          <div class="team-member">
+            <div class="team-card">
+              <div class="member-image">
+                <img src="./assets/images/avtar.jpeg" alt="Anuj Lumar" />
+              </div>
+              <div class="member-info">
+                <h2>Anuj Kumar</h2>
+                <h3>Founder & CEO</h3>
+                <p class="member-description">
+                  Innovative leader with a passion for technology and design. 2+
+                  years of experience.
+                </p>
+                <div class="team-socials">
+                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Team Member 2: Frontend Developer -->
-        <div class="team-member">
-          <div class="team-card">
-            <div class="member-image">
-              <img src="./assets/images/avtar2.jpeg" alt="Satish chaudhary" />
-            </div>
-            <div class="member-info">
-              <h2>Satish Chaudhary</h2>
-              <h3>Frontend Developer</h3>
-              <p class="member-description">
-                Builds sleek, responsive interfaces with modern frameworks.
-                Expert in React and Vue.js.
-              </p>
-              <div class="team-socials">
-                <a href="https://s7h6m3.csb.app/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="Dribbble">
-                  <i class="fab fa-instagram"></i>
-                </a>
+          <!-- Team Member 2: Frontend Developer -->
+          <div class="team-member">
+            <div class="team-card">
+              <div class="member-image">
+                <img src="./assets/images/avtar2.jpeg" alt="Satish chaudhary" />
+              </div>
+              <div class="member-info">
+                <h2>Satish Chaudhary</h2>
+                <h3>Frontend Developer</h3>
+                <p class="member-description">
+                  Builds sleek, responsive interfaces with modern frameworks.
+                  Expert in React and Vue.js.
+                </p>
+                <div class="team-socials">
+                  <a href="https://s7h6m3.csb.app/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="Dribbble">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Team Member 3: Backend Developer -->
-        <div class="team-member">
-          <div class="team-card">
-            <div class="member-image">
-              <img src="./assets/images/avtar3.jpg" alt="Sahil Singh" />
-            </div>
-            <div class="member-info">
-              <h2>Sahil Singh</h2>
-              <h3>Backend Developer</h3>
-              <p class="member-description">
-                Architects robust APIs and scalable server-side systems.
-                Specializes in Node.js and Python.
-              </p>
-              <div class="team-socials">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="Stack Overflow">
-                  <i class="fab fa-instagram"></i>
-                </a>
+          <!-- Team Member 3: Backend Developer -->
+          <div class="team-member">
+            <div class="team-card">
+              <div class="member-image">
+                <img src="./assets/images/avtar3.jpg" alt="Sahil Singh" />
+              </div>
+              <div class="member-info">
+                <h2>Sahil Singh</h2>
+                <h3>Backend Developer</h3>
+                <p class="member-description">
+                  Architects robust APIs and scalable server-side systems.
+                  Specializes in Node.js and Python.
+                </p>
+                <div class="team-socials">
+                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="Stack Overflow">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Team Member 4: UI/UX Designer -->
-        <div class="team-member">
-          <div class="team-card">
-            <div class="member-image">
-              <img src="./assets/images/avtar4.jpeg" alt="Arya Gupta" />
-            </div>
-            <div class="member-info">
-              <h2>Arya Gupta</h2>
-              <h3>UI/UX Designer</h3>
-              <p class="member-description">
-                Designs intuitive experiences that users love. Expert in user
-                research and prototyping.
-              </p>
-              <div class="team-socials">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://behance.net/" target="_blank" rel="noopener noreferrer" class="social-link"
-                  title="Behance">
-                  <i class="fab fa-instagram"></i>
-                </a>
+          <!-- Team Member 4: UI/UX Designer -->
+          <div class="team-member">
+            <div class="team-card">
+              <div class="member-image">
+                <img src="./assets/images/avtar4.jpeg" alt="Arya Gupta" />
+              </div>
+              <div class="member-info">
+                <h2>Arya Gupta</h2>
+                <h3>UI/UX Designer</h3>
+                <p class="member-description">
+                  Designs intuitive experiences that users love. Expert in user
+                  research and prototyping.
+                </p>
+                <div class="team-socials">
+                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://behance.net/" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="Behance">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1176,7 +1128,7 @@
                 <i class="fas fa-map-marker-alt"></i> Vijaynagar, Indore, MP
               </p>
               <p>
-                <i class="fas fa-phone-alt"></i> +91 9334541428 | +91
+                <i class="fas fa-phone-alt"></i> +91 9334454142 | +91
                 8009777605
               </p>
               <p><i class="fas fa-envelope"></i> zeros.studio19@gmail.com</p>
