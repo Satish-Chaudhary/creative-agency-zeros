@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const pageHeroCta = document.querySelector('.page-hero .cta-button');
     const statItems = document.querySelectorAll('.stat-item');
     const sectionHeaders = document.querySelectorAll('.section-header h2, .section-header p');
-    const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
     const testimonialsHeaderH2 = document.querySelector('.testimonials-header h2');
     const testimonialsHeaderLine = document.querySelector('.testimonials-header .line');
@@ -170,22 +169,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Animate filter buttons
-    filterButtons.forEach((button, index) => {
-        gsap.to(button, {
-            scrollTrigger: {
-                trigger: button,
-                start: "top 90%",
-                toggleActions: "play none none reverse"
-            },
-            duration: 0.8,
-            y: 0,
-            opacity: 1,
-            ease: 'power2.out',
-            delay: index * 0.1
-        });
-    });
-
     // Animate project cards with staggered GSAP animations
     projectCards.forEach((card, index) => {
         gsap.to(card, {
@@ -211,92 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    // Project filtering functionality with smooth animations and auto-arrangement
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-
-            // Add active class to clicked button
-            this.classList.add('active');
-
-            const filterValue = this.getAttribute('data-filter');
-
-            // Create arrays to hold visible and hidden cards
-            const visibleCards = [];
-            const hiddenCards = [];
-
-            // Filter projects and separate visible/hidden cards
-            projectCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                    visibleCards.push(card);
-                    // Show card with animation
-                    gsap.to(card, {
-                        duration: 0.5,
-                        opacity: 1,
-                        scale: 1,
-                        ease: 'power2.out'
-                    });
-                } else {
-                    hiddenCards.push(card);
-                    // Hide card with animation
-                    gsap.to(card, {
-                        duration: 0.5,
-                        opacity: 0,
-                        scale: 0.9,
-                        ease: 'power2.out'
-                    });
-                }
-            });
-
-            // After animations complete, rearrange the grid
-            setTimeout(() => {
-                const projectsGrid = document.querySelector('.projects-grid');
-
-                // Clear the grid while preserving cards in DOM
-                while (projectsGrid.firstChild) {
-                    projectsGrid.removeChild(projectsGrid.firstChild);
-                }
-
-                // Add visible cards first
-                visibleCards.forEach(card => {
-                    // Reset display property for visible cards
-                    card.style.display = 'block';
-                    projectsGrid.appendChild(card);
-                });
-
-                // Then add hidden cards (they remain hidden but are in the DOM)
-                hiddenCards.forEach(card => {
-                    // Hide cards with display none
-                    card.style.display = 'none';
-                    projectsGrid.appendChild(card);
-                });
-            }, 500); // Match the animation duration
-        });
-
-        // Add hover effects to filter buttons
-        button.addEventListener('mouseenter', () => {
-            if (!button.classList.contains('active')) {
-                gsap.to(button, {
-                    duration: 0.3,
-                    y: -3,
-                    boxShadow: '0 5px 15px rgba(106, 13, 173, 0.3)',
-                    ease: 'power2.out'
-                });
-            }
-        });
-
-        button.addEventListener('mouseleave', () => {
-            if (!button.classList.contains('active')) {
-                gsap.to(button, {
-                    duration: 0.3,
-                    y: 0,
-                    boxShadow: 'none',
-                    ease: 'power2.out'
-                });
-            }
-        });
-    });
 
     // Add smooth scrolling for CTA button
     const ctaButton = document.querySelector('.page-hero .cta-button');
@@ -347,114 +244,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 ease: 'power2.inOut'
             });
         });
-    }
-
-    // Testimonials carousel with GSAP - Optimized version
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.testimonial-slide');
-    const indicators = document.querySelectorAll('.indicator');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-
-    // Initially hide all slides except the first one
-    slides.forEach((slide, index) => {
-        if (index === 0) {
-            slide.style.display = 'block';
-            slide.style.opacity = '1';
-        } else {
-            slide.style.display = 'none';
-            slide.style.opacity = '0';
-        }
-    });
-
-    function showSlide(index) {
-        // If same slide, do nothing
-        if (index === currentSlide) return;
-
-        // Get current and next slides
-        const currentSlideElement = slides[currentSlide];
-        const nextSlideElement = slides[index];
-
-        // Fade out current slide
-        gsap.to(currentSlideElement, {
-            duration: 0.5,
-            opacity: 0,
-            onComplete: function () {
-                // Hide current slide after fade out
-                currentSlideElement.style.display = 'none';
-
-                // Show next slide
-                nextSlideElement.style.display = 'block';
-
-                // Fade in next slide
-                gsap.to(nextSlideElement, {
-                    duration: 0.5,
-                    opacity: 1,
-                    ease: 'power2.out'
-                });
-            },
-            ease: 'power2.inOut'
-        });
-
-        // Update indicators
-        indicators.forEach(indicator => indicator.classList.remove('active'));
-        indicators[index].classList.add('active');
-
-        currentSlide = index;
-    }
-
-    function nextSlide() {
-        const nextIndex = (currentSlide + 1) % slides.length;
-        showSlide(nextIndex);
-    }
-
-    function prevSlide() {
-        const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(prevIndex);
-    }
-
-    // Auto slide change
-    let autoSlideInterval = setInterval(nextSlide, 5000);
-
-    // Pause auto-slide on hover
-    const testimonialsContainer = document.querySelector('.testimonials-container');
-    if (testimonialsContainer) {
-        testimonialsContainer.addEventListener('mouseenter', () => {
-            clearInterval(autoSlideInterval);
-        });
-
-        testimonialsContainer.addEventListener('mouseleave', () => {
-            autoSlideInterval = setInterval(nextSlide, 5000);
-        });
-    }
-
-    // Button event listeners
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            resetAutoSlide();
-        });
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
-            resetAutoSlide();
-        });
-    }
-
-    // Indicator click events
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            showSlide(index);
-            resetAutoSlide();
-        });
-    });
-
-    // Reset auto-slide timer
-    function resetAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(nextSlide, 5000);
     }
 
     // Animate testimonials header and line
