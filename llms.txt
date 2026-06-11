@@ -1,0 +1,21 @@
+# Zeros Studio
+
+Zeros Studio is a premium web design and development agency crafting high-performance websites, UI/UX designs, and custom digital experiences for startups, growing brands, and enterprises globally.
+
+## Core Information
+- **Website URL**: https://zerosstudio.in/ (Mirror: https://zerosstudio.vercel.app/)
+- **Headquarters**: Vijaynagar, Indore, Madhya Pradesh, India (Serving clients worldwide across all cities, states, and countries)
+- **Primary Services**: Custom Web Development, UI/UX Design, AI Video Generation, SEO & Digital Marketing, Brand Identity, website maintenance.
+- **Contact Email**: zeros.studio19@gmail.com
+- **Phone Contacts**: +91 9334454142 | +91 8009777605
+
+## Main Pages
+- [Home](https://zerosstudio.in/index.html): Introduction to Zeros Studio, core service highlights, featured projects, customer stats, pricing summary, and FAQs.
+- [About Us](https://zerosstudio.in/about.html): Our agency's story, vision, timeline of milestones, and client-centric process.
+- [Services](https://zerosstudio.in/services.html): In-depth breakdown of web development, UI/UX design, AI videos, SEO, and branding offerings, along with service FAQs.
+- [Portfolio & Projects](https://zerosstudio.in/projects.html): Grid of custom websites we have built (Event Planner, Beauty Parlour, Coffee Shop, Dental Clinic, Gift Shop, Real Estate).
+- [Pricing Plans](https://zerosstudio.in/Purchase.html): Detailed tiers (Starter, Business, Enterprise) with transparent features, add-on pricing, and currency toggles (INR/USD).
+- [Contact Page](https://zerosstudio.in/Contact.html): Dynamic client intake questionnaire to specify web design goals, style preferences, required features, budget, and timeline.
+
+## Deep Dive Data
+- [Technical Full Summary](https://zerosstudio.in/llms-full.txt): Detailed breakdown of technology stack, full pricing structures, case study details, and extensive FAQs for AI search engines.

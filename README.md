@@ -114,9 +114,6 @@
 
 <div style="background: #121212; padding: 20px; border-radius: 10px; font-family: 'Courier New', monospace; margin: 25px 0;">
 creative-agency-zeros/<br>
-├── blog.html           <span style="color: #6a0dad;"># Blog listing page</span><br>
-├── blog-post.html      <span style="color: #6a0dad;"># Individual blog post template</span><br>
-├── blog-admin.html     <span style="color: #6a0dad;"># Blog admin panel for content management</span><br>
 ├── about.html         <span style="color: #6a0dad;"># About the agency with typewriter animation</span><br>
 ├── Contact.html       <span style="color: #6a0dad;"># Enhanced contact form with data handling</span><br>
 ├── index.html         <span style="color: #6a0dad;"># Main landing page with typewriter effect</span><br>
@@ -132,7 +129,6 @@ creative-agency-zeros/<br>
 ├── assets/<br>
 │   ├── css/<br>
 │   │   ├── style.css          <span style="color: #6a0dad;"># Main stylesheet</span><br>
-│   │   ├── blog-styles.css    <span style="color: #6a0dad;"># Styles for blog pages</span><br>
 │   │   ├── about-style.css    <span style="color: #6a0dad;"># Styles for about page</span><br>
 │   │   ├── contact.css        <span style="color: #6a0dad;"># Styles for contact page</span><br>
 │   │   ├── projects-styles.css<span style="color: #6a0dad;"># Styles for projects page</span><br>
@@ -146,7 +142,6 @@ creative-agency-zeros/<br>
 │   │   └── [other images]<br>
 │   └── js/<br>
 │       ├── script.js          <span style="color: #6a0dad;"># Main scripts and animations</span><br>
-│       ├── blog.js            <span style="color: #6a0dad;"># Blog functionality and real-time features</span><br>
 │       ├── about.js           <span style="color: #6a0dad;"># Scripts for about page</span><br>
 │       ├── contact.js         <span style="color: #6a0dad;"># Scripts for contact page</span><br>
 │       ├── projects.js        <span style="color: #6a0dad;"># Scripts for projects page</span><br>
@@ -251,18 +246,6 @@ creative-agency-zeros/<br>
       <span style="color: #6a0dad; font-size: 1.5rem; margin-right: 15px;">✓</span>
       <div>
         <strong>Project Showcase:</strong> Improved with filtering and carousel navigation
-      </div>
-    </li>
-    <li style="margin: 15px 0; padding: 15px; background: #222; border-radius: 8px; display: flex; align-items: center;">
-      <span style="color: #6a0dad; font-size: 1.5rem; margin-right: 15px;">✓</span>
-      <div>
-        <strong>Blog Feature:</strong> Added comprehensive blog with listing and post templates
-      </div>
-    </li>
-    <li style="margin: 15px 0; padding: 15px; background: #222; border-radius: 8px; display: flex; align-items: center;">
-      <span style="color: #6a0dad; font-size: 1.5rem; margin-right: 15px;">✓</span>
-      <div>
-        <strong>Real-time Blog Admin:</strong> Added admin panel for creating and managing blog posts in real-time
       </div>
     </li>
     <li style="margin: 15px 0; padding: 15px; background: #222; border-radius: 8px; display: flex; align-items: center;">

@@ -1981,3 +1981,42 @@ ScrollTrigger.batch(".pricing-card", {
         });
     });
 })();
+
+// ===================== FAQ ACCORDION TOGGLE =====================
+(function() {
+    const faqButtons = document.querySelectorAll('.faq-question-btn');
+    faqButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const card = this.parentElement;
+            const container = card.querySelector('.faq-answer-container');
+            const icon = this.querySelector('i');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-card').forEach(otherCard => {
+                if (otherCard !== card) {
+                    const otherBtn = otherCard.querySelector('.faq-question-btn');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                    const otherContainer = otherCard.querySelector('.faq-answer-container');
+                    if (otherContainer) otherContainer.style.maxHeight = null;
+                    const otherIcon = otherCard.querySelector('.faq-question-btn i');
+                    if (otherIcon) {
+                        otherIcon.className = 'fas fa-plus';
+                    }
+                }
+            });
+
+            // Toggle current FAQ
+            if (isExpanded) {
+                this.setAttribute('aria-expanded', 'false');
+                container.style.maxHeight = null;
+                if (icon) icon.className = 'fas fa-plus';
+            } else {
+                this.setAttribute('aria-expanded', 'true');
+                container.style.maxHeight = container.scrollHeight + "px";
+                if (icon) icon.className = 'fas fa-minus';
+            }
+        });
+    });
+})();
+

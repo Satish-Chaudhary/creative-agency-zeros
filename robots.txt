@@ -1,10 +1,11 @@
 User-agent: *
 Disallow:
 
+Sitemap: https://zerosstudio.in/sitemap.xml
 Sitemap: https://zerosstudio.vercel.app/sitemap.xml
 
 # Host
-Host: https://zerosstudio.vercel.app
+Host: https://zerosstudio.in
 
 # Directives
 User-agent: Googlebot
